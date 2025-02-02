@@ -1,166 +1,159 @@
 import React from "react";
-
-// reactstrap components
 import {
-  Button,
-  Label,
-  FormGroup,
-  Input,
-  NavItem,
-  NavLink,
-  Nav,
-  TabContent,
-  TabPane,
   Container,
   Row,
   Col,
+  Card,
+  CardBody,
+  CardTitle,
+  Button,
+  Progress
 } from "reactstrap";
 
-// core components
+// components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import MatriculaHeader from "components/Headers/MatriculaHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
 function MatriculaPage() {
-  const [activeTab, setActiveTab] = React.useState("1");
-
-  const toggle = (tab) => {
-    if (activeTab !== tab) {
-      setActiveTab(tab);
-    }
-  };
-
-  document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
-    document.body.classList.add("landing-page");
-    return function cleanup() {
-      document.body.classList.remove("landing-page");
-    };
-  });
+    document.documentElement.classList.remove("nav-open");
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <ExamplesNavbar />
       <MatriculaHeader />
-      <div className="section profile-content">
+      <div className="section">
         <Container>
-          <div className="owner">
-            <div className="name">
-              <h4 className="title">
-                Proceso de Matricula <br />
-              </h4>
-              <h6 className="description">U.E. Aliñambi</h6>
-            </div>
-          </div>
-          <Row>
-            <Col className="ml-auto mr-auto text-center" md="6">
-              <p>
-                Aqui va contenido...
-              </p>
-              <br />
-              <Button className="btn-round" color="default" outline>
-                <i className="fa fa-cog" /> Configuraciones
-              </Button>
+          <Row className="justify-content-center">
+            <Col md="8">
+              <h2 className="text-center title">Proceso de Matrícula</h2>
+              <h5 className="text-center description">
+                Conoce los pasos y requisitos necesarios para matricular a tu hijo/a
+                en nuestra institución educativa.
+              </h5>
             </Col>
           </Row>
-          <br />
-          <div className="nav-tabs-navigation">
-            <div className="nav-tabs-wrapper">
-              <Nav role="tablist" tabs>
-                <NavItem>
-                  <NavLink
-                    className={activeTab === "1" ? "active" : ""}
-                    onClick={() => {
-                      toggle("1");
-                    }}
-                  >
-                    Follows
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    className={activeTab === "2" ? "active" : ""}
-                    onClick={() => {
-                      toggle("2");
-                    }}
-                  >
-                    Following
-                  </NavLink>
-                </NavItem>
-              </Nav>
-            </div>
-          </div>
-          {/* Tab panes */}
-          <TabContent className="following" activeTab={activeTab}>
-            <TabPane tabId="1" id="follows">
-              <Row>
-                <Col className="ml-auto mr-auto" md="6">
-                  <ul className="list-unstyled follows">
-                    <li>
-                      <Row>
-                        <Col className="ml-auto mr-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
-                          />
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="7" md="4" xs="4">
-                          <h6>
-                            Flume <br />
-                            <small>Musical Producer</small>
-                          </h6>
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input
-                                defaultChecked
-                                defaultValue=""
-                                type="checkbox"
-                              />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
-                    <hr />
-                    <li>
-                      <Row>
-                        <Col className="mx-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/ayo-ogunseinde-2.jpg")}
-                          />
-                        </Col>
-                        <Col lg="7" md="4" xs="4">
-                          <h6>
-                            Banks <br />
-                            <small>Singer</small>
-                          </h6>
-                        </Col>
-                        <Col lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input defaultValue="" type="checkbox" />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
+          <Row className="mt-5">
+            <Col md="12">
+              <Card className="card-plain">
+                <CardBody>
+                  <h3>Progreso del Proceso</h3>
+                  <div className="progress-container">
+                    <span className="progress-badge">Paso 1</span>
+                    <Progress max="100" value="100">
+                      <span className="progress-value">Documentación</span>
+                    </Progress>
+                  </div>
+                  <div className="progress-container">
+                    <span className="progress-badge">Paso 2</span>
+                    <Progress max="100" value="100">
+                      <span className="progress-value">Pago</span>
+                    </Progress>
+                  </div>
+                  <div className="progress-container">
+                    <span className="progress-badge">Paso 3</span>
+                    <Progress max="100" value="100">
+                      <span className="progress-value">Confirmación</span>
+                    </Progress>
+                  </div>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          <Row className="mt-5">
+            <Col md="4">
+              <Card className="card-plain">
+                <CardBody>
+                  <CardTitle tag="h4">Documentación Requerida</CardTitle>
+                  <ul className="list-unstyled">
+                    <li>• Formulario de matrícula</li>
+                    <li>• Documentos de identidad</li>
+                    <li>• Certificados académicos</li>
+                    <li>• Certificado médico</li>
+                    <li>• Fotos tamaño carnet</li>
                   </ul>
-                </Col>
-              </Row>
-            </TabPane>
-            <TabPane className="text-center" tabId="2" id="following">
-              <h3 className="text-muted">Not following anyone yet :(</h3>
-              <Button className="btn-round" color="warning">
-                Find artists
-              </Button>
-            </TabPane>
-          </TabContent>
+                  <Button
+                    className="btn-round"
+                    color="info"
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Descargar Formularios
+                  </Button>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col md="4">
+              <Card className="card-plain">
+                <CardBody>
+                  <CardTitle tag="h4">Formas de Pago</CardTitle>
+                  <ul className="list-unstyled">
+                    <li>• Transferencia bancaria</li>
+                    <li>• Tarjeta de crédito</li>
+                    <li>• Débito directo</li>
+                    <li>• Pago en efectivo</li>
+                    <li>• Convenios de pago</li>
+                  </ul>
+                  <Button
+                    className="btn-round"
+                    color="success"
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Realizar Pago
+                  </Button>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col md="4">
+              <Card className="card-plain">
+                <CardBody>
+                  <CardTitle tag="h4">Fechas Importantes</CardTitle>
+                  <ul className="list-unstyled">
+                    <li>• Inicio de matrículas: 1 de julio</li>
+                    <li>• Matrículas ordinarias: julio</li>
+                    <li>• Matrículas extraordinarias: agosto</li>
+                    <li>• Inicio de clases: septiembre</li>
+                    <li>• Inducción: última semana agosto</li>
+                  </ul>
+                  <Button
+                    className="btn-round"
+                    color="danger"
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Ver Calendario
+                  </Button>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          <Row className="mt-5">
+            <Col md="12">
+              <Card className="bg-info">
+                <CardBody>
+                  <h3 className="text-white text-center">¿Necesitas ayuda?</h3>
+                  <p className="text-white text-center">
+                    Nuestro equipo de admisiones está disponible para ayudarte en todo el proceso.
+                    Contáctanos para resolver tus dudas.
+                  </p>
+                  <div className="text-center">
+                    <Button
+                      className="btn-round"
+                      color="neutral"
+                      href="#pablo"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      Contactar Admisiones
+                    </Button>
+                  </div>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </div>
       <DemoFooter />

@@ -4,23 +4,21 @@ import "assets/css/paper-kit.css";
 // reactstrap components
 import { Container } from "reactstrap";
 
-// core components
-
-function FundacionHeader() {
+function CronogramasHeader() {
   return (
     <>
       <div
         className="page-header section-dark"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/Alinambi/fotoAlinambiUno.jpg") + ")"
+            "url(" + require("assets/img/Alinambi/fotoAlinambiCuatro.jpg") + ")"
         }}
       >
         <div className="filter" />
         <div className="content-center">
           <Container>
             <div className="title-brand">
-              <h1 className="presentation-title">Nuestra Historia</h1>
+              <h1 className="presentation-title">Cronograma Académico</h1>
               <div className="fog-low">
                 <img alt="..." src={require("assets/img/fog-low.png")} />
               </div>
@@ -29,7 +27,7 @@ function FundacionHeader() {
               </div>
             </div>
             <h2 className="presentation-subtitle text-center">
-              Construyendo el futuro de la educación desde 1990
+              Organiza tu año lectivo con nuestro calendario de actividades
             </h2>
           </Container>
         </div>
@@ -44,4 +42,4 @@ function FundacionHeader() {
   );
 }
 
-export default FundacionHeader;
+export default CronogramasHeader; 

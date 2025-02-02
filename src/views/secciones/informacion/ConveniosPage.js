@@ -1,166 +1,141 @@
 import React from "react";
-
-// reactstrap components
 import {
-  Button,
-  Label,
-  FormGroup,
-  Input,
-  NavItem,
-  NavLink,
-  Nav,
-  TabContent,
-  TabPane,
   Container,
   Row,
   Col,
+  Card,
+  CardImg,
+  CardBody,
+  CardTitle,
+  CardText
 } from "reactstrap";
 
-// core components
+// components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ConveniosHeader from "components/Headers/ConveniosHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
 function ConveniosPage() {
-  const [activeTab, setActiveTab] = React.useState("1");
-
-  const toggle = (tab) => {
-    if (activeTab !== tab) {
-      setActiveTab(tab);
-    }
-  };
-
-  document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
-    document.body.classList.add("landing-page");
-    return function cleanup() {
-      document.body.classList.remove("landing-page");
-    };
-  });
+    document.documentElement.classList.remove("nav-open");
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <ExamplesNavbar />
       <ConveniosHeader />
-      <div className="section profile-content">
+      <div className="section">
         <Container>
-          <div className="owner">
-            <div className="name">
-              <h4 className="title">
-                Nuestros convenios <br />
-              </h4>
-              <h6 className="description">U.E. Aliñambi</h6>
-            </div>
-          </div>
-          <Row>
-            <Col className="ml-auto mr-auto text-center" md="6">
-              <p>
-                Aqui va contenido...
-              </p>
-              <br />
-              <Button className="btn-round" color="default" outline>
-                <i className="fa fa-cog" /> Configuraciones
-              </Button>
+          <Row className="justify-content-center">
+            <Col md="8">
+              <h2 className="text-center title">Convenios Institucionales</h2>
+              <h5 className="text-center description">
+                Mantenemos alianzas estratégicas con instituciones nacionales e internacionales
+                para enriquecer la experiencia educativa de nuestros estudiantes.
+              </h5>
             </Col>
           </Row>
-          <br />
-          <div className="nav-tabs-navigation">
-            <div className="nav-tabs-wrapper">
-              <Nav role="tablist" tabs>
-                <NavItem>
-                  <NavLink
-                    className={activeTab === "1" ? "active" : ""}
-                    onClick={() => {
-                      toggle("1");
-                    }}
-                  >
-                    Follows
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    className={activeTab === "2" ? "active" : ""}
-                    onClick={() => {
-                      toggle("2");
-                    }}
-                  >
-                    Following
-                  </NavLink>
-                </NavItem>
-              </Nav>
-            </div>
-          </div>
-          {/* Tab panes */}
-          <TabContent className="following" activeTab={activeTab}>
-            <TabPane tabId="1" id="follows">
-              <Row>
-                <Col className="ml-auto mr-auto" md="6">
-                  <ul className="list-unstyled follows">
-                    <li>
-                      <Row>
-                        <Col className="ml-auto mr-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
-                          />
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="7" md="4" xs="4">
-                          <h6>
-                            Flume <br />
-                            <small>Musical Producer</small>
-                          </h6>
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input
-                                defaultChecked
-                                defaultValue=""
-                                type="checkbox"
-                              />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
-                    <hr />
-                    <li>
-                      <Row>
-                        <Col className="mx-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/ayo-ogunseinde-2.jpg")}
-                          />
-                        </Col>
-                        <Col lg="7" md="4" xs="4">
-                          <h6>
-                            Banks <br />
-                            <small>Singer</small>
-                          </h6>
-                        </Col>
-                        <Col lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input defaultValue="" type="checkbox" />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
-                  </ul>
-                </Col>
-              </Row>
-            </TabPane>
-            <TabPane className="text-center" tabId="2" id="following">
-              <h3 className="text-muted">Not following anyone yet :(</h3>
-              <Button className="btn-round" color="warning">
-                Find artists
-              </Button>
-            </TabPane>
-          </TabContent>
+          <Row className="mt-5">
+            <Col md="4">
+              <Card>
+                <CardImg
+                  alt="Convenios Académicos"
+                  src={require("assets/img/Alinambi/fotoAlinambiUno.jpg")}
+                  top
+                />
+                <CardBody className="bg-info">
+                  <CardTitle tag="h4" className="text-white">Convenios Académicos</CardTitle>
+                  <CardText className="text-white">
+                    <ul>
+                      <li>Pontificia Universidad Católica del Ecuador (PUCE)</li>
+                      <li>Universidad de las Fuerzas Armadas (ESPE)</li>
+                      <li>Instituto Tecnológico Rumiñahui</li>
+                      <li>Programas de intercambio</li>
+                      <li>Certificaciones internacionales</li>
+                    </ul>
+                  </CardText>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col md="4">
+              <Card>
+                <CardImg
+                  alt="Convenios Deportivos"
+                  src={require("assets/img/Alinambi/fotoAlinambiDos.jpg")}
+                  top
+                />
+                <CardBody className="bg-info">
+                  <CardTitle tag="h4" className="text-white">Convenios Deportivos</CardTitle>
+                  <CardText className="text-white">
+                    <ul>
+                      <li>Clubes deportivos locales</li>
+                      <li>Federaciones deportivas</li>
+                      <li>Competencias intercolegiales</li>
+                      <li>Escuelas de formación</li>
+                      <li>Eventos deportivos nacionales</li>
+                    </ul>
+                  </CardText>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col md="4">
+              <Card>
+                <CardImg
+                  alt="Convenios Culturales"
+                  src={require("assets/img/Alinambi/fotoAlinambiTres.jpg")}
+                  top
+                />
+                <CardBody className="bg-info">
+                  <CardTitle tag="h4" className="text-white">Convenios Culturales</CardTitle>
+                  <CardText className="text-white">
+                    <ul>
+                      <li>Centros culturales</li>
+                      <li>Museos y galerías</li>
+                      <li>Escuelas de arte</li>
+                      <li>Programas de teatro</li>
+                      <li>Intercambios culturales</li>
+                    </ul>
+                  </CardText>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          <Row className="mt-5">
+            <Col md="12">
+              <Card className="card-plain bg-info">
+                <CardBody>
+                  <h3 className="text-white text-center">Beneficios para Estudiantes</h3>
+                  <Row>
+                    <Col md="4">
+                      <h5 className="text-white text-center">Académicos</h5>
+                      <ul className="text-white">
+                        <li>Acceso a recursos educativos</li>
+                        <li>Programas de mentoría</li>
+                        <li>Becas y descuentos</li>
+                      </ul>
+                    </Col>
+                    <Col md="4">
+                      <h5 className="text-white text-center">Deportivos</h5>
+                      <ul className="text-white">
+                        <li>Uso de instalaciones</li>
+                        <li>Entrenamiento especializado</li>
+                        <li>Participación en torneos</li>
+                      </ul>
+                    </Col>
+                    <Col md="4">
+                      <h5 className="text-white text-center">Culturales</h5>
+                      <ul className="text-white">
+                        <li>Talleres artísticos</li>
+                        <li>Eventos culturales</li>
+                        <li>Exposiciones y muestras</li>
+                      </ul>
+                    </Col>
+                  </Row>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </div>
       <DemoFooter />

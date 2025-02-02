@@ -12,10 +12,9 @@ import {
 
 // components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import EdInicialHeader from "components/Headers/EdInicialHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
-function EdInicialPage() {
+function EducacionInicialPage() {
   React.useEffect(() => {
     document.documentElement.classList.remove("nav-open");
     window.scrollTo(0, 0);
@@ -24,7 +23,6 @@ function EdInicialPage() {
   return (
     <>
       <ExamplesNavbar />
-      <EdInicialHeader />
       <div className="section">
         <Container>
           <Row className="justify-content-center">
@@ -38,43 +36,64 @@ function EdInicialPage() {
             </Col>
           </Row>
           <Row className="mt-5">
-            <Col md="6">
+            <Col md="4">
               <Card>
                 <CardImg
-                  alt="Inicial 2 - 4 años"
-                  src={require("assets/img/Alinambi/fotoAlinambiTres.jpg")}
+                  alt="..."
+                  src="https://via.placeholder.com/350x200"
                   top
                 />
-                <CardBody className="bg-info">
-                  <CardTitle tag="h4" className="text-white">Inicial 2 (4 años)</CardTitle>
-                  <CardText className="text-white">
+                <CardBody>
+                  <CardTitle tag="h4">Metodología</CardTitle>
+                  <CardText>
                     <ul>
-                      <li>Desarrollo motriz fino y grueso</li>
-                      <li>Iniciación a la lectoescritura</li>
-                      <li>Expresión artística y musical</li>
+                      <li>Aprendizaje basado en el juego</li>
+                      <li>Desarrollo de la creatividad</li>
+                      <li>Estimulación temprana</li>
+                      <li>Educación personalizada</li>
                       <li>Desarrollo socioemocional</li>
-                      <li>Inglés básico</li>
                     </ul>
                   </CardText>
                 </CardBody>
               </Card>
             </Col>
-            <Col md="6">
+            <Col md="4">
               <Card>
                 <CardImg
-                  alt="Preparatoria - 5 años"
-                  src={require("assets/img/Alinambi/fotoAlinambiCuatro.jpg")}
+                  alt="..."
+                  src="https://via.placeholder.com/350x200"
                   top
                 />
-                <CardBody className="bg-info">
-                  <CardTitle tag="h4" className="text-white">Preparatoria (5 años)</CardTitle>
-                  <CardText className="text-white">
+                <CardBody>
+                  <CardTitle tag="h4">Áreas de Desarrollo</CardTitle>
+                  <CardText>
                     <ul>
-                      <li>Lectoescritura avanzada</li>
-                      <li>Pensamiento lógico-matemático</li>
-                      <li>Desarrollo de la creatividad</li>
-                      <li>Habilidades sociales</li>
-                      <li>Inglés intermedio</li>
+                      <li>Desarrollo motor grueso y fino</li>
+                      <li>Desarrollo del lenguaje</li>
+                      <li>Desarrollo cognitivo</li>
+                      <li>Desarrollo social y emocional</li>
+                      <li>Expresión artística</li>
+                    </ul>
+                  </CardText>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col md="4">
+              <Card>
+                <CardImg
+                  alt="..."
+                  src="https://via.placeholder.com/350x200"
+                  top
+                />
+                <CardBody>
+                  <CardTitle tag="h4">Servicios Complementarios</CardTitle>
+                  <CardText>
+                    <ul>
+                      <li>Psicología infantil</li>
+                      <li>Terapia de lenguaje</li>
+                      <li>Nutrición balanceada</li>
+                      <li>Actividades extracurriculares</li>
+                      <li>Transporte escolar</li>
                     </ul>
                   </CardText>
                 </CardBody>
@@ -85,10 +104,10 @@ function EdInicialPage() {
             <Col md="12">
               <Card className="card-plain bg-info">
                 <CardBody>
-                  <h3 className="text-white">Horarios y Metodología</h3>
+                  <h3 className="text-white">Horarios y Niveles</h3>
                   <Row>
                     <Col md="6">
-                      <h5 className="text-white">Horario</h5>
+                      <h5 className="text-white">Inicial 1 (3 años)</h5>
                       <ul className="text-white">
                         <li>Jornada matutina: 8:00 AM - 12:30 PM</li>
                         <li>Grupos reducidos</li>
@@ -96,11 +115,11 @@ function EdInicialPage() {
                       </ul>
                     </Col>
                     <Col md="6">
-                      <h5 className="text-white">Metodología</h5>
+                      <h5 className="text-white">Inicial 2 (4 años)</h5>
                       <ul className="text-white">
-                        <li>Aprendizaje basado en el juego</li>
-                        <li>Estimulación temprana</li>
-                        <li>Educación personalizada</li>
+                        <li>Jornada matutina: 8:00 AM - 12:30 PM</li>
+                        <li>Preparación para Primaria</li>
+                        <li>Actividades de integración</li>
                       </ul>
                     </Col>
                   </Row>
@@ -115,4 +134,4 @@ function EdInicialPage() {
   );
 }
 
-export default EdInicialPage;
+export default EducacionInicialPage; 

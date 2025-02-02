@@ -1,166 +1,150 @@
 import React from "react";
-
-// reactstrap components
 import {
-  Button,
-  Label,
-  FormGroup,
-  Input,
-  NavItem,
-  NavLink,
-  Nav,
-  TabContent,
-  TabPane,
   Container,
   Row,
   Col,
+  Card,
+  CardBody,
+  CardTitle,
+  CardText,
+  CardImg,
+  Button
 } from "reactstrap";
 
-// core components
+// components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import FundacionHeader from "components/Headers/FundacionHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
 function FundacionPage() {
-  const [activeTab, setActiveTab] = React.useState("1");
-
-  const toggle = (tab) => {
-    if (activeTab !== tab) {
-      setActiveTab(tab);
-    }
-  };
-
-  document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
-    document.body.classList.add("landing-page");
-    return function cleanup() {
-      document.body.classList.remove("landing-page");
-    };
-  });
+    document.documentElement.classList.remove("nav-open");
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <ExamplesNavbar />
       <FundacionHeader />
-      <div className="section profile-content">
+      <div className="section">
         <Container>
-          <div className="owner">
-            <div className="name">
-              <h4 className="title">
-                Conoce nuestra fundación <br />
-              </h4>
-              <h6 className="description">Aliñambi</h6>
-            </div>
-          </div>
-          <Row>
-            <Col className="ml-auto mr-auto text-center" md="6">
-              <p>
-                Aqui va contenido....
-              </p>
-              <br />
-              <Button className="btn-round" color="default" outline>
-                <i className="fa fa-cog" /> Configuraciones
-              </Button>
+          <Row className="justify-content-center">
+            <Col md="8">
+              <h2 className="text-center title">Nuestra Historia</h2>
+              <h5 className="text-center description">
+                Conoce la trayectoria y los valores que han forjado nuestra institución
+                a lo largo de los años.
+              </h5>
+              <div className="text-center mt-4">
+                <Button
+                  className="btn-round"
+                  color="info"
+                  href="https://lorenzojumbo.wixsite.com/fualinambi/nosotros"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visitar Fundación Alinambi
+                </Button>
+              </div>
             </Col>
           </Row>
-          <br />
-          <div className="nav-tabs-navigation">
-            <div className="nav-tabs-wrapper">
-              <Nav role="tablist" tabs>
-                <NavItem>
-                  <NavLink
-                    className={activeTab === "1" ? "active" : ""}
-                    onClick={() => {
-                      toggle("1");
-                    }}
-                  >
-                    Follows
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    className={activeTab === "2" ? "active" : ""}
-                    onClick={() => {
-                      toggle("2");
-                    }}
-                  >
-                    Following
-                  </NavLink>
-                </NavItem>
-              </Nav>
-            </div>
-          </div>
-          {/* Tab panes */}
-          <TabContent className="following" activeTab={activeTab}>
-            <TabPane tabId="1" id="follows">
-              <Row>
-                <Col className="ml-auto mr-auto" md="6">
-                  <ul className="list-unstyled follows">
-                    <li>
-                      <Row>
-                        <Col className="ml-auto mr-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
-                          />
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="7" md="4" xs="4">
-                          <h6>
-                            Flume <br />
-                            <small>Musical Producer</small>
-                          </h6>
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input
-                                defaultChecked
-                                defaultValue=""
-                                type="checkbox"
-                              />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
-                    <hr />
-                    <li>
-                      <Row>
-                        <Col className="mx-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/ayo-ogunseinde-2.jpg")}
-                          />
-                        </Col>
-                        <Col lg="7" md="4" xs="4">
-                          <h6>
-                            Banks <br />
-                            <small>Singer</small>
-                          </h6>
-                        </Col>
-                        <Col lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input defaultValue="" type="checkbox" />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
-                  </ul>
-                </Col>
-              </Row>
-            </TabPane>
-            <TabPane className="text-center" tabId="2" id="following">
-              <h3 className="text-muted">Not following anyone yet :(</h3>
-              <Button className="btn-round" color="warning">
-                Find artists
-              </Button>
-            </TabPane>
-          </TabContent>
+          <Row className="mt-5">
+            <Col md="6">
+              <Card>
+                <CardImg
+                  alt="Historia"
+                  src={require("assets/img/Alinambi/fotoAlinambiUno.jpg")}
+                  top
+                />
+                <CardBody>
+                  <CardTitle tag="h4">Fundación y Trayectoria</CardTitle>
+                  <CardText>
+                    <p>
+                      La Unidad Educativa Alinambi fue fundada con el propósito de brindar
+                      una educación integral y de calidad a la comunidad. Desde sus inicios,
+                      ha mantenido un compromiso inquebrantable con la excelencia académica
+                      y la formación en valores.
+                    </p>
+                    <ul>
+                      <li>Fundación: 1990</li>
+                      <li>Primera promoción: 1996</li>
+                      <li>Acreditación internacional: 2005</li>
+                      <li>Renovación infraestructura: 2015</li>
+                      <li>Innovación tecnológica: 2020</li>
+                    </ul>
+                  </CardText>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col md="6">
+              <Card>
+                <CardImg
+                  alt="Valores"
+                  src={require("assets/img/Alinambi/fotoAlinambiDos.jpg")}
+                  top
+                />
+                <CardBody>
+                  <CardTitle tag="h4">Valores Institucionales</CardTitle>
+                  <CardText>
+                    <p>
+                      Nuestros valores son el pilar fundamental que guía todas nuestras
+                      acciones y decisiones, formando estudiantes íntegros y comprometidos
+                      con la sociedad.
+                    </p>
+                    <ul>
+                      <li>Excelencia académica</li>
+                      <li>Integridad y honestidad</li>
+                      <li>Responsabilidad social</li>
+                      <li>Innovación y creatividad</li>
+                      <li>Respeto y tolerancia</li>
+                    </ul>
+                  </CardText>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          <Row className="mt-5">
+            <Col md="4">
+              <Card className="card-plain bg-info">
+                <CardBody>
+                  <CardTitle tag="h4" className="text-white">Misión</CardTitle>
+                  <CardText className="text-white">
+                    Formar estudiantes integrales con excelencia académica, valores sólidos
+                    y compromiso social, preparados para enfrentar los desafíos del mundo
+                    contemporáneo y contribuir positivamente a la sociedad.
+                  </CardText>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col md="4">
+              <Card className="card-plain bg-info">
+                <CardBody>
+                  <CardTitle tag="h4" className="text-white">Visión</CardTitle>
+                  <CardText className="text-white">
+                    Ser reconocidos como una institución educativa líder en innovación
+                    pedagógica, formación integral y compromiso con la excelencia,
+                    inspirando a las futuras generaciones a alcanzar su máximo potencial.
+                  </CardText>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col md="4">
+              <Card className="card-plain bg-info">
+                <CardBody>
+                  <CardTitle tag="h4" className="text-white">Objetivos</CardTitle>
+                  <CardText className="text-white">
+                    <ul>
+                      <li>Excelencia académica</li>
+                      <li>Formación integral</li>
+                      <li>Innovación educativa</li>
+                      <li>Desarrollo sostenible</li>
+                      <li>Vinculación comunitaria</li>
+                    </ul>
+                  </CardText>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </div>
       <DemoFooter />

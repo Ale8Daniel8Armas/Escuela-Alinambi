@@ -6,7 +6,6 @@ import {
   Card,
   CardBody,
   CardTitle,
-  CardImg,
   Nav,
   NavItem,
   NavLink,
@@ -17,10 +16,9 @@ import classnames from "classnames";
 
 // components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import EdBasicaHeader from "components/Headers/EdBasicaHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
-function EdBasicaPage() {
+function EducacionBasicaPage() {
   const [activeTab, setActiveTab] = React.useState("1");
 
   const toggle = (tab) => {
@@ -37,7 +35,6 @@ function EdBasicaPage() {
   return (
     <>
       <ExamplesNavbar />
-      <EdBasicaHeader />
       <div className="section">
         <Container>
           <Row className="justify-content-center">
@@ -59,7 +56,7 @@ function EdBasicaPage() {
                       toggle("1");
                     }}
                   >
-                    Básica Elemental (2do-4to)
+                    Básica Elemental
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -69,7 +66,17 @@ function EdBasicaPage() {
                       toggle("2");
                     }}
                   >
-                    Básica Media (5to-7mo)
+                    Básica Media
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    className={classnames({ active: activeTab === "3" })}
+                    onClick={() => {
+                      toggle("3");
+                    }}
+                  >
+                    Básica Superior
                   </NavLink>
                 </NavItem>
               </Nav>
@@ -77,15 +84,10 @@ function EdBasicaPage() {
                 <TabPane tabId="1">
                   <Row>
                     <Col md="6">
-                      <Card>
-                        <CardImg
-                          alt="Básica Elemental"
-                          src={require("assets/img/Alinambi/fotoAlinambiCinco.jpg")}
-                          top
-                        />
-                        <CardBody className="bg-info">
-                          <CardTitle tag="h4" className="text-white">Áreas Académicas</CardTitle>
-                          <ul className="text-white">
+                      <Card className="card-plain">
+                        <CardBody>
+                          <CardTitle tag="h4">Áreas Académicas</CardTitle>
+                          <ul>
                             <li>Lengua y Literatura</li>
                             <li>Matemáticas</li>
                             <li>Ciencias Naturales</li>
@@ -98,15 +100,10 @@ function EdBasicaPage() {
                       </Card>
                     </Col>
                     <Col md="6">
-                      <Card>
-                        <CardImg
-                          alt="Metodología Elemental"
-                          src={require("assets/img/Alinambi/fotoAlinambiSeis.jpg")}
-                          top
-                        />
-                        <CardBody className="bg-info">
-                          <CardTitle tag="h4" className="text-white">Metodología</CardTitle>
-                          <ul className="text-white">
+                      <Card className="card-plain">
+                        <CardBody>
+                          <CardTitle tag="h4">Metodología</CardTitle>
+                          <ul>
                             <li>Aprendizaje significativo</li>
                             <li>Desarrollo de competencias</li>
                             <li>Trabajo colaborativo</li>
@@ -121,15 +118,10 @@ function EdBasicaPage() {
                 <TabPane tabId="2">
                   <Row>
                     <Col md="6">
-                      <Card>
-                        <CardImg
-                          alt="Básica Media"
-                          src={require("assets/img/Alinambi/fotoAlinambiSiete.jpg")}
-                          top
-                        />
-                        <CardBody className="bg-info">
-                          <CardTitle tag="h4" className="text-white">Plan Curricular</CardTitle>
-                          <ul className="text-white">
+                      <Card className="card-plain">
+                        <CardBody>
+                          <CardTitle tag="h4">Plan Curricular</CardTitle>
+                          <ul>
                             <li>Lengua y Literatura avanzada</li>
                             <li>Matemáticas con razonamiento lógico</li>
                             <li>Ciencias Naturales experimentales</li>
@@ -142,15 +134,10 @@ function EdBasicaPage() {
                       </Card>
                     </Col>
                     <Col md="6">
-                      <Card>
-                        <CardImg
-                          alt="Actividades Media"
-                          src={require("assets/img/Alinambi/fotoAlinambiOcho.jpg")}
-                          top
-                        />
-                        <CardBody className="bg-info">
-                          <CardTitle tag="h4" className="text-white">Actividades Complementarias</CardTitle>
-                          <ul className="text-white">
+                      <Card className="card-plain">
+                        <CardBody>
+                          <CardTitle tag="h4">Actividades Complementarias</CardTitle>
+                          <ul>
                             <li>Clubes académicos</li>
                             <li>Proyectos de investigación</li>
                             <li>Salidas pedagógicas</li>
@@ -162,32 +149,39 @@ function EdBasicaPage() {
                     </Col>
                   </Row>
                 </TabPane>
-              </TabContent>
-            </Col>
-          </Row>
-          <Row className="mt-5">
-            <Col md="12">
-              <Card className="card-plain bg-info">
-                <CardBody>
-                  <h3 className="text-white text-center">Horario Académico</h3>
+                <TabPane tabId="3">
                   <Row>
-                    <Col md="6" className="text-center">
-                      <h5 className="text-white">Jornada Matutina</h5>
-                      <p className="text-white">
-                        Lunes a Viernes<br />
-                        7:15 AM - 13:45 PM
-                      </p>
+                    <Col md="6">
+                      <Card className="card-plain">
+                        <CardBody>
+                          <CardTitle tag="h4">Perfil de Salida</CardTitle>
+                          <ul>
+                            <li>Pensamiento crítico y analítico</li>
+                            <li>Competencias digitales</li>
+                            <li>Habilidades de comunicación</li>
+                            <li>Valores y ética</li>
+                            <li>Preparación para bachillerato</li>
+                          </ul>
+                        </CardBody>
+                      </Card>
                     </Col>
-                    <Col md="6" className="text-center">
-                      <h5 className="text-white">Actividades Extracurriculares</h5>
-                      <p className="text-white">
-                        Lunes a Jueves<br />
-                        14:00 PM - 15:30 PM
-                      </p>
+                    <Col md="6">
+                      <Card className="card-plain">
+                        <CardBody>
+                          <CardTitle tag="h4">Proyectos Especiales</CardTitle>
+                          <ul>
+                            <li>Feria de ciencias</li>
+                            <li>Modelo de Naciones Unidas</li>
+                            <li>Olimpiadas académicas</li>
+                            <li>Proyectos comunitarios</li>
+                            <li>Intercambios culturales</li>
+                          </ul>
+                        </CardBody>
+                      </Card>
                     </Col>
                   </Row>
-                </CardBody>
-              </Card>
+                </TabPane>
+              </TabContent>
             </Col>
           </Row>
         </Container>
@@ -197,4 +191,4 @@ function EdBasicaPage() {
   );
 }
 
-export default EdBasicaPage;
+export default EducacionBasicaPage; 

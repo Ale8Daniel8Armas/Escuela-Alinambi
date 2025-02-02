@@ -1,176 +1,166 @@
 import React from "react";
-
-// reactstrap components
 import {
-  Button,
-  Label,
-  FormGroup,
-  Input,
-  NavItem,
-  NavLink,
-  Nav,
-  TabContent,
-  TabPane,
   Container,
   Row,
   Col,
+  Card,
+  CardBody,
+  CardTitle,
+  Button,
+  Table
 } from "reactstrap";
 
-// core components
+// components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import CronogramaHeader from "components/Headers/CronogramaHeader.js";
+import CronogramasHeader from "components/Headers/CronogramasHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
-function CronogramaPage() {
-  const [activeTab, setActiveTab] = React.useState("1");
-
-  const toggle = (tab) => {
-    if (activeTab !== tab) {
-      setActiveTab(tab);
-    }
-  };
-
-  document.documentElement.classList.remove("nav-open");
+function CronogramasPage() {
   React.useEffect(() => {
-    document.body.classList.add("landing-page");
-    return function cleanup() {
-      document.body.classList.remove("landing-page");
-    };
-  });
+    document.documentElement.classList.remove("nav-open");
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <ExamplesNavbar />
-      <CronogramaHeader />
-      <div className="section profile-content">
+      <CronogramasHeader />
+      <div className="section">
         <Container>
-          <div className="owner">
-            <div className="avatar">
-              <img
-                alt="..."
-                className="img-circle img-no-padding img-responsive"
-                src={require("assets/img/faces/joe-gardner-2.jpg")}
-              />
-            </div>
-            <div className="name">
-              <h4 className="title">
-                Jane Faker <br />
-              </h4>
-              <h6 className="description">Music Producer</h6>
-            </div>
-          </div>
-          <Row>
-            <Col className="ml-auto mr-auto text-center" md="6">
-              <p>
-                An artist of considerable range, Jane Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.
-              </p>
-              <br />
-              <Button className="btn-round" color="default" outline>
-                <i className="fa fa-cog" /> Settings
-              </Button>
+          <Row className="justify-content-center">
+            <Col md="8">
+              <h2 className="text-center title">Cronograma Académico</h2>
+              <h5 className="text-center description">
+                Calendario de actividades académicas, eventos y fechas importantes
+                del año lectivo 2024-2025.
+              </h5>
             </Col>
           </Row>
-          <br />
-          <div className="nav-tabs-navigation">
-            <div className="nav-tabs-wrapper">
-              <Nav role="tablist" tabs>
-                <NavItem>
-                  <NavLink
-                    className={activeTab === "1" ? "active" : ""}
-                    onClick={() => {
-                      toggle("1");
-                    }}
-                  >
-                    Follows
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    className={activeTab === "2" ? "active" : ""}
-                    onClick={() => {
-                      toggle("2");
-                    }}
-                  >
-                    Following
-                  </NavLink>
-                </NavItem>
-              </Nav>
-            </div>
-          </div>
-          {/* Tab panes */}
-          <TabContent className="following" activeTab={activeTab}>
-            <TabPane tabId="1" id="follows">
-              <Row>
-                <Col className="ml-auto mr-auto" md="6">
-                  <ul className="list-unstyled follows">
-                    <li>
-                      <Row>
-                        <Col className="ml-auto mr-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
-                          />
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="7" md="4" xs="4">
-                          <h6>
-                            Flume <br />
-                            <small>Musical Producer</small>
-                          </h6>
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input
-                                defaultChecked
-                                defaultValue=""
-                                type="checkbox"
-                              />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
-                    <hr />
-                    <li>
-                      <Row>
-                        <Col className="mx-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/ayo-ogunseinde-2.jpg")}
-                          />
-                        </Col>
-                        <Col lg="7" md="4" xs="4">
-                          <h6>
-                            Banks <br />
-                            <small>Singer</small>
-                          </h6>
-                        </Col>
-                        <Col lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input defaultValue="" type="checkbox" />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
+          <Row className="mt-5">
+            <Col md="12">
+              <Card className="card-plain">
+                <CardBody>
+                  <CardTitle tag="h4">Primer Quimestre</CardTitle>
+                  <Table responsive>
+                    <thead>
+                      <tr>
+                        <th>Mes</th>
+                        <th>Actividad</th>
+                        <th>Fecha</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Septiembre</td>
+                        <td>Inicio de clases</td>
+                        <td>4 de septiembre</td>
+                      </tr>
+                      <tr>
+                        <td>Octubre</td>
+                        <td>Primera evaluación parcial</td>
+                        <td>9-13 de octubre</td>
+                      </tr>
+                      <tr>
+                        <td>Noviembre</td>
+                        <td>Segunda evaluación parcial</td>
+                        <td>20-24 de noviembre</td>
+                      </tr>
+                      <tr>
+                        <td>Diciembre</td>
+                        <td>Evaluación quimestral</td>
+                        <td>18-22 de diciembre</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          <Row className="mt-4">
+            <Col md="12">
+              <Card className="card-plain">
+                <CardBody>
+                  <CardTitle tag="h4">Segundo Quimestre</CardTitle>
+                  <Table responsive>
+                    <thead>
+                      <tr>
+                        <th>Mes</th>
+                        <th>Actividad</th>
+                        <th>Fecha</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Enero</td>
+                        <td>Inicio segundo quimestre</td>
+                        <td>8 de enero</td>
+                      </tr>
+                      <tr>
+                        <td>Febrero</td>
+                        <td>Primera evaluación parcial</td>
+                        <td>12-16 de febrero</td>
+                      </tr>
+                      <tr>
+                        <td>Abril</td>
+                        <td>Segunda evaluación parcial</td>
+                        <td>15-19 de abril</td>
+                      </tr>
+                      <tr>
+                        <td>Junio</td>
+                        <td>Evaluación quimestral</td>
+                        <td>17-21 de junio</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          <Row className="mt-5">
+            <Col md="6">
+              <Card className="card-plain">
+                <CardBody>
+                  <CardTitle tag="h4">Eventos Especiales</CardTitle>
+                  <ul className="list-unstyled">
+                    <li>• Día de la Familia - Octubre</li>
+                    <li>• Festival Navideño - Diciembre</li>
+                    <li>• Feria de Ciencias - Marzo</li>
+                    <li>• Juegos Deportivos - Mayo</li>
+                    <li>• Graduación - Julio</li>
                   </ul>
-                </Col>
-              </Row>
-            </TabPane>
-            <TabPane className="text-center" tabId="2" id="following">
-              <h3 className="text-muted">Not following anyone yet :(</h3>
-              <Button className="btn-round" color="warning">
-                Find artists
-              </Button>
-            </TabPane>
-          </TabContent>
+                  <Button
+                    className="btn-round"
+                    color="info"
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Ver Calendario de Eventos
+                  </Button>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col md="6">
+              <Card className="card-plain">
+                <CardBody>
+                  <CardTitle tag="h4">Vacaciones y Feriados</CardTitle>
+                  <ul className="list-unstyled">
+                    <li>• Vacaciones de Navidad: 23 dic - 7 ene</li>
+                    <li>• Carnaval: 12-13 febrero</li>
+                    <li>• Semana Santa: 25-29 marzo</li>
+                    <li>• Vacaciones de Verano: 1 jul - 31 ago</li>
+                  </ul>
+                  <Button
+                    className="btn-round"
+                    color="danger"
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    Descargar Calendario
+                  </Button>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </div>
       <DemoFooter />
@@ -178,4 +168,4 @@ function CronogramaPage() {
   );
 }
 
-export default CronogramaPage;
+export default CronogramasPage;

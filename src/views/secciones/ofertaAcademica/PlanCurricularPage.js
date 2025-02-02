@@ -1,24 +1,22 @@
 import React from "react";
-
-// reactstrap components
 import {
-  Button,
-  Label,
-  FormGroup,
-  Input,
-  NavItem,
-  NavLink,
-  Nav,
-  TabContent,
-  TabPane,
   Container,
   Row,
   Col,
+  Card,
+  CardBody,
+  CardTitle,
+  Nav,
+  NavItem,
+  NavLink,
+  TabContent,
+  TabPane
 } from "reactstrap";
+import classnames from "classnames";
 
-// core components
+// components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import PlanHeader from "components/Headers/PlanCurricularHeader.js";
+import PlanCurricularHeader from "components/Headers/PlanCurricularHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
 function PlanCurricularPage() {
@@ -30,137 +28,160 @@ function PlanCurricularPage() {
     }
   };
 
-  document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
-    document.body.classList.add("landing-page");
-    return function cleanup() {
-      document.body.classList.remove("landing-page");
-    };
-  });
+    document.documentElement.classList.remove("nav-open");
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <ExamplesNavbar />
-      <PlanHeader />
-      <div className="section profile-content">
+      <PlanCurricularHeader />
+      <div className="section">
         <Container>
-          <div className="owner">
-            <div className="name">
-              <h4 className="title">
-                Plan Curricular <br />
-              </h4>
-              <h6 className="description">U.E. Aliñambi</h6>
-            </div>
-          </div>
-          <Row>
-            <Col className="ml-auto mr-auto text-center" md="6">
-              <p>
-                Aqui va contenido....
-              </p>
-              <br />
-              <Button className="btn-round" color="default" outline>
-                <i className="fa fa-cog" /> Configuraciones
-              </Button>
+          <Row className="justify-content-center">
+            <Col md="8">
+              <h2 className="text-center title">Plan Curricular Institucional</h2>
+              <h5 className="text-center description">
+                Nuestro plan curricular está diseñado para formar estudiantes integrales,
+                con sólidos conocimientos académicos y valores humanos.
+              </h5>
             </Col>
           </Row>
-          <br />
-          <div className="nav-tabs-navigation">
-            <div className="nav-tabs-wrapper">
-              <Nav role="tablist" tabs>
+          <Row className="mt-5">
+            <Col className="ml-auto mr-auto" md="10">
+              <Nav className="justify-content-center" role="tablist" tabs>
                 <NavItem>
                   <NavLink
-                    className={activeTab === "1" ? "active" : ""}
+                    className={classnames({ active: activeTab === "1" })}
                     onClick={() => {
                       toggle("1");
                     }}
                   >
-                    Follows
+                    Fundamentos
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    className={activeTab === "2" ? "active" : ""}
+                    className={classnames({ active: activeTab === "2" })}
                     onClick={() => {
                       toggle("2");
                     }}
                   >
-                    Following
+                    Metodología
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    className={classnames({ active: activeTab === "3" })}
+                    onClick={() => {
+                      toggle("3");
+                    }}
+                  >
+                    Evaluación
                   </NavLink>
                 </NavItem>
               </Nav>
-            </div>
-          </div>
-          {/* Tab panes */}
-          <TabContent className="following" activeTab={activeTab}>
-            <TabPane tabId="1" id="follows">
-              <Row>
-                <Col className="ml-auto mr-auto" md="6">
-                  <ul className="list-unstyled follows">
-                    <li>
-                      <Row>
-                        <Col className="ml-auto mr-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
-                          />
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="7" md="4" xs="4">
-                          <h6>
-                            Flume <br />
-                            <small>Musical Producer</small>
-                          </h6>
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input
-                                defaultChecked
-                                defaultValue=""
-                                type="checkbox"
-                              />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
-                    <hr />
-                    <li>
-                      <Row>
-                        <Col className="mx-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/ayo-ogunseinde-2.jpg")}
-                          />
-                        </Col>
-                        <Col lg="7" md="4" xs="4">
-                          <h6>
-                            Banks <br />
-                            <small>Singer</small>
-                          </h6>
-                        </Col>
-                        <Col lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input defaultValue="" type="checkbox" />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
-                  </ul>
-                </Col>
-              </Row>
-            </TabPane>
-            <TabPane className="text-center" tabId="2" id="following">
-              <h3 className="text-muted">Not following anyone yet :(</h3>
-              <Button className="btn-round" color="warning">
-                Find artists
-              </Button>
-            </TabPane>
-          </TabContent>
+              <TabContent activeTab={activeTab}>
+                <TabPane tabId="1">
+                  <Row>
+                    <Col md="6">
+                      <Card className="card-plain">
+                        <CardBody>
+                          <CardTitle tag="h4">Principios Pedagógicos</CardTitle>
+                          <ul>
+                            <li>Educación centrada en el estudiante</li>
+                            <li>Aprendizaje significativo y contextualizado</li>
+                            <li>Desarrollo de competencias</li>
+                            <li>Formación en valores</li>
+                            <li>Innovación educativa</li>
+                          </ul>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                    <Col md="6">
+                      <Card className="card-plain">
+                        <CardBody>
+                          <CardTitle tag="h4">Ejes Transversales</CardTitle>
+                          <ul>
+                            <li>Educación en valores</li>
+                            <li>Pensamiento crítico</li>
+                            <li>Competencias digitales</li>
+                            <li>Cuidado del medio ambiente</li>
+                            <li>Responsabilidad social</li>
+                          </ul>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                  </Row>
+                </TabPane>
+                <TabPane tabId="2">
+                  <Row>
+                    <Col md="6">
+                      <Card className="card-plain">
+                        <CardBody>
+                          <CardTitle tag="h4">Estrategias de Enseñanza</CardTitle>
+                          <ul>
+                            <li>Aprendizaje basado en proyectos</li>
+                            <li>Trabajo colaborativo</li>
+                            <li>Uso de tecnología educativa</li>
+                            <li>Investigación y experimentación</li>
+                            <li>Desarrollo del pensamiento</li>
+                          </ul>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                    <Col md="6">
+                      <Card className="card-plain">
+                        <CardBody>
+                          <CardTitle tag="h4">Recursos Educativos</CardTitle>
+                          <ul>
+                            <li>Plataformas digitales</li>
+                            <li>Laboratorios especializados</li>
+                            <li>Material didáctico innovador</li>
+                            <li>Biblioteca virtual</li>
+                            <li>Espacios de aprendizaje flexibles</li>
+                          </ul>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                  </Row>
+                </TabPane>
+                <TabPane tabId="3">
+                  <Row>
+                    <Col md="6">
+                      <Card className="card-plain">
+                        <CardBody>
+                          <CardTitle tag="h4">Sistema de Evaluación</CardTitle>
+                          <ul>
+                            <li>Evaluación diagnóstica</li>
+                            <li>Evaluación formativa</li>
+                            <li>Evaluación sumativa</li>
+                            <li>Autoevaluación y coevaluación</li>
+                            <li>Rúbricas de desempeño</li>
+                          </ul>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                    <Col md="6">
+                      <Card className="card-plain">
+                        <CardBody>
+                          <CardTitle tag="h4">Seguimiento Académico</CardTitle>
+                          <ul>
+                            <li>Tutorías personalizadas</li>
+                            <li>Reportes de progreso</li>
+                            <li>Acompañamiento estudiantil</li>
+                            <li>Refuerzo académico</li>
+                            <li>Comunicación con padres</li>
+                          </ul>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                  </Row>
+                </TabPane>
+              </TabContent>
+            </Col>
+          </Row>
         </Container>
       </div>
       <DemoFooter />
