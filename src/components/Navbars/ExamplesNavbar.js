@@ -43,7 +43,7 @@ function ExamplesNavbar() {
         document.documentElement.scrollTop < 300 ||
         document.body.scrollTop < 300
       ) {
-        setNavbarColor("navbar-transparent"); 
+        setNavbarColor("navbar-transparent");
       }
     };
 
@@ -63,7 +63,7 @@ function ExamplesNavbar() {
         expand="lg"
         style={{
           backgroundColor:
-            navbarColor === "navbar-transparent" ? "transparent" : "#3CB371",
+            navbarColor === "navbar-transparent" ? "transparent" : "#9CC066",
           marginTop: "-25px",
           width: "100%",
           marginBottom: "-15px",
@@ -108,7 +108,7 @@ function ExamplesNavbar() {
                 style={{
                   fontSize: "25px",
                   fontWeight: "600",
-                  color: "#CDD180",
+                  color: "#E3EAB2",
                   lineHeight: "1.2",
                 }}
               >
@@ -118,7 +118,7 @@ function ExamplesNavbar() {
                 style={{
                   fontSize: "29px",
                   fontWeight: "700",
-                  color: "#0A69E6",
+                  color: "#1A9BD5",
                   lineHeight: "1.2",
                 }}
               >
@@ -170,25 +170,14 @@ function ExamplesNavbar() {
                     </h6>
                   </DropdownToggle>
                   <DropdownMenu aria-labelledby="quienesSomosNavbarDropdownMenu">
-                    <DropdownItem
-                       to="/misionYvision-page"
-                       tag={Link} 
-                    >
+                    <DropdownItem to="/misionYvision-page" tag={Link}>
                       Mision - Vision
                     </DropdownItem>
-                    <DropdownItem
-                      href="/historia-page"
-                    >
-                      Historia
-                    </DropdownItem>
-                    <DropdownItem
-                      href="/valores-page"
-                    >
+                    <DropdownItem href="/historia-page">Historia</DropdownItem>
+                    <DropdownItem href="/valores-page">
                       Valores y Compromiso
                     </DropdownItem>
-                    <DropdownItem
-                      href="/docentes-page"
-                    >
+                    <DropdownItem href="/docentes-page">
                       Nuestro Equipo
                     </DropdownItem>
                   </DropdownMenu>
@@ -217,24 +206,16 @@ function ExamplesNavbar() {
                     </h6>
                   </DropdownToggle>
                   <DropdownMenu aria-labelledby="ofertaEducativaNavbarDropdownMenu">
-                    <DropdownItem
-                      href="/admisiones-page"
-                    >
+                    <DropdownItem href="/admisiones-page">
                       Admisiones
                     </DropdownItem>
-                    <DropdownItem
-                      href="/edInicial-page"
-                    >
+                    <DropdownItem href="/edInicial-page">
                       Educación Inicial
                     </DropdownItem>
-                    <DropdownItem
-                      href="/edBasica-page"
-                    >
+                    <DropdownItem href="/edBasica-page">
                       Educación Básica
                     </DropdownItem>
-                    <DropdownItem
-                      href="/planCurricular-page"
-                    >
+                    <DropdownItem href="/planCurricular-page">
                       Plan Curricular
                     </DropdownItem>
                   </DropdownMenu>
@@ -264,24 +245,16 @@ function ExamplesNavbar() {
                     </h6>
                   </DropdownToggle>
                   <DropdownMenu aria-labelledby="infoNavbarDropdownMenu">
-                    <DropdownItem
-                      href="/convenios-page"
-                    >
+                    <DropdownItem href="/convenios-page">
                       Convenios
                     </DropdownItem>
-                    <DropdownItem
-                      href="/matricula-page"
-                    >
+                    <DropdownItem href="/matricula-page">
                       Matricula
                     </DropdownItem>
-                    <DropdownItem
-                      href="/cronogramas-page"
-                    >
+                    <DropdownItem href="/cronogramas-page">
                       Cronogramas
                     </DropdownItem>
-                    <DropdownItem
-                      href="/fundacion-page"
-                    >
+                    <DropdownItem href="/fundacion-page">
                       Fundación
                     </DropdownItem>
                   </DropdownMenu>

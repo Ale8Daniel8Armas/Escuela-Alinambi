@@ -7,7 +7,7 @@ import {
   CardBody,
   CardTitle,
   Button,
-  Table
+  Table,
 } from "reactstrap";
 
 // components
@@ -25,14 +25,25 @@ function CronogramasPage() {
     <>
       <ExamplesNavbar />
       <CronogramasHeader />
-      <div className="section">
+      <div
+        className="section"
+        style={{
+          backgroundImage:
+            "url(" + require("assets/img/Alinambi/Wallpaper.jpg") + ")",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
+          paddingTop: "0",
+        }}
+      >
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
               <h2 className="text-center title">Cronograma Académico</h2>
               <h5 className="text-center description">
-                Calendario de actividades académicas, eventos y fechas importantes
-                del año lectivo 2024-2025.
+                Calendario de actividades académicas, eventos y fechas
+                importantes del año lectivo 2024-2025.
               </h5>
             </Col>
           </Row>

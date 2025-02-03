@@ -41,7 +41,18 @@ function ValoresPage() {
     <>
       <ExamplesNavbar />
       <ValoresHeader />
-      <div className="section profile-content">
+      <div
+        className="section profile-content"
+        style={{
+          backgroundImage:
+            "url(" + require("assets/img/Alinambi/Wallpaper.jpg") + ")",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
+          paddingTop: "0",
+        }}
+      >
         <Container>
           <div className="owner">
             <div className="name">
@@ -53,9 +64,7 @@ function ValoresPage() {
           </div>
           <Row>
             <Col className="ml-auto mr-auto text-center" md="6">
-              <p>
-                Aqui va contenido....
-              </p>
+              <p>Aqui va contenido....</p>
               <br />
               <Button className="btn-round" color="default" outline>
                 <i className="fa fa-cog" /> Configuraciones

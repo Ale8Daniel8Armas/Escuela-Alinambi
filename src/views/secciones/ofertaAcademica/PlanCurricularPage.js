@@ -10,7 +10,7 @@ import {
   NavItem,
   NavLink,
   TabContent,
-  TabPane
+  TabPane,
 } from "reactstrap";
 import classnames from "classnames";
 
@@ -37,14 +37,28 @@ function PlanCurricularPage() {
     <>
       <ExamplesNavbar />
       <PlanCurricularHeader />
-      <div className="section">
+      <div
+        className="section"
+        style={{
+          backgroundImage:
+            "url(" + require("assets/img/Alinambi/Wallpaper.jpg") + ")",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
+          paddingTop: "0",
+        }}
+      >
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
-              <h2 className="text-center title">Plan Curricular Institucional</h2>
+              <h2 className="text-center title">
+                Plan Curricular Institucional
+              </h2>
               <h5 className="text-center description">
-                Nuestro plan curricular está diseñado para formar estudiantes integrales,
-                con sólidos conocimientos académicos y valores humanos.
+                Nuestro plan curricular está diseñado para formar estudiantes
+                integrales, con sólidos conocimientos académicos y valores
+                humanos.
               </h5>
             </Col>
           </Row>
@@ -120,7 +134,9 @@ function PlanCurricularPage() {
                     <Col md="6">
                       <Card className="card-plain">
                         <CardBody>
-                          <CardTitle tag="h4">Estrategias de Enseñanza</CardTitle>
+                          <CardTitle tag="h4">
+                            Estrategias de Enseñanza
+                          </CardTitle>
                           <ul>
                             <li>Aprendizaje basado en proyectos</li>
                             <li>Trabajo colaborativo</li>

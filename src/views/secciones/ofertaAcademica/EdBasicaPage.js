@@ -11,7 +11,7 @@ import {
   NavItem,
   NavLink,
   TabContent,
-  TabPane
+  TabPane,
 } from "reactstrap";
 import classnames from "classnames";
 
@@ -38,14 +38,25 @@ function EdBasicaPage() {
     <>
       <ExamplesNavbar />
       <EdBasicaHeader />
-      <div className="section">
+      <div
+        className="section"
+        style={{
+          backgroundImage:
+            "url(" + require("assets/img/Alinambi/Wallpaper.jpg") + ")",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
+          paddingTop: "0",
+        }}
+      >
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
               <h2 className="text-center title">Educación General Básica</h2>
               <h5 className="text-center description">
-                Formación integral basada en valores, excelencia académica y desarrollo
-                de habilidades para el siglo XXI.
+                Formación integral basada en valores, excelencia académica y
+                desarrollo de habilidades para el siglo XXI.
               </h5>
             </Col>
           </Row>
@@ -84,7 +95,9 @@ function EdBasicaPage() {
                           top
                         />
                         <CardBody className="bg-info">
-                          <CardTitle tag="h4" className="text-white">Áreas Académicas</CardTitle>
+                          <CardTitle tag="h4" className="text-white">
+                            Áreas Académicas
+                          </CardTitle>
                           <ul className="text-white">
                             <li>Lengua y Literatura</li>
                             <li>Matemáticas</li>
@@ -105,7 +118,9 @@ function EdBasicaPage() {
                           top
                         />
                         <CardBody className="bg-info">
-                          <CardTitle tag="h4" className="text-white">Metodología</CardTitle>
+                          <CardTitle tag="h4" className="text-white">
+                            Metodología
+                          </CardTitle>
                           <ul className="text-white">
                             <li>Aprendizaje significativo</li>
                             <li>Desarrollo de competencias</li>
@@ -128,7 +143,9 @@ function EdBasicaPage() {
                           top
                         />
                         <CardBody className="bg-info">
-                          <CardTitle tag="h4" className="text-white">Plan Curricular</CardTitle>
+                          <CardTitle tag="h4" className="text-white">
+                            Plan Curricular
+                          </CardTitle>
                           <ul className="text-white">
                             <li>Lengua y Literatura avanzada</li>
                             <li>Matemáticas con razonamiento lógico</li>
@@ -149,7 +166,9 @@ function EdBasicaPage() {
                           top
                         />
                         <CardBody className="bg-info">
-                          <CardTitle tag="h4" className="text-white">Actividades Complementarias</CardTitle>
+                          <CardTitle tag="h4" className="text-white">
+                            Actividades Complementarias
+                          </CardTitle>
                           <ul className="text-white">
                             <li>Clubes académicos</li>
                             <li>Proyectos de investigación</li>
@@ -174,14 +193,18 @@ function EdBasicaPage() {
                     <Col md="6" className="text-center">
                       <h5 className="text-white">Jornada Matutina</h5>
                       <p className="text-white">
-                        Lunes a Viernes<br />
+                        Lunes a Viernes
+                        <br />
                         7:15 AM - 13:45 PM
                       </p>
                     </Col>
                     <Col md="6" className="text-center">
-                      <h5 className="text-white">Actividades Extracurriculares</h5>
+                      <h5 className="text-white">
+                        Actividades Extracurriculares
+                      </h5>
                       <p className="text-white">
-                        Lunes a Jueves<br />
+                        Lunes a Jueves
+                        <br />
                         14:00 PM - 15:30 PM
                       </p>
                     </Col>

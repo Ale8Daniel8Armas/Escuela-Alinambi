@@ -6,7 +6,7 @@ import {
   Card,
   CardBody,
   CardTitle,
-  Button
+  Button,
 } from "reactstrap";
 
 // components
@@ -22,14 +22,26 @@ function AdmisionesPage() {
   return (
     <>
       <ExamplesNavbar />
-      <div className="section section-dark">
+      <div
+        className="section section-dark"
+        style={{
+          backgroundImage:
+            "url(" + require("assets/img/Alinambi/Wallpaper.jpg") + ")",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
+          paddingTop: "0",
+        }}
+      >
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
               <h2 className="text-center title">Proceso de Admisiones</h2>
               <h5 className="text-center description">
-                Bienvenidos al proceso de admisión de la Unidad Educativa Alinambi. 
-                Aquí encontrarás toda la información necesaria para formar parte de nuestra comunidad educativa.
+                Bienvenidos al proceso de admisión de la Unidad Educativa
+                Alinambi. Aquí encontrarás toda la información necesaria para
+                formar parte de nuestra comunidad educativa.
               </h5>
             </Col>
           </Row>
@@ -111,4 +123,4 @@ function AdmisionesPage() {
   );
 }
 
-export default AdmisionesPage; 
+export default AdmisionesPage;

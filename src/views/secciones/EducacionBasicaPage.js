@@ -10,7 +10,7 @@ import {
   NavItem,
   NavLink,
   TabContent,
-  TabPane
+  TabPane,
 } from "reactstrap";
 import classnames from "classnames";
 
@@ -35,14 +35,25 @@ function EducacionBasicaPage() {
   return (
     <>
       <ExamplesNavbar />
-      <div className="section">
+      <div
+        className="section"
+        style={{
+          backgroundImage:
+            "url(" + require("assets/img/Alinambi/Wallpaper.jpg") + ")",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
+          paddingTop: "0",
+        }}
+      >
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
               <h2 className="text-center title">Educación General Básica</h2>
               <h5 className="text-center description">
-                Formación integral basada en valores, excelencia académica y desarrollo
-                de habilidades para el siglo XXI.
+                Formación integral basada en valores, excelencia académica y
+                desarrollo de habilidades para el siglo XXI.
               </h5>
             </Col>
           </Row>
@@ -136,7 +147,9 @@ function EducacionBasicaPage() {
                     <Col md="6">
                       <Card className="card-plain">
                         <CardBody>
-                          <CardTitle tag="h4">Actividades Complementarias</CardTitle>
+                          <CardTitle tag="h4">
+                            Actividades Complementarias
+                          </CardTitle>
                           <ul>
                             <li>Clubes académicos</li>
                             <li>Proyectos de investigación</li>
@@ -191,4 +204,4 @@ function EducacionBasicaPage() {
   );
 }
 
-export default EducacionBasicaPage; 
+export default EducacionBasicaPage;

@@ -7,7 +7,7 @@ import {
   CardImg,
   CardBody,
   CardTitle,
-  CardText
+  CardText,
 } from "reactstrap";
 
 // components
@@ -25,14 +25,26 @@ function ConveniosPage() {
     <>
       <ExamplesNavbar />
       <ConveniosHeader />
-      <div className="section">
+      <div
+        className="section"
+        style={{
+          backgroundImage:
+            "url(" + require("assets/img/Alinambi/Wallpaper.jpg") + ")",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
+          paddingTop: "0",
+        }}
+      >
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
               <h2 className="text-center title">Convenios Institucionales</h2>
               <h5 className="text-center description">
-                Mantenemos alianzas estratégicas con instituciones nacionales e internacionales
-                para enriquecer la experiencia educativa de nuestros estudiantes.
+                Mantenemos alianzas estratégicas con instituciones nacionales e
+                internacionales para enriquecer la experiencia educativa de
+                nuestros estudiantes.
               </h5>
             </Col>
           </Row>
@@ -45,10 +57,14 @@ function ConveniosPage() {
                   top
                 />
                 <CardBody className="bg-info">
-                  <CardTitle tag="h4" className="text-white">Convenios Académicos</CardTitle>
+                  <CardTitle tag="h4" className="text-white">
+                    Convenios Académicos
+                  </CardTitle>
                   <CardText className="text-white">
                     <ul>
-                      <li>Pontificia Universidad Católica del Ecuador (PUCE)</li>
+                      <li>
+                        Pontificia Universidad Católica del Ecuador (PUCE)
+                      </li>
                       <li>Universidad de las Fuerzas Armadas (ESPE)</li>
                       <li>Instituto Tecnológico Rumiñahui</li>
                       <li>Programas de intercambio</li>
@@ -66,7 +82,9 @@ function ConveniosPage() {
                   top
                 />
                 <CardBody className="bg-info">
-                  <CardTitle tag="h4" className="text-white">Convenios Deportivos</CardTitle>
+                  <CardTitle tag="h4" className="text-white">
+                    Convenios Deportivos
+                  </CardTitle>
                   <CardText className="text-white">
                     <ul>
                       <li>Clubes deportivos locales</li>
@@ -87,7 +105,9 @@ function ConveniosPage() {
                   top
                 />
                 <CardBody className="bg-info">
-                  <CardTitle tag="h4" className="text-white">Convenios Culturales</CardTitle>
+                  <CardTitle tag="h4" className="text-white">
+                    Convenios Culturales
+                  </CardTitle>
                   <CardText className="text-white">
                     <ul>
                       <li>Centros culturales</li>
@@ -105,7 +125,9 @@ function ConveniosPage() {
             <Col md="12">
               <Card className="card-plain bg-info">
                 <CardBody>
-                  <h3 className="text-white text-center">Beneficios para Estudiantes</h3>
+                  <h3 className="text-white text-center">
+                    Beneficios para Estudiantes
+                  </h3>
                   <Row>
                     <Col md="4">
                       <h5 className="text-white text-center">Académicos</h5>

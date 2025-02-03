@@ -8,7 +8,7 @@ import {
   CardTitle,
   CardText,
   CardImg,
-  Button
+  Button,
 } from "reactstrap";
 
 // components
@@ -26,14 +26,25 @@ function FundacionPage() {
     <>
       <ExamplesNavbar />
       <FundacionHeader />
-      <div className="section">
+      <div
+        className="section"
+        style={{
+          backgroundImage:
+            "url(" + require("assets/img/Alinambi/Wallpaper.jpg") + ")",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
+          paddingTop: "0",
+        }}
+      >
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
               <h2 className="text-center title">Nuestra Historia</h2>
               <h5 className="text-center description">
-                Conoce la trayectoria y los valores que han forjado nuestra institución
-                a lo largo de los años.
+                Conoce la trayectoria y los valores que han forjado nuestra
+                institución a lo largo de los años.
               </h5>
               <div className="text-center mt-4">
                 <Button
@@ -60,10 +71,11 @@ function FundacionPage() {
                   <CardTitle tag="h4">Fundación y Trayectoria</CardTitle>
                   <CardText>
                     <p>
-                      La Unidad Educativa Alinambi fue fundada con el propósito de brindar
-                      una educación integral y de calidad a la comunidad. Desde sus inicios,
-                      ha mantenido un compromiso inquebrantable con la excelencia académica
-                      y la formación en valores.
+                      La Unidad Educativa Alinambi fue fundada con el propósito
+                      de brindar una educación integral y de calidad a la
+                      comunidad. Desde sus inicios, ha mantenido un compromiso
+                      inquebrantable con la excelencia académica y la formación
+                      en valores.
                     </p>
                     <ul>
                       <li>Fundación: 1990</li>
@@ -87,9 +99,9 @@ function FundacionPage() {
                   <CardTitle tag="h4">Valores Institucionales</CardTitle>
                   <CardText>
                     <p>
-                      Nuestros valores son el pilar fundamental que guía todas nuestras
-                      acciones y decisiones, formando estudiantes íntegros y comprometidos
-                      con la sociedad.
+                      Nuestros valores son el pilar fundamental que guía todas
+                      nuestras acciones y decisiones, formando estudiantes
+                      íntegros y comprometidos con la sociedad.
                     </p>
                     <ul>
                       <li>Excelencia académica</li>
@@ -107,11 +119,14 @@ function FundacionPage() {
             <Col md="4">
               <Card className="card-plain bg-info">
                 <CardBody>
-                  <CardTitle tag="h4" className="text-white">Misión</CardTitle>
+                  <CardTitle tag="h4" className="text-white">
+                    Misión
+                  </CardTitle>
                   <CardText className="text-white">
-                    Formar estudiantes integrales con excelencia académica, valores sólidos
-                    y compromiso social, preparados para enfrentar los desafíos del mundo
-                    contemporáneo y contribuir positivamente a la sociedad.
+                    Formar estudiantes integrales con excelencia académica,
+                    valores sólidos y compromiso social, preparados para
+                    enfrentar los desafíos del mundo contemporáneo y contribuir
+                    positivamente a la sociedad.
                   </CardText>
                 </CardBody>
               </Card>
@@ -119,11 +134,14 @@ function FundacionPage() {
             <Col md="4">
               <Card className="card-plain bg-info">
                 <CardBody>
-                  <CardTitle tag="h4" className="text-white">Visión</CardTitle>
+                  <CardTitle tag="h4" className="text-white">
+                    Visión
+                  </CardTitle>
                   <CardText className="text-white">
-                    Ser reconocidos como una institución educativa líder en innovación
-                    pedagógica, formación integral y compromiso con la excelencia,
-                    inspirando a las futuras generaciones a alcanzar su máximo potencial.
+                    Ser reconocidos como una institución educativa líder en
+                    innovación pedagógica, formación integral y compromiso con
+                    la excelencia, inspirando a las futuras generaciones a
+                    alcanzar su máximo potencial.
                   </CardText>
                 </CardBody>
               </Card>
@@ -131,7 +149,9 @@ function FundacionPage() {
             <Col md="4">
               <Card className="card-plain bg-info">
                 <CardBody>
-                  <CardTitle tag="h4" className="text-white">Objetivos</CardTitle>
+                  <CardTitle tag="h4" className="text-white">
+                    Objetivos
+                  </CardTitle>
                   <CardText className="text-white">
                     <ul>
                       <li>Excelencia académica</li>

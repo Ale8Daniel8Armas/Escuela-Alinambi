@@ -7,7 +7,7 @@ import {
   CardBody,
   CardTitle,
   Button,
-  CardImg
+  CardImg,
 } from "reactstrap";
 
 // components
@@ -25,14 +25,28 @@ function AdmisionesPage() {
     <>
       <ExamplesNavbar />
       <AdmisionesHeader />
-      <div className="section section-dark">
+      <div
+        className="section section-dark"
+        style={{
+          backgroundImage:
+            "url(" + require("assets/img/Alinambi/Wallpaper.jpg") + ")",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
+          paddingTop: "0",
+        }}
+      >
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
-              <h2 className="text-center title">ADN Alinambi - ¿Hacia dónde miras?</h2>
+              <h2 className="text-center title">
+                ADN Alinambi - ¿Hacia dónde miras?
+              </h2>
               <h5 className="text-center description">
-                La Unidad Educativa Alinambi ofrece una educación de excelencia centrada en el estudiante 
-                para formar seres competentes, críticos y sensibles a diferentes perspectivas, que contribuyan 
+                La Unidad Educativa Alinambi ofrece una educación de excelencia
+                centrada en el estudiante para formar seres competentes,
+                críticos y sensibles a diferentes perspectivas, que contribuyan
                 a un mundo más justo, equitativo y solidario.
               </h5>
             </Col>
@@ -47,9 +61,12 @@ function AdmisionesPage() {
                   top
                 />
                 <CardBody className="bg-info">
-                  <CardTitle tag="h3" className="text-white text-center">Inicial 2</CardTitle>
+                  <CardTitle tag="h3" className="text-white text-center">
+                    Inicial 2
+                  </CardTitle>
                   <p className="text-white">
-                    Ofrecemos educación para niños de 4 años, con un programa educativo que incluye:
+                    Ofrecemos educación para niños de 4 años, con un programa
+                    educativo que incluye:
                   </p>
                   <ul className="text-white">
                     <li>• Desarrollo motriz y sensorial</li>
@@ -69,9 +86,12 @@ function AdmisionesPage() {
                   top
                 />
                 <CardBody className="bg-info">
-                  <CardTitle tag="h3" className="text-white text-center">Séptimo de Básica</CardTitle>
+                  <CardTitle tag="h3" className="text-white text-center">
+                    Séptimo de Básica
+                  </CardTitle>
                   <p className="text-white">
-                    Formación integral para estudiantes de educación básica media:
+                    Formación integral para estudiantes de educación básica
+                    media:
                   </p>
                   <ul className="text-white">
                     <li>• Materias básicas del currículo nacional</li>
@@ -116,7 +136,9 @@ function AdmisionesPage() {
                   <CardTitle tag="h4">Documentación Requerida</CardTitle>
                   <ul className="text-white">
                     <li>• Partida de nacimiento</li>
-                    <li>• Cédula de identidad del estudiante y representantes</li>
+                    <li>
+                      • Cédula de identidad del estudiante y representantes
+                    </li>
                     <li>• Certificados de promoción anteriores</li>
                     <li>• Certificado de conducta</li>
                     <li>• Certificado médico</li>
@@ -140,19 +162,23 @@ function AdmisionesPage() {
             <Col md="12">
               <Card className="card-plain bg-info">
                 <CardBody>
-                  <h3 className="text-white text-center">Información de Contacto</h3>
+                  <h3 className="text-white text-center">
+                    Información de Contacto
+                  </h3>
                   <Row>
                     <Col md="6" className="text-center">
                       <h5 className="text-white">Dirección</h5>
                       <p className="text-white">
-                        Calle Panzaleo E8-203, sector Fajardo<br />
+                        Calle Panzaleo E8-203, sector Fajardo
+                        <br />
                         Sangolquí - Ecuador
                       </p>
                     </Col>
                     <Col md="6" className="text-center">
                       <h5 className="text-white">Contacto</h5>
                       <p className="text-white">
-                        Teléfonos: 02-2344-544<br />
+                        Teléfonos: 02-2344-544
+                        <br />
                         Email: alinambiuio@yahoo.com
                       </p>
                     </Col>

@@ -7,7 +7,7 @@ import {
   CardImg,
   CardBody,
   CardTitle,
-  CardText
+  CardText,
 } from "reactstrap";
 
 // components
@@ -25,14 +25,25 @@ function EdInicialPage() {
     <>
       <ExamplesNavbar />
       <EdInicialHeader />
-      <div className="section">
+      <div
+        className="section"
+        style={{
+          backgroundImage:
+            "url(" + require("assets/img/Alinambi/Wallpaper.jpg") + ")",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
+          paddingTop: "0",
+        }}
+      >
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
               <h2 className="text-center title">Educación Inicial</h2>
               <h5 className="text-center description">
-                Formamos a nuestros pequeños estudiantes en un ambiente seguro, 
-                estimulante y lleno de amor, desarrollando sus habilidades y 
+                Formamos a nuestros pequeños estudiantes en un ambiente seguro,
+                estimulante y lleno de amor, desarrollando sus habilidades y
                 competencias de manera integral.
               </h5>
             </Col>
@@ -46,7 +57,9 @@ function EdInicialPage() {
                   top
                 />
                 <CardBody className="bg-info">
-                  <CardTitle tag="h4" className="text-white">Inicial 2 (4 años)</CardTitle>
+                  <CardTitle tag="h4" className="text-white">
+                    Inicial 2 (4 años)
+                  </CardTitle>
                   <CardText className="text-white">
                     <ul>
                       <li>Desarrollo motriz fino y grueso</li>
@@ -67,7 +80,9 @@ function EdInicialPage() {
                   top
                 />
                 <CardBody className="bg-info">
-                  <CardTitle tag="h4" className="text-white">Preparatoria (5 años)</CardTitle>
+                  <CardTitle tag="h4" className="text-white">
+                    Preparatoria (5 años)
+                  </CardTitle>
                   <CardText className="text-white">
                     <ul>
                       <li>Lectoescritura avanzada</li>

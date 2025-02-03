@@ -7,7 +7,7 @@ import {
   CardImg,
   CardBody,
   CardTitle,
-  CardText
+  CardText,
 } from "reactstrap";
 
 // components
@@ -23,14 +23,25 @@ function EducacionInicialPage() {
   return (
     <>
       <ExamplesNavbar />
-      <div className="section">
+      <div
+        className="section"
+        style={{
+          backgroundImage:
+            "url(" + require("assets/img/Alinambi/Wallpaper.jpg") + ")",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
+          paddingTop: "0",
+        }}
+      >
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
               <h2 className="text-center title">Educación Inicial</h2>
               <h5 className="text-center description">
-                Formamos a nuestros pequeños estudiantes en un ambiente seguro, 
-                estimulante y lleno de amor, desarrollando sus habilidades y 
+                Formamos a nuestros pequeños estudiantes en un ambiente seguro,
+                estimulante y lleno de amor, desarrollando sus habilidades y
                 competencias de manera integral.
               </h5>
             </Col>
@@ -134,4 +145,4 @@ function EducacionInicialPage() {
   );
 }
 
-export default EducacionInicialPage; 
+export default EducacionInicialPage;

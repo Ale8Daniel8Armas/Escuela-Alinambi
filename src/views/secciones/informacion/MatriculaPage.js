@@ -7,7 +7,7 @@ import {
   CardBody,
   CardTitle,
   Button,
-  Progress
+  Progress,
 } from "reactstrap";
 
 // components
@@ -25,14 +25,25 @@ function MatriculaPage() {
     <>
       <ExamplesNavbar />
       <MatriculaHeader />
-      <div className="section">
+      <div
+        className="section"
+        style={{
+          backgroundImage:
+            "url(" + require("assets/img/Alinambi/Wallpaper.jpg") + ")",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
+          paddingTop: "0",
+        }}
+      >
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
               <h2 className="text-center title">Proceso de Matrícula</h2>
               <h5 className="text-center description">
-                Conoce los pasos y requisitos necesarios para matricular a tu hijo/a
-                en nuestra institución educativa.
+                Conoce los pasos y requisitos necesarios para matricular a tu
+                hijo/a en nuestra institución educativa.
               </h5>
             </Col>
           </Row>
@@ -137,8 +148,8 @@ function MatriculaPage() {
                 <CardBody>
                   <h3 className="text-white text-center">¿Necesitas ayuda?</h3>
                   <p className="text-white text-center">
-                    Nuestro equipo de admisiones está disponible para ayudarte en todo el proceso.
-                    Contáctanos para resolver tus dudas.
+                    Nuestro equipo de admisiones está disponible para ayudarte
+                    en todo el proceso. Contáctanos para resolver tus dudas.
                   </p>
                   <div className="text-center">
                     <Button
