@@ -13,14 +13,14 @@ function FundacionHeader() {
         className="page-header section-dark"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/Alinambi/fotoAlinambiUno.jpg") + ")"
+          "url(" + require("assets/img/Alinambi/fotoAlinambiVeintitres.jpg") + ")"
         }}
       >
         <div className="filter" />
         <div className="content-center">
           <Container>
             <div className="title-brand">
-              <h1 className="presentation-title">Nuestra Historia</h1>
+              <h1 className="presentation-title">Nuestros lazos</h1>
               <div className="fog-low">
                 <img alt="..." src={require("assets/img/fog-low.png")} />
               </div>
@@ -29,7 +29,7 @@ function FundacionHeader() {
               </div>
             </div>
             <h2 className="presentation-subtitle text-center">
-              Construyendo el futuro de la educación desde 1990
+              Construyendo sueños gracias a nuestra fundación
             </h2>
           </Container>
         </div>

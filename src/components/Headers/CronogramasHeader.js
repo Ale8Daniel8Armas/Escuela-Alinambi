@@ -11,7 +11,7 @@ function CronogramasHeader() {
         className="page-header section-dark"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/Alinambi/fotoAlinambiCuatro.jpg") + ")"
+          "url(" + require("assets/img/Alinambi/panoramicaAlinambi.JPG") + ")"
         }}
       >
         <div className="filter" />

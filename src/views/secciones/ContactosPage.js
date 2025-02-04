@@ -21,8 +21,7 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
-import LandingPageHeader from "components/Headers/LandingPageHeader.js";
+import ContactosPageHeader from "components/Headers/ContactosHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
 function ContactosPage() {
@@ -44,7 +43,7 @@ function ContactosPage() {
   return (
     <>
       <ExamplesNavbar />
-      <LandingPageHeader />
+      <ContactosPageHeader />
       <div
         className="section profile-content"
         style={{

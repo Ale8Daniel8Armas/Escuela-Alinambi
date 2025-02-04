@@ -1,6 +1,11 @@
 import React from "react";
 
-// reactstrap components
+//components
+import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import MisionVisionHeader from "components/Headers/MisionVisionHeader.js";
+import DemoFooter from "components/Footers/DemoFooter.js";
+
+
 import {
   Button,
   Label,
@@ -15,11 +20,6 @@ import {
   Row,
   Col,
 } from "reactstrap";
-
-// core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import MisionVisionHeader from "components/Headers/MisionVisionHeader.js";
-import DemoFooter from "components/Footers/DemoFooter.js";
 
 function SeccionVisionMision() {
   const [activeTab, setActiveTab] = React.useState("1");
@@ -37,6 +37,7 @@ function SeccionVisionMision() {
       document.body.classList.remove("landing-page");
     };
   });
+  
   return (
     <>
       <ExamplesNavbar />
@@ -63,15 +64,13 @@ function SeccionVisionMision() {
             </div>
           </div>
           <Row>
-            <Col className="ml-auto mr-auto text-center" md="6">
-              <p>Aqui va texto...</p>
+            <Col className="ml-auto mr-auto text-center" md="8">
+              <p className="description">
+                Somos una institución educativa comprometida con la excelencia académica y la formación integral de nuestros estudiantes.
+              </p>
               <br />
-              <Button className="btn-round" color="default" outline>
-                <i className="fa fa-cog" /> Configuraciones
-              </Button>
             </Col>
           </Row>
-          <br />
           <div className="nav-tabs-navigation">
             <div className="nav-tabs-wrapper">
               <Nav role="tablist" tabs>
@@ -82,7 +81,7 @@ function SeccionVisionMision() {
                       toggle("1");
                     }}
                   >
-                    Follows
+                    Misión
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -92,82 +91,55 @@ function SeccionVisionMision() {
                       toggle("2");
                     }}
                   >
-                    Following
+                    Visión
                   </NavLink>
                 </NavItem>
               </Nav>
             </div>
           </div>
-          {/* Tab panes */}
           <TabContent className="following" activeTab={activeTab}>
             <TabPane tabId="1" id="follows">
               <Row>
-                <Col className="ml-auto mr-auto" md="6">
-                  <ul className="list-unstyled follows">
-                    <li>
-                      <Row>
-                        <Col className="ml-auto mr-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
-                          />
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="7" md="4" xs="4">
-                          <h6>
-                            Flume <br />
-                            <small>Musical Producer</small>
-                          </h6>
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input
-                                defaultChecked
-                                defaultValue=""
-                                type="checkbox"
-                              />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
-                    <hr />
-                    <li>
-                      <Row>
-                        <Col className="mx-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/ayo-ogunseinde-2.jpg")}
-                          />
-                        </Col>
-                        <Col lg="7" md="4" xs="4">
-                          <h6>
-                            Banks <br />
-                            <small>Singer</small>
-                          </h6>
-                        </Col>
-                        <Col lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input defaultValue="" type="checkbox" />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
-                  </ul>
+                <Col className="ml-auto mr-auto" md="8">
+                  <div className="text-center">
+                    <img
+                      alt="Misión"
+                      className="img-rounded img-responsive"
+                      src={require("assets/img/Alinambi/fotoAlinambiVeintiCinco.jpg")}
+                      style={{ maxWidth: "300px", marginBottom: "20px" }}
+                    />
+                    <h3>Nuestra Misión</h3>
+                    <p className="description">
+                      Formar integralmente a estudiantes con excelencia académica y valores humanos, 
+                      mediante una educación personalizada que potencia el pensamiento crítico, 
+                      la creatividad y el compromiso social. Nos dedicamos a cultivar mentes curiosas 
+                      y corazones compasivos, preparando a nuestros alumnos para ser líderes éticos 
+                      y ciudadanos globales que contribuyan positivamente a la sociedad.
+                    </p>
+                  </div>
                 </Col>
               </Row>
             </TabPane>
             <TabPane className="text-center" tabId="2" id="following">
-              <h3 className="text-muted">Not following anyone yet :(</h3>
-              <Button className="btn-round" color="warning">
-                Find artists
-              </Button>
+              <Row>
+                <Col className="ml-auto mr-auto" md="8">
+                  <img
+                    alt="Visión"
+                    className="img-rounded img-responsive"
+                    src={require("assets/img/Alinambi/fotoAlinambiVentiuno.jpg")}
+                    style={{ maxWidth: "300px", marginBottom: "20px" }}
+                  />
+                  <h3>Nuestra Visión</h3>
+                  <p className="description">
+                    Ser reconocidos como una institución educativa líder en innovación pedagógica, 
+                    que inspire a cada estudiante a alcanzar su máximo potencial académico y personal. 
+                    Aspiramos a crear un ambiente educativo donde la excelencia académica, 
+                    la innovación tecnológica y los valores humanos se fusionen para formar 
+                    individuos capaces de enfrentar los desafíos del siglo XXI con confianza 
+                    y responsabilidad social.
+                  </p>
+                </Col>
+              </Row>
             </TabPane>
           </TabContent>
         </Container>

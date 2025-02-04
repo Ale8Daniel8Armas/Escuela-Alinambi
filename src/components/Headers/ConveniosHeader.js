@@ -13,7 +13,7 @@ function ConveniosHeader() {
         className="page-header section-dark"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/Alinambi/fotoAlinambiTres.jpg") + ")"
+            "url(" + require("assets/img/Alinambi/panoramicaAlinambi.JPG") + ")"
         }}
       >
         <div className="filter" />

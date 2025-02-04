@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -213,6 +214,7 @@ function LandingPage() {
               <Row>
                 {/* Primera fila */}
                 <Col md="3">
+                <Link to="/matricula-page" style={{ textDecoration: "none" }}>
                   <Card
                     data-background="image"
                     style={{
@@ -230,8 +232,10 @@ function LandingPage() {
                       </p>
                     </CardBody>
                   </Card>
+                  </Link>
                 </Col>
                 <Col md="3">
+                <Link to="/admisiones-page" style={{ textDecoration: "none" }}>
                   <Card
                     data-background="image"
                     style={{
@@ -249,8 +253,10 @@ function LandingPage() {
                       </p>
                     </CardBody>
                   </Card>
+                  </Link>
                 </Col>
                 <Col md="3">
+                <Link to="/historia-page" style={{ textDecoration: "none" }}>
                   <Card
                     data-background="image"
                     style={{
@@ -268,8 +274,10 @@ function LandingPage() {
                       </p>
                     </CardBody>
                   </Card>
+                  </Link>
                 </Col>
                 <Col md="3">
+                <Link to="/servicios-page" style={{ textDecoration: "none" }}>
                   <Card
                     data-background="image"
                     style={{
@@ -287,11 +295,13 @@ function LandingPage() {
                       </p>
                     </CardBody>
                   </Card>
+                  </Link>
                 </Col>
               </Row>
               <Row>
                 {/* Segunda fila */}
                 <Col md="3">
+                <Link to="/contactos-page" style={{ textDecoration: "none" }}>
                   <Card
                     data-background="image"
                     style={{
@@ -309,6 +319,7 @@ function LandingPage() {
                       </p>
                     </CardBody>
                   </Card>
+                  </Link>
                 </Col>
                 <Col md="3">
                   <Card
@@ -347,6 +358,7 @@ function LandingPage() {
                   </Card>
                 </Col>
                 <Col md="3">
+                <Link to="/fundacion-page" style={{ textDecoration: "none" }}>
                   <Card
                     data-background="image"
                     style={{
@@ -364,6 +376,7 @@ function LandingPage() {
                       </p>
                     </CardBody>
                   </Card>
+                  </Link>
                 </Col>
               </Row>
             </Container>

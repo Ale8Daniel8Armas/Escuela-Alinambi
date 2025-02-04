@@ -18,8 +18,7 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
-import LandingPageHeader from "components/Headers/LandingPageHeader.js";
+import ServiciosPageHeader from "components/Headers/ServiciosHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
 function ServiciosPage() {
@@ -41,7 +40,7 @@ function ServiciosPage() {
   return (
     <>
       <ExamplesNavbar />
-      <LandingPageHeader />
+      <ServiciosPageHeader />
       <div
         className="section profile-content"
         style={{

@@ -13,7 +13,7 @@ function PlanCurricularHeader() {
         className="page-header section-dark"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/Alinambi/fotoAlinambiCinco.jpg") + ")"
+            "url(" + require("assets/img/Alinambi/fotoAlinambiCuatro.jpg") + ")"
         }}
       >
         <div className="filter" />

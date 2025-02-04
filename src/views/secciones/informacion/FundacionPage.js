@@ -41,10 +41,12 @@ function FundacionPage() {
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
-              <h2 className="text-center title">Nuestra Historia</h2>
+              <h2 className="text-center title">Somos parte de la fundación Aliñambi</h2>
               <h5 className="text-center description">
-                Conoce la trayectoria y los valores que han forjado nuestra
-                institución a lo largo de los años.
+                Alinambi es una institución que busca fortalecer la educación
+                general básica en la comunidad de Alinambi, de manera que todos
+                los niños y niñas puedan desarrollar habilidades y valores
+                necesarios para el siglo XXI.
               </h5>
               <div className="text-center mt-4">
                 <Button
