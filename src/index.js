@@ -23,11 +23,15 @@ import AdmisionesPage from "views/secciones/ofertaAcademica/AdmisionesPage.js";
 import EdBasicaPage from "views/secciones/ofertaAcademica/EdBasicaPage.js";
 import EdInicialPage from "views/secciones/ofertaAcademica/EdInicialPage.js";
 import PlanCurricularPage from "views/secciones/ofertaAcademica/PlanCurricularPage.js";
+import ActividadesPage from "views/secciones/ofertaAcademica/ActividadesPages.js";
+
 //informacion
 import ConveniosPage from "views/secciones/informacion/ConveniosPage.js";
 import CronogramaPage from "views/secciones/informacion/CronogramasPage.js";
 import FundacionPage from "views/secciones/informacion/FundacionPage.js";
 import MatriculaPage from "views/secciones/informacion/MatriculaPage.js";
+import BoletinesPage from "views/secciones/informacion/BoletinesPage.js";
+
 //servicios
 import ServiciosPage from "views/secciones/ServiciosPage.js";
 //contactos
@@ -57,6 +61,8 @@ root.render(
       <Route path="/matricula-page" element={<MatriculaPage />} />
       <Route path="/servicios-page" element={<ServiciosPage />} />
       <Route path="/contactos-page" element={<ContactosPage />} />
+      <Route path="/actividades-page" element={<ActividadesPage />} />
+      <Route path="/boletines-page" element={<BoletinesPage />} />
       <Route path="*" element={<Navigate to="/homePage" replace />} />
     </Routes>
   </BrowserRouter>

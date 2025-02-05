@@ -13,7 +13,7 @@ function DocentesHeader() {
           className="page-header section-dark"
           style={{
             backgroundImage:
-              "url(" + require("assets/img/Alinambi/DocentesAlinambi.jpeg") + ")",
+              "url(" + require("assets/img/Alinambi/AlinambiInicios.jpg") + ")",
               //backgroundPosition: "top",
               //backgroundSize: "cover", 
               //backgroundRepeat: "no-repeat",

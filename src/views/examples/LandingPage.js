@@ -124,7 +124,7 @@ function LandingPage() {
                   marginBottom: "15px",
                 }}
               >
-                ¡Descubre algunos de nuestros logros!
+                ¡Descubre nuestros programas!
               </h3>
             </Col>
           </Row>
@@ -322,6 +322,7 @@ function LandingPage() {
                   </Link>
                 </Col>
                 <Col md="3">
+                <Link to="/actividades-page" style={{ textDecoration: "none" }}>
                   <Card
                     data-background="image"
                     style={{
@@ -340,8 +341,10 @@ function LandingPage() {
                       </p>
                     </CardBody>
                   </Card>
+                  </Link>
                 </Col>
                 <Col md="3">
+                <Link to="/boletines-page" style={{ textDecoration: "none" }}>
                   <Card
                     data-background="image"
                     style={{
@@ -356,6 +359,7 @@ function LandingPage() {
                       <p>Encuentra documentos y archivos de nuestra entidad.</p>
                     </CardBody>
                   </Card>
+                  </Link>
                 </Col>
                 <Col md="3">
                 <Link to="/fundacion-page" style={{ textDecoration: "none" }}>

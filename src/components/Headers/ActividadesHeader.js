@@ -6,24 +6,21 @@ import { Container } from "reactstrap";
 
 // core components
 
-function ValoresHeader() {
+function ActividadesHeader() {
   return (
     <>
       <div
         className="page-header section-dark"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/Alinambi/AlinambiInicios.jpg") + ")",
-            //backgroundPosition: "top",
-            //backgroundSize: "cover", 
-            //backgroundRepeat: "no-repeat",
+            "url(" + require("assets/img/Alinambi/fotoAlinambiCuatro.jpg") + ")"
         }}
       >
         <div className="filter" />
         <div className="content-center">
           <Container>
             <div className="title-brand">
-              <h1 className="presentation-title">Valores Institución</h1>
+              <h1 className="presentation-title">Actividades</h1>
               <div className="fog-low">
                 <img alt="..." src={require("assets/img/fog-low.png")} />
               </div>
@@ -32,7 +29,7 @@ function ValoresHeader() {
               </div>
             </div>
             <h2 className="presentation-subtitle text-center">
-             Nuestro compromiso explicado en valores ejemplares e ideales
+              Estos son los programas que generalmente realizamos
             </h2>
           </Container>
         </div>
@@ -47,4 +44,4 @@ function ValoresHeader() {
   );
 }
 
-export default ValoresHeader;
+export default ActividadesHeader;

@@ -218,6 +218,9 @@ function ExamplesNavbar() {
                     <DropdownItem href="/planCurricular-page">
                       Plan Curricular
                     </DropdownItem>
+                    <DropdownItem href="/actividades-page">
+                      Actividades
+                    </DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
               </NavItem>
@@ -253,6 +256,9 @@ function ExamplesNavbar() {
                     </DropdownItem>
                     <DropdownItem href="/cronogramas-page">
                       Cronogramas
+                    </DropdownItem>
+                    <DropdownItem href="/boletines-page">
+                      Boletines
                     </DropdownItem>
                     <DropdownItem href="/fundacion-page">
                       Fundación

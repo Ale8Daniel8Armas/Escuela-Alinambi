@@ -18,11 +18,11 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import ServiciosPageHeader from "components/Headers/ServiciosHeader.js";
+import BoletinesHeader from "components/Headers/BoletinesHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
-import ServiciosContent from "views/secciones/Servicios.js";
+import BoletinesBody from "views/secciones/informacion/Boletines.js";
 
-function ServiciosPage() {
+function BoletinesPage() {
   const [activeTab, setActiveTab] = React.useState("1");
 
   const toggle = (tab) => {
@@ -41,7 +41,7 @@ function ServiciosPage() {
   return (
     <>
       <ExamplesNavbar />
-      <ServiciosPageHeader />
+      <BoletinesHeader />
       <div
         className="section profile-content"
         style={{
@@ -55,7 +55,9 @@ function ServiciosPage() {
         }}
       >
         <Container>
-        <ServiciosContent />
+          <Row>
+            <BoletinesBody />
+          </Row>
         </Container>
       </div>
       <DemoFooter />
@@ -63,4 +65,4 @@ function ServiciosPage() {
   );
 }
 
-export default ServiciosPage;
+export default BoletinesPage;
