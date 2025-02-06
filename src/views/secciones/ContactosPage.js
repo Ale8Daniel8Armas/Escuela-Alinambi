@@ -23,6 +23,7 @@ import {
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ContactosPageHeader from "components/Headers/ContactosHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
+import ContactosContent from "views/secciones/ContactosContenido.js";
 
 function ContactosPage() {
   const [activeTab, setActiveTab] = React.useState("1");
@@ -57,20 +58,13 @@ function ContactosPage() {
         }}
       >
         <Container>
-          <div className="owner">
-            <div className="name">
-              <h4 className="title">
-                Llamanos
-                <br />
-              </h4>
-              <h6 className="description">+593 9679 709</h6>
-            </div>
-          </div>
+          <Row>
+            <ContactosContent />
+          </Row>
         </Container>
         <Container>
           <Row>
             <Col className="ml-auto mr-auto" md="8">
-              <h2 className="text-center">Contáctanos</h2>
               <Form className="contact-form">
                 <Row>
                   <Col md="6">

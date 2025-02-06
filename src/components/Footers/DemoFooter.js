@@ -31,14 +31,13 @@ function DemoFooter() {
             >
               <h5
                 style={{
-                  color: "#83A83F",
-                  fontStyle: "italic",
-                  fontFamily: "serif",
-                  fontSize: "32px",
-                  fontWeight: "Bold",
+                  color: "#4CAF50",
+                  fontFamily: "Arial, sans-serif",
+                  fontSize: "28px",
+                  fontWeight: "600",
                   textAlign: "center",
                   width: "100%",
-                  marginBottom: "0",
+                  marginBottom: "0px",
                 }}
               >
                 Dirección
@@ -148,11 +147,10 @@ function DemoFooter() {
             >
               <h5
                 style={{
-                  color: "#83A83F",
-                  fontStyle: "italic",
-                  fontFamily: "serif",
-                  fontSize: "32px",
-                  fontWeight: "Bold",
+                  color: "#4CAF50",
+                  fontFamily: "Arial, sans-serif",
+                  fontSize: "28px",
+                  fontWeight: "600",
                   textAlign: "center",
                   width: "100%",
                   marginBottom: "0px",
@@ -265,11 +263,10 @@ function DemoFooter() {
             >
               <h5
                 style={{
-                  color: "#83A83F",
-                  fontStyle: "italic",
-                  fontFamily: "serif",
-                  fontSize: "32px",
-                  fontWeight: "Bold",
+                  color: "#4CAF50",
+                  fontFamily: "Arial, sans-serif",
+                  fontSize: "28px",
+                  fontWeight: "600",
                   textAlign: "center",
                   width: "100%",
                   marginBottom: "0px",
