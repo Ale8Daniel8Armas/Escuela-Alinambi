@@ -13,7 +13,10 @@ function MatriculaHeader() {
         className="page-header section-dark"
         style={{
           backgroundImage:
-          "url(" + require("assets/img/Alinambi/panoramicaAlinambi.JPG") + ")"
+            "url(" + require("assets/img/Alinambi/PortadaGeneral.jpg") + ")",
+          minHeight: "600px",
+          width: "100%",
+          overflow: "hidden",
         }}
       >
         <div className="filter" />
@@ -36,7 +39,7 @@ function MatriculaHeader() {
         <div
           className="moving-clouds"
           style={{
-            backgroundImage: "url(" + require("assets/img/clouds.png") + ")"
+            backgroundImage: "url(" + require("assets/img/clouds.png") + ")",
           }}
         />
       </div>

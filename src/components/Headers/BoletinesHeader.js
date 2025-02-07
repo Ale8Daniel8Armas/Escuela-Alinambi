@@ -13,7 +13,10 @@ function BoletinesHeader() {
         className="page-header section-dark"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/Alinambi/panoramicaAlinambi.JPG") + ")"
+            "url(" + require("assets/img/Alinambi/PortadaGeneral.jpg") + ")",
+          minHeight: "600px",
+          width: "100%",
+          overflow: "hidden",
         }}
       >
         <div className="filter" />
@@ -29,14 +32,14 @@ function BoletinesHeader() {
               </div>
             </div>
             <h2 className="presentation-subtitle text-center">
-                Documentación de información de interés
+              Documentación de información de interés
             </h2>
           </Container>
         </div>
         <div
           className="moving-clouds"
           style={{
-            backgroundImage: "url(" + require("assets/img/clouds.png") + ")"
+            backgroundImage: "url(" + require("assets/img/clouds.png") + ")",
           }}
         />
       </div>

@@ -13,14 +13,17 @@ function ConveniosHeader() {
         className="page-header section-dark"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/Alinambi/panoramicaAlinambi.JPG") + ")"
+            "url(" + require("assets/img/Alinambi/PortadaGeneral.jpg") + ")",
+          minHeight: "600px",
+          width: "100%",
+          overflow: "hidden",
         }}
       >
         <div className="filter" />
         <div className="content-center">
           <Container>
             <div className="title-brand">
-              <h1 className="presentation-title">Convenios Institucionales</h1>
+              <h1 className="presentation-title">Convenios Institución</h1>
               <div className="fog-low">
                 <img alt="..." src={require("assets/img/fog-low.png")} />
               </div>
@@ -29,14 +32,15 @@ function ConveniosHeader() {
               </div>
             </div>
             <h2 className="presentation-subtitle text-center">
-              Alianzas estratégicas para el desarrollo integral de nuestros estudiantes
+              Alianzas estratégicas para el desarrollo integral de nuestros
+              estudiantes
             </h2>
           </Container>
         </div>
         <div
           className="moving-clouds"
           style={{
-            backgroundImage: "url(" + require("assets/img/clouds.png") + ")"
+            backgroundImage: "url(" + require("assets/img/clouds.png") + ")",
           }}
         />
       </div>

@@ -70,6 +70,7 @@ function ValoresPage() {
                   color: "#2c3e50",
                   letterSpacing: "1.5px",
                   marginBottom: "15px",
+                  marginTop: "35px",
                 }}
               >
                 Valores Institucionales

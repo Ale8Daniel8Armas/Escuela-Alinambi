@@ -58,45 +58,54 @@ function DocentesPage() {
           paddingTop: "0",
         }}
       >
-      <Container className="mt-5">
-        {/* Sección Docentes*/}
-                  <Row>
-                    <Col className="text-center title" md="12">
-                      <h2 className="mx-auto"
-                      style={{
-                        fontWeight: "bold",
-                        color: "#2c3e50",
-                        marginBottom: "15px",
-                      }}
-                      >Contamos con docentes de calidad</h2>
-                    </Col>
-                  </Row>
-      <Row className="justify-content-center">
-        <Col md="12" className="text-center">
-          <Card className="shadow-lg border-0 rounded-4" style={{ width: "70rem"}}>
-            {/* Imagen en la parte superior */}
-            <CardImg 
-              top 
-              src={require("assets/img/Alinambi/DocentesAlinambi.jpeg")} 
-              alt="imagen de docentes en cabecera" 
-              className="img-fluid" 
-              style={{ height: "500px", objectFit: "cover" }} 
-            />
-            <CardBody className="p-4">
-              <CardText className="fw-semibold text-muted"
-                style = {{fontSize: "16px", fontWeight: "bold"}}
+        <Container className="mt-5">
+          {/* Sección Docentes*/}
+          <Row>
+            <Col className="text-center" md="12">
+              <h2
+                className="mx-auto"
+                style={{
+                  fontWeight: "bold",
+                  color: "#2c3e50",
+                  marginBottom: "35px",
+                }}
               >
-              Contamos con varias docentes especializadas para cada grado y área, entre ellas podemos encontrar
-              a la Lcda. Isabel Sandoval, encargada de los cursos de segundo y tercero E.G.B. y la Mgsc. Marina 
-              Gomez...., todas ellas conforman el equipo de esta noble institución.
-              </CardText>
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
-    {/* Sección Ejecutivos*/}
-      <TeamSection />
-    </Container>
+                Contamos con docentes de calidad
+              </h2>
+            </Col>
+          </Row>
+          <Row className="justify-content-center">
+            <Col md="12" className="text-center">
+              <Card
+                className="shadow-lg border-0 rounded-4"
+                style={{ width: "70rem" }}
+              >
+                {/* Imagen en la parte superior */}
+                <CardImg
+                  top
+                  src={require("assets/img/Alinambi/DocentesAlinambi.jpeg")}
+                  alt="imagen de docentes en cabecera"
+                  className="img-fluid"
+                  style={{ height: "500px", objectFit: "cover" }}
+                />
+                <CardBody className="p-4">
+                  <CardText
+                    className="fw-semibold text-muted"
+                    style={{ fontSize: "16px", fontWeight: "bold" }}
+                  >
+                    Contamos con varias docentes especializadas para cada grado
+                    y área, entre ellas podemos encontrar a la Lcda. Isabel
+                    Sandoval, encargada de los cursos de segundo y tercero
+                    E.G.B. y la Mgsc. Marina Gomez...., todas ellas conforman el
+                    equipo de esta noble institución.
+                  </CardText>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          {/* Sección Ejecutivos*/}
+          <TeamSection />
+        </Container>
       </div>
       <DemoFooter />
     </>

@@ -13,7 +13,12 @@ function EdInicialHeader() {
         className="page-header section-dark"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/Alinambi/fotoAlinambiCuatro.jpg") + ")"
+            "url(" +
+            require("assets/img/Alinambi/fotoAlinambiCuatro.jpg") +
+            ")",
+          minHeight: "600px",
+          width: "100%",
+          overflow: "hidden",
         }}
       >
         <div className="filter" />
@@ -36,7 +41,7 @@ function EdInicialHeader() {
         <div
           className="moving-clouds"
           style={{
-            backgroundImage: "url(" + require("assets/img/clouds.png") + ")"
+            backgroundImage: "url(" + require("assets/img/clouds.png") + ")",
           }}
         />
       </div>

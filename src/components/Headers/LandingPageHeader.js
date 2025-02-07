@@ -27,7 +27,12 @@ function LandingPageHeader() {
       <div
         style={{
           backgroundImage:
-            "url(" + require("assets/img/Alinambi/PortadaGeneral.jpg") + ")",
+            "url(" +
+            require("assets/img/Alinambi/panoramicaAlinambi.JPG") +
+            ")",
+          minHeight: "550px",
+          width: "100%",
+          overflow: "hidden",
         }}
         className="page-header"
         data-parallax={true}

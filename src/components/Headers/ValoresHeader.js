@@ -13,10 +13,10 @@ function ValoresHeader() {
         className="page-header section-dark"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/Alinambi/AlinambiInicios.jpg") + ")",
-            //backgroundPosition: "top",
-            //backgroundSize: "cover", 
-            //backgroundRepeat: "no-repeat",
+            "url(" + require("assets/img/Alinambi/fotoAlinambiDos.jpg") + ")",
+          minHeight: "600px",
+          width: "100%",
+          overflow: "hidden",
         }}
       >
         <div className="filter" />
@@ -32,14 +32,14 @@ function ValoresHeader() {
               </div>
             </div>
             <h2 className="presentation-subtitle text-center">
-             Nuestro compromiso explicado en valores ejemplares e ideales
+              Nuestro compromiso explicado en valores ejemplares e ideales
             </h2>
           </Container>
         </div>
         <div
           className="moving-clouds"
           style={{
-            backgroundImage: "url(" + require("assets/img/clouds.png") + ")"
+            backgroundImage: "url(" + require("assets/img/clouds.png") + ")",
           }}
         />
       </div>

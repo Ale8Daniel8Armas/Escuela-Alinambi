@@ -13,10 +13,10 @@ function HistoriaHeader() {
         className="page-header section-dark"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/Alinambi/AlinambiInicios.jpg") + ")",
-            //backgroundPosition: "top",
-            //backgroundSize: "cover", 
-            //backgroundRepeat: "no-repeat",
+            "url(" + require("assets/img/Alinambi/fotoAlinambiDos.jpg") + ")",
+          minHeight: "600px",
+          width: "100%",
+          overflow: "hidden",
         }}
       >
         <div className="filter" />
@@ -32,14 +32,14 @@ function HistoriaHeader() {
               </div>
             </div>
             <h2 className="presentation-subtitle text-center">
-             Conoce nuestras raíces y nuestra razón de ser
+              Conoce nuestras raíces y nuestra razón de ser
             </h2>
           </Container>
         </div>
         <div
           className="moving-clouds"
           style={{
-            backgroundImage: "url(" + require("assets/img/clouds.png") + ")"
+            backgroundImage: "url(" + require("assets/img/clouds.png") + ")",
           }}
         />
       </div>

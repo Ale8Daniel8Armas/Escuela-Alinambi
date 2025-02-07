@@ -10,7 +10,6 @@ import {
   NavLink,
   Nav,
   Container,
-  Button,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -21,8 +20,6 @@ function ExamplesNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 
-  //nav items dropdown
-  //Nav items
   const [quienesSomosOpen, setQuienesSomosOpen] = React.useState(false);
   const [ofertaEducativaOpen, setOfertaEducativaOpen] = React.useState(false);
   const [infoOpen, setInfoOpen] = React.useState(false);
@@ -56,7 +53,6 @@ function ExamplesNavbar() {
 
   return (
     <>
-      {/* Navbar */}
       <Navbar
         className={classnames("fixed-top", navbarColor)}
         color-on-scroll="300"
@@ -64,14 +60,18 @@ function ExamplesNavbar() {
         style={{
           backgroundColor:
             navbarColor === "navbar-transparent" ? "transparent" : "#9CC066",
-          marginTop: "-25px",
           width: "100%",
-          marginBottom: "-15px",
+          height: "90px",
+          fontFamily: "'Montserrat', sans-serif",
+          position: "fixed",
+          top: 0,
+          transition: "all 0.3s ease",
+          zIndex: 1030,
         }}
       >
         <Container
           style={{
-            paddingLeft: "15px",
+            paddingLeft: "10px",
             maxWidth: "100%",
           }}
         >
@@ -82,16 +82,16 @@ function ExamplesNavbar() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "20px",
-              marginLeft: "-30px",
+              gap: "10px",
+              marginLeft: "-15px",
             }}
           >
             <img
               src={require("assets/img/Alinambi/LogoAlinambi.png")}
               alt="Logo de Empresa"
               style={{
-                maxHeight: "120px",
-                width: "100%",
+                maxHeight: "75px",
+                width: "auto",
                 objectFit: "contain",
               }}
             />
@@ -100,26 +100,28 @@ function ExamplesNavbar() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                gap: "4px",
-                marginLeft: "10px",
+                gap: "2px",
+                marginLeft: "5px",
               }}
             >
               <span
                 style={{
-                  fontSize: "25px",
+                  fontSize: "22px",
                   fontWeight: "600",
-                  color: "#E3EAB2",
-                  lineHeight: "1.2",
+                  color: "#B8C38B",
+                  lineHeight: "1.1",
+                  fontFamily: "'Montserrat', sans-serif",
                 }}
               >
                 Unidad Educativa
               </span>
               <span
                 style={{
-                  fontSize: "29px",
+                  fontSize: "24px",
                   fontWeight: "700",
                   color: "#1A9BD5",
-                  lineHeight: "1.2",
+                  lineHeight: "1.1",
+                  fontFamily: "'Montserrat', sans-serif",
                 }}
               >
                 Aliñambi
@@ -135,6 +137,7 @@ function ExamplesNavbar() {
             style={{
               border: "none",
               background: "transparent",
+              padding: "5px",
             }}
           >
             <span className="navbar-toggler-bar bar1" />
@@ -146,7 +149,9 @@ function ExamplesNavbar() {
             navbar
             isOpen={navbarCollapse}
           >
-            <Nav navbar>
+            <Nav navbar style={{ gap: "10px" }}>
+              {" "}
+              {/* Añadido gap entre items */}
               <NavItem>
                 <UncontrolledDropdown
                   nav
@@ -159,17 +164,23 @@ function ExamplesNavbar() {
                     href="/misionYvision-page"
                     id="quienesSomosNavbarDropdownMenu"
                     nav
+                    style={{ padding: "8px 12px" }}
                   >
                     <h6
                       style={{
-                        fontSize: "15px",
+                        fontSize: "14px",
                         color: "#000000",
+                        margin: 0,
+                        fontFamily: "'Montserrat', sans-serif",
                       }}
                     >
                       <b>Quienes Somos</b>
                     </h6>
                   </DropdownToggle>
-                  <DropdownMenu aria-labelledby="quienesSomosNavbarDropdownMenu">
+                  <DropdownMenu
+                    aria-labelledby="quienesSomosNavbarDropdownMenu"
+                    style={{ fontFamily: "'Montserrat', sans-serif" }}
+                  >
                     <DropdownItem to="/misionYvision-page" tag={Link}>
                       Mision - Vision
                     </DropdownItem>
@@ -183,6 +194,7 @@ function ExamplesNavbar() {
                   </DropdownMenu>
                 </UncontrolledDropdown>
               </NavItem>
+              {/* Los demás NavItems siguen el mismo patrón */}
               <NavItem>
                 <UncontrolledDropdown
                   nav
@@ -195,17 +207,23 @@ function ExamplesNavbar() {
                     href="/admisiones-page"
                     id="ofertaEducativaNavbarDropdownMenu"
                     nav
+                    style={{ padding: "8px 12px" }}
                   >
                     <h6
                       style={{
-                        fontSize: "15px",
+                        fontSize: "14px",
                         color: "#000000",
+                        margin: 0,
+                        fontFamily: "'Montserrat', sans-serif",
                       }}
                     >
                       <b>Oferta Educativa</b>
                     </h6>
                   </DropdownToggle>
-                  <DropdownMenu aria-labelledby="ofertaEducativaNavbarDropdownMenu">
+                  <DropdownMenu
+                    aria-labelledby="ofertaEducativaNavbarDropdownMenu"
+                    style={{ fontFamily: "'Montserrat', sans-serif" }}
+                  >
                     <DropdownItem href="/admisiones-page">
                       Admisiones
                     </DropdownItem>
@@ -237,17 +255,23 @@ function ExamplesNavbar() {
                     id="infoNavbarDropdownMenu"
                     nav
                     onClick={(e) => e.preventDefault()}
+                    style={{ padding: "8px 12px" }}
                   >
                     <h6
                       style={{
-                        fontSize: "15px",
+                        fontSize: "14px",
                         color: "#000000",
+                        margin: 0,
+                        fontFamily: "'Montserrat', sans-serif",
                       }}
                     >
                       <b>Información</b>
                     </h6>
                   </DropdownToggle>
-                  <DropdownMenu aria-labelledby="infoNavbarDropdownMenu">
+                  <DropdownMenu
+                    aria-labelledby="infoNavbarDropdownMenu"
+                    style={{ fontFamily: "'Montserrat', sans-serif" }}
+                  >
                     <DropdownItem href="/convenios-page">
                       Convenios
                     </DropdownItem>
@@ -267,12 +291,17 @@ function ExamplesNavbar() {
                 </UncontrolledDropdown>
               </NavItem>
               <NavItem>
-                <NavLink to="/servicios-page" tag={Link}>
-                  <i className="nc-icon nc-layout-11" />
+                <NavLink
+                  to="/servicios-page"
+                  tag={Link}
+                  style={{ padding: "8px 12px" }}
+                >
+                  {" "}
                   <b
                     style={{
-                      fontSize: "15px",
+                      fontSize: "14px",
                       color: "#000000",
+                      fontFamily: "'Montserrat', sans-serif",
                     }}
                   >
                     Servicios
@@ -280,12 +309,17 @@ function ExamplesNavbar() {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/contactos-page" tag={Link}>
-                  <i className="nc-icon nc-layout-11" />
+                <NavLink
+                  to="/contactos-page"
+                  tag={Link}
+                  style={{ padding: "8px 12px" }}
+                >
+                  {" "}
                   <b
                     style={{
-                      fontSize: "15px",
+                      fontSize: "14px",
                       color: "#000000",
+                      fontFamily: "'Montserrat', sans-serif",
                     }}
                   >
                     Contactos
@@ -297,12 +331,11 @@ function ExamplesNavbar() {
         </Container>
       </Navbar>
 
-      {/* Imagen de fondo para mover el navbar arriba como encabezado */}
       <div
         style={{
           position: "relative",
           width: "50%",
-          height: "25vh",
+          height: "15vh", // Reducido de 25vh
           backgroundImage: `url('path-to-your-image.jpg')`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
