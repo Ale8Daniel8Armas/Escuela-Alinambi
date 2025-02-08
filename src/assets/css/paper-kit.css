@@ -4060,7 +4060,7 @@ License - nucleoapp.com/license/
 /*             Navigation Tabs                 */
 .nav-tabs-navigation {
   text-align: center;
-  border-bottom: 1px solid #2c3e50;
+  border-bottom: 2px solid #1e2668;
   margin-bottom: 30px;
 }
 .nav-tabs-navigation .nav > .nav-item > .nav-link {
@@ -4068,7 +4068,6 @@ License - nucleoapp.com/license/
 }
 
 .nav-tabs-wrapper {
-  margin-bottom: -6px;
   margin-left: 1.25%;
   margin-right: 1.25%;
   position: relative;

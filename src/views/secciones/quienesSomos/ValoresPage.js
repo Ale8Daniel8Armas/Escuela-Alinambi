@@ -65,11 +65,12 @@ function ValoresPage() {
               <h2
                 className="mx-auto"
                 style={{
-                  fontSize: "23px",
+                  fontSize: "33px",
                   fontWeight: "bold",
                   color: "#2c3e50",
                   letterSpacing: "1.5px",
                   marginBottom: "15px",
+                  textTransform: "uppercase",
                   marginTop: "35px",
                 }}
               >
@@ -79,9 +80,8 @@ function ValoresPage() {
                 className="descripcion-valores"
                 style={{
                   fontSize: "22px",
-                  fontStyle: "italic",
-                  color: "#4CAF50",
-                  marginTop: "10px",
+                  color: "black",
+                  marginTop: "30px",
                   fontWeight: "500",
                 }}
               >
@@ -175,9 +175,8 @@ function ValoresPage() {
                 className="descripcion-valores"
                 style={{
                   fontSize: "22px",
-                  fontStyle: "italic",
-                  color: "#4CAF50",
-                  marginTop: "10px",
+                  color: "black",
+                  marginTop: "30px",
                   fontWeight: "500",
                 }}
               >

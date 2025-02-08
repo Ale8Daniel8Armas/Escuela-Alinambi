@@ -251,7 +251,7 @@ function ExamplesNavbar() {
                 >
                   <DropdownToggle
                     data-toggle="dropdown"
-                    href="..."
+                    href="/convenios-page"
                     id="infoNavbarDropdownMenu"
                     nav
                     onClick={(e) => e.preventDefault()}
@@ -296,16 +296,16 @@ function ExamplesNavbar() {
                   tag={Link}
                   style={{ padding: "8px 12px" }}
                 >
-                  {" "}
-                  <b
+                  <h6
                     style={{
                       fontSize: "14px",
                       color: "#000000",
+                      margin: 0,
                       fontFamily: "'Montserrat', sans-serif",
                     }}
                   >
-                    Servicios
-                  </b>
+                    <b>Servicios</b>
+                  </h6>
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -314,16 +314,16 @@ function ExamplesNavbar() {
                   tag={Link}
                   style={{ padding: "8px 12px" }}
                 >
-                  {" "}
-                  <b
+                  <h6
                     style={{
                       fontSize: "14px",
                       color: "#000000",
+                      margin: 0,
                       fontFamily: "'Montserrat', sans-serif",
                     }}
                   >
-                    Contactos
-                  </b>
+                    <b>Contactos</b>
+                  </h6>
                 </NavLink>
               </NavItem>
             </Nav>

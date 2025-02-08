@@ -58,11 +58,12 @@ function SeccionVisionMision() {
             <h2
               className="mx-auto"
               style={{
-                fontSize: "23px",
+                fontSize: "33px",
                 fontWeight: "bold",
                 color: "#2c3e50",
                 letterSpacing: "1.5px",
-                marginBottom: "15px",
+                marginBottom: "25px",
+                textTransform: "uppercase",
                 marginTop: "35px",
               }}
             >
@@ -72,7 +73,7 @@ function SeccionVisionMision() {
           <div
             className="nav-tabs-navigation"
             style={{
-              borderTop: "3px solid navy",
+              borderTop: "2px solid navy",
               width: "100%",
               margin: "10px 0",
             }}
@@ -133,15 +134,7 @@ function SeccionVisionMision() {
 
           {/* Fondo suave con color pastel o gris claro */}
           <TabContent className="following" activeTab={activeTab}>
-            <TabPane
-              tabId="1"
-              id="follows"
-              style={{
-                borderTop: "3px solid navy",
-                width: "100%",
-                margin: "10px 0",
-              }}
-            >
+            <TabPane tabId="1" id="follows">
               <Row>
                 <Col className="ml-auto mr-auto" md="8">
                   <div
@@ -188,16 +181,7 @@ function SeccionVisionMision() {
                 </Col>
               </Row>
             </TabPane>
-            <TabPane
-              className="text-center"
-              tabId="2"
-              id="following"
-              style={{
-                borderTop: "3px solid navy",
-                width: "100%",
-                margin: "10px 0",
-              }}
-            >
+            <TabPane className="text-center" tabId="2" id="following">
               <Row>
                 <Col className="ml-auto mr-auto" md="8">
                   <div

@@ -55,177 +55,181 @@ function HistoriaPage() {
         }}
       >
         <Container>
-          <div className="owner">
-            <div className="name">
-              <h4 className="title">
-                Nuestra Historia <br />
-              </h4>
-              <h6 className="description">U.E. Aliñambi</h6>
-            </div>
-          </div>
           <Row>
-            <Col className="ml-auto mr-auto text-center" md="8">
-              <p className="description">
-                Una historia de excelencia educativa y compromiso con la formación integral
+            <Col className="text-center" md="12">
+              <h2
+                className="mx-auto"
+                style={{
+                  fontSize: "33px",
+                  fontWeight: "bold",
+                  color: "#2c3e50",
+                  letterSpacing: "1.5px",
+                  marginBottom: "15px",
+                  textTransform: "uppercase",
+                  marginTop: "35px",
+                }}
+              >
+                Historia de la Unidad Educativa Aliñambi
+              </h2>
+              <p
+                className="descripcion-valores justify-content-center description"
+                style={{
+                  fontSize: "22px",
+                  color: "black",
+                  marginTop: "30px",
+                  fontWeight: "500",
+                }}
+              >
+                Somos una institución educativa fiscomisional comprometida con
+                los valores de igualdad, equidad e inclusión social desde
+                nuestra fundación en 2016, bajo la normativa
+                MINEDUC-ME-2016-00124-A, otorgada por el Ministerio de
+                Educación. Impuslado por la fundación Aliñambi, a lo largo de
+                los años, hemos implementado diversos proyectos que han
+                fortalecido tanto la calidad humana de nuestra comunidad como el
+                compromiso con la defensa de los derechos humanos y los valores
+                que nos definen y enorgullecen.
               </p>
-              <br />
             </Col>
           </Row>
-          <div className="nav-tabs-navigation">
-            <div className="nav-tabs-wrapper">
-              <Nav role="tablist" tabs>
-                <NavItem>
-                  <NavLink
-                    className={activeTab === "1" ? "active" : ""}
-                    onClick={() => {
-                      toggle("1");
-                    }}
-                  >
-                    Nuestros Orígenes
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    className={activeTab === "2" ? "active" : ""}
-                    onClick={() => {
-                      toggle("2");
-                    }}
-                  >
-                    Crecimiento y Logros
-                  </NavLink>
-                </NavItem>
-              </Nav>
-            </div>
-          </div>
-          <TabContent className="following" activeTab={activeTab}>
-            <TabPane tabId="1" id="follows">
-              <Row>
-                <Col className="ml-auto mr-auto" md="10">
-                  <Card className="card-plain">
-                    <CardBody>
-                      <Row className="align-items-center">
-                        <Col md="6">
-                          <img
-                            alt="Fundación"
-                            className="img-rounded img-responsive"
-                            src={require("assets/img/Alinambi/AlinambiInicios.jpg")}
-                            style={{ width: "100%", marginBottom: "20px" }}
-                          />
-                        </Col>
-                        <Col md="6">
-                          <h4 className="title">Los Primeros Pasos</h4>
-                          <p className="description">
-                            La Unidad Educativa Aliñambi nació en 1985 con una visión revolucionaria 
-                            para su época: crear un espacio educativo que combinara la excelencia 
-                            académica con el desarrollo integral del ser humano. Nuestros fundadores 
-                            iniciaron este sueño con apenas tres aulas y un puñado de estudiantes 
-                            comprometidos.
-                          </p>
-                        </Col>
-                      </Row>
-                    </CardBody>
-                  </Card>
-
-                  <div className="text-center my-4">
-                    <img
-                      alt="separador"
-                      src={require("assets/img/Alinambi/AlinambiInicios.jpg")}
-                      style={{ maxWidth: "150px" }}
-                    />
-                  </div>
-
-                  <Card className="card-plain">
-                    <CardBody>
-                      <Row className="align-items-center">
-                        <Col md="6" className="order-md-2">
-                          <img
-                            alt="Desarrollo"
-                            className="img-rounded img-responsive"
-                            src={require("assets/img/Alinambi/AlinambiInicios.jpg")}
-                            style={{ width: "100%", marginBottom: "20px" }}
-                          />
-                        </Col>
-                        <Col md="6" className="order-md-1">
-                          <h4 className="title">Década de los 90</h4>
-                          <p className="description">
-                            Durante los años 90, nuestra institución experimentó un crecimiento 
-                            significativo. Implementamos programas innovadores de educación bilingüe 
-                            y comenzamos a destacar en competencias académicas nacionales. La 
-                            construcción de nuestro actual campus principal marcó un hito en 
-                            nuestra historia, proporcionando espacios modernos y adaptados a las 
-                            necesidades educativas.
-                          </p>
-                        </Col>
-                      </Row>
-                    </CardBody>
-                  </Card>
-                </Col>
-              </Row>
-            </TabPane>
-            <TabPane tabId="2" id="following">
-              <Row>
-                <Col className="ml-auto mr-auto" md="10">
-                  <Card className="card-plain">
-                    <CardBody>
-                      <Row className="align-items-center">
-                        <Col md="6">
-                          <img
-                            alt="Modernización"
-                            className="img-rounded img-responsive"
-                            src={require("assets/img/Alinambi/AlinambiInicios.jpg")}
-                            style={{ width: "100%", marginBottom: "20px" }}
-                          />
-                        </Col>
-                        <Col md="6">
-                          <h4 className="title">Nuevo Milenio</h4>
-                          <p className="description">
-                            Con la llegada del siglo XXI, nuestra institución se posicionó como 
-                            referente en innovación educativa. Implementamos laboratorios de 
-                            última generación, desarrollamos programas de intercambio internacional 
-                            y obtuvimos reconocimientos por nuestro modelo educativo integral.
-                          </p>
-                        </Col>
-                      </Row>
-                    </CardBody>
-                  </Card>
-
-                  <div className="text-center my-4">
-                    <img
-                      alt="separador"
-                      src={require("assets/img/Alinambi/AlinambiInicios.jpg")}
-                      style={{ maxWidth: "150px" }}
-                    />
-                  </div>
-
-                  <Card className="card-plain">
-                    <CardBody>
-                      <h4 className="title text-center">Actualidad y Proyección</h4>
-                      <p className="description text-center">
-                        Hoy, la U.E. Aliñambi se mantiene a la vanguardia de la educación, 
-                        con más de 1000 estudiantes y un equipo docente altamente calificado. 
-                        Nuestros graduados destacan en universidades nacionales e internacionales, 
-                        y nuestro compromiso con la excelencia educativa sigue más firme que nunca.
-                      </p>
-                      <div className="text-center mt-4">
-                        <h5>Logros Destacados</h5>
-                        <ul className="list-unstyled">
-                          <li>✓ Acreditación Internacional de Calidad Educativa</li>
-                          <li>✓ Reconocimiento por Innovación Pedagógica</li>
-                          <li>✓ Centro de Excelencia en Educación Ambiental</li>
-                        </ul>
+          <div className="container py-5">
+            <Row>
+              <Col md="15" className="mx-auto">
+                <Card className="shadow">
+                  <CardBody>
+                    <h3
+                      className="title text-center mb-3"
+                      style={{ color: "#4CAF50" }}
+                    >
+                      Nuestros Orígenes
+                    </h3>
+                    <Row style={{ paddingLeft: "50px", paddingRight: "50px" }}>
+                      <Col md="6">
+                        <img
+                          alt="Fundación"
+                          className="img-fluid rounded mb-3"
+                          src={require("assets/img/Alinambi/AlinambiInicios.jpg")}
+                        />
+                      </Col>
+                      <Col md="6">
+                        <p
+                          className="lead"
+                          style={{
+                            color: "black",
+                            marginTop: "20px",
+                            fontWeight: "400",
+                          }}
+                        >
+                          La Unidad Educativa Aliñambi nació en 1985 con una
+                          visión revolucionaria: crear un espacio educativo que
+                          combinara la excelencia académica con el desarrollo
+                          integral del ser humano. Iniciamos con tres aulas y
+                          pocos estudiantes, pero con una gran pasión por la
+                          educación.
+                        </p>
+                      </Col>
+                    </Row>
+                    <h3
+                      className="title text-center mb-3"
+                      style={{ color: "#4CAF50" }}
+                    >
+                      Crecimiento y Logros
+                    </h3>
+                    <Row style={{ paddingLeft: "25px", paddingRight: "25px" }}>
+                      <Col md="6" className="order-md-2">
+                        <img
+                          alt="Desarrollo"
+                          className="img-fluid rounded mb-3"
+                          src={require("assets/img/Alinambi/fotoAlinambiVeintiSeis.jpg")}
+                        />
+                      </Col>
+                      <Col md="6" className="order-md-1">
+                        <p
+                          className="lead"
+                          style={{
+                            color: "black",
+                            marginTop: "20px",
+                            fontWeight: "400",
+                          }}
+                        >
+                          En la década de los 90, nuestra institución creció
+                          considerablemente, con programas educativos
+                          innovadores y la construcción de un nuevo campus. La
+                          excelencia académica y el liderazgo en competiciones
+                          nacionales nos posicionaron como una de las
+                          principales instituciones educativas del país.
+                        </p>
+                      </Col>
+                    </Row>
+                    <h3
+                      className="title text-center mb-3"
+                      style={{ color: "#4CAF50" }}
+                    >
+                      Nuevo Milenio y Proyección Futura
+                    </h3>
+                    <Row style={{ paddingLeft: "30px", paddingRight: "30px" }}>
+                      <div
+                        className="text-center my-4"
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          gap: "10px",
+                        }}
+                      >
+                        <img
+                          alt="imagen1"
+                          src={require("assets/img/Alinambi/fotoAlinambiSeis.jpg")}
+                          style={{ maxWidth: "320px" }}
+                        />
+                        <img
+                          alt="imagen2"
+                          src={require("assets/img/Alinambi/fotoAlinambiOnce.jpg")}
+                          style={{ maxWidth: "320px" }}
+                        />
+                        <img
+                          alt="imagen3"
+                          src={require("assets/img/Alinambi/fotoAlinambiTrece.jpg")}
+                          style={{ maxWidth: "320px" }}
+                        />
                       </div>
-                    </CardBody>
-                  </Card>
+                      <p
+                        className="lead text-center"
+                        style={{
+                          color: "black",
+                          marginTop: "10px",
+                          fontWeight: "400",
+                        }}
+                      >
+                        Hoy, la U.E. Aliñambi es referente en innovación
+                        educativa, con más de 1000 estudiantes y un equipo
+                        docente altamente calificado. Nuestros logros incluyen
+                        la acreditación internacional de calidad educativa y un
+                        compromiso firme con la excelencia.
+                      </p>
+                    </Row>
+                    <br />
+                    <div className="text-center mt-4">
+                      <h5>Logros Destacados</h5>
+                      <ul className="list-unstyled">
+                        <li>
+                          ✓ Acreditación Internacional de Calidad Educativa
+                        </li>
+                        <li>✓ Reconocimiento por Innovación Pedagógica</li>
+                        <li>✓ Centro de Excelencia en Educación Ambiental</li>
+                      </ul>
+                    </div>
 
-                  <div className="text-center mt-5">
-                    <Button className="btn-round" color="info">
-                      <i className="fa fa-book" /> Conoce más sobre nuestra historia
-                    </Button>
-                  </div>
-                </Col>
-              </Row>
-            </TabPane>
-          </TabContent>
+                    <div className="text-center mt-4">
+                      <Button className="btn-round" color="info">
+                        <i className="fa fa-book" /> Conoce más sobre nuestra
+                        historia
+                      </Button>
+                    </div>
+                  </CardBody>
+                </Card>
+              </Col>
+            </Row>
+          </div>
         </Container>
       </div>
       <DemoFooter />
