@@ -40,8 +40,29 @@ function EdInicialPage() {
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
-              <h2 className="text-center title">Educación Inicial</h2>
-              <h5 className="text-center description">
+              <h2
+                className="text-center"
+                style={{
+                  fontSize: "33px",
+                  fontWeight: "bold",
+                  color: "#1E90FF",
+                  letterSpacing: "1.5px",
+                  marginBottom: "15px",
+                  textTransform: "uppercase",
+                  marginTop: "35px",
+                }}
+              >
+                Educación Inicial
+              </h2>
+              <h5
+                className="text-center justify-content-center description"
+                style={{
+                  fontSize: "22px",
+                  color: "black",
+                  marginTop: "30px",
+                  fontWeight: "500",
+                }}
+              >
                 Formamos a nuestros pequeños estudiantes en un ambiente seguro,
                 estimulante y lleno de amor, desarrollando sus habilidades y
                 competencias de manera integral.
@@ -56,12 +77,19 @@ function EdInicialPage() {
                   src={require("assets/img/Alinambi/fotoAlinambiTres.jpg")}
                   top
                 />
-                <CardBody className="bg-info">
-                  <CardTitle tag="h4" className="text-white">
-                    Inicial 2 (4 años)
+                <CardBody
+                  style={{ backgroundColor: "rgba(58, 241, 180, 0.93)" }}
+                >
+                  <CardTitle
+                    tag="h3"
+                    className="text-white text-center"
+                    style={{ fontWeight: "bold" }}
+                  >
+                    <b style={{ color: "#343a40" }}>Inicial 2 (4 años)</b>
                   </CardTitle>
+                  <br />
                   <CardText className="text-white">
-                    <ul>
+                    <ul style={{ fontWeight: "bold" }}>
                       <li>Desarrollo motriz fino y grueso</li>
                       <li>Iniciación a la lectoescritura</li>
                       <li>Expresión artística y musical</li>
@@ -79,12 +107,19 @@ function EdInicialPage() {
                   src={require("assets/img/Alinambi/fotoAlinambiCuatro.jpg")}
                   top
                 />
-                <CardBody className="bg-info">
-                  <CardTitle tag="h4" className="text-white">
-                    Preparatoria (5 años)
+                <CardBody
+                  style={{ backgroundColor: "rgba(20, 114, 83, 0.93)" }}
+                >
+                  <CardTitle
+                    tag="h3"
+                    className="text-white text-center"
+                    style={{ fontWeight: "bold" }}
+                  >
+                    <b style={{ color: "#343a40" }}>Preparatoria (5 años)</b>
                   </CardTitle>
+                  <br />
                   <CardText className="text-white">
-                    <ul>
+                    <ul style={{ fontWeight: "bold" }}>
                       <li>Lectoescritura avanzada</li>
                       <li>Pensamiento lógico-matemático</li>
                       <li>Desarrollo de la creatividad</li>
@@ -98,21 +133,54 @@ function EdInicialPage() {
           </Row>
           <Row className="mt-5">
             <Col md="12">
-              <Card className="card-plain bg-info">
-                <CardBody>
-                  <h3 className="text-white">Horarios y Metodología</h3>
+              <Card className="card-plain bg-primary">
+                <CardBody className="p-4">
+                  <h3
+                    className="text-white text-center"
+                    style={{
+                      fontWeight: "bold",
+                      fontSize: "1.75rem",
+                      marginBottom: "2rem",
+                    }}
+                  >
+                    Horarios y Metodología
+                  </h3>
                   <Row>
                     <Col md="6">
-                      <h5 className="text-white">Horario</h5>
-                      <ul className="text-white">
+                      <h5
+                        className="text-white text-center"
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "1.50rem",
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        Horario
+                      </h5>
+                      <ul
+                        className="text-white"
+                        style={{ paddingLeft: "40px", fontSize: "1.05rem" }}
+                      >
                         <li>Jornada matutina: 8:00 AM - 12:30 PM</li>
                         <li>Grupos reducidos</li>
                         <li>Docentes especializados</li>
                       </ul>
                     </Col>
                     <Col md="6">
-                      <h5 className="text-white">Metodología</h5>
-                      <ul className="text-white">
+                      <h5
+                        className="text-white text-center"
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "1.50rem",
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        Metodología
+                      </h5>
+                      <ul
+                        className="text-white"
+                        style={{ paddingLeft: "40px", fontSize: "1.05rem" }}
+                      >
                         <li>Aprendizaje basado en el juego</li>
                         <li>Estimulación temprana</li>
                         <li>Educación personalizada</li>

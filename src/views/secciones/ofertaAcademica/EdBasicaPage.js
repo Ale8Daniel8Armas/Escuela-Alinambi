@@ -53,8 +53,29 @@ function EdBasicaPage() {
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
-              <h2 className="text-center title">Educación General Básica</h2>
-              <h5 className="text-center description">
+              <h2
+                className="text-center"
+                style={{
+                  fontSize: "33px",
+                  fontWeight: "bold",
+                  color: "#1E90FF",
+                  letterSpacing: "1.5px",
+                  marginBottom: "15px",
+                  textTransform: "uppercase",
+                  marginTop: "35px",
+                }}
+              >
+                Educación General Básica
+              </h2>
+              <h5
+                className="text-center justify-content-center description"
+                style={{
+                  fontSize: "22px",
+                  color: "black",
+                  marginTop: "30px",
+                  fontWeight: "500",
+                }}
+              >
                 Formación integral basada en valores, excelencia académica y
                 desarrollo de habilidades para el siglo XXI.
               </h5>
@@ -62,43 +83,96 @@ function EdBasicaPage() {
           </Row>
           <Row className="mt-5">
             <Col className="ml-auto mr-auto" md="10">
-              <Nav className="justify-content-center" role="tablist" tabs>
-                <NavItem>
-                  <NavLink
-                    className={classnames({ active: activeTab === "1" })}
-                    onClick={() => {
-                      toggle("1");
-                    }}
-                  >
-                    Básica Elemental (2do-4to)
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    className={classnames({ active: activeTab === "2" })}
-                    onClick={() => {
-                      toggle("2");
-                    }}
-                  >
-                    Básica Media (5to-7mo)
-                  </NavLink>
-                </NavItem>
-              </Nav>
+              <div
+                className="nav-tabs-navigation"
+                style={{
+                  borderTop: "2px solid navy",
+                  width: "100%",
+                  margin: "10px 0",
+                }}
+              >
+                <div className="nav-tabs-wrapper">
+                  <Nav role="tablist" tabs>
+                    <NavItem>
+                      <NavLink
+                        className={activeTab === "1" ? "active" : ""}
+                        onClick={() => {
+                          toggle("1");
+                        }}
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: "600",
+                          textTransform: "uppercase",
+                          letterSpacing: "1.5px",
+                          transition: "all 0.3s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.textShadow =
+                            "2px 2px 10px rgba(0, 0, 0, 0.3)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.textShadow = "none";
+                        }}
+                      >
+                        Básica Elemental (2do - 4to grado)
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink
+                        className={activeTab === "2" ? "active" : ""}
+                        onClick={() => {
+                          toggle("2");
+                        }}
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: "600",
+                          textTransform: "uppercase",
+                          letterSpacing: "1.5px",
+                          transition: "all 0.3s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.textShadow =
+                            "2px 2px 10px rgba(0, 0, 0, 0.3)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.textShadow = "none";
+                        }}
+                      >
+                        Básica Media (5to - 7mo grado)
+                      </NavLink>
+                    </NavItem>
+                  </Nav>
+                </div>
+              </div>
+              <br />
               <TabContent activeTab={activeTab}>
                 <TabPane tabId="1">
                   <Row>
                     <Col md="6">
-                      <Card>
+                      <Card className="d-flex flex-column h-100">
                         <CardImg
                           alt="Básica Elemental"
                           src={require("assets/img/Alinambi/fotoAlinambiCinco.jpg")}
                           top
                         />
-                        <CardBody className="bg-info">
-                          <CardTitle tag="h4" className="text-white">
-                            Áreas Académicas
+                        <CardBody
+                          className="flex-grow-1 d-flex flex-column"
+                          style={{
+                            backgroundColor: "rgba(255, 187, 89, 0.9)",
+                          }}
+                        >
+                          <CardTitle
+                            tag="h4"
+                            className="text-white text-center"
+                            style={{ fontWeight: "bold" }}
+                          >
+                            <b style={{ color: "#343a40" }}>Áreas Académicas</b>
                           </CardTitle>
-                          <ul className="text-white">
+                          <br />
+                          <ul
+                            className="text-white flex-grow-1"
+                            style={{ fontWeight: "bold" }}
+                          >
                             <li>Lengua y Literatura</li>
                             <li>Matemáticas</li>
                             <li>Ciencias Naturales</li>
@@ -110,18 +184,32 @@ function EdBasicaPage() {
                         </CardBody>
                       </Card>
                     </Col>
+
                     <Col md="6">
-                      <Card>
+                      <Card className="d-flex flex-column h-100">
                         <CardImg
                           alt="Metodología Elemental"
                           src={require("assets/img/Alinambi/fotoAlinambiSeis.jpg")}
                           top
                         />
-                        <CardBody className="bg-info">
-                          <CardTitle tag="h4" className="text-white">
-                            Metodología
+                        <CardBody
+                          className="flex-grow-1 d-flex flex-column"
+                          style={{
+                            backgroundColor: "rgba(255, 160, 122, 0.9)",
+                          }}
+                        >
+                          <CardTitle
+                            tag="h4"
+                            className="text-white text-center"
+                            style={{ fontWeight: "bold" }}
+                          >
+                            <b style={{ color: "#343a40" }}>Metodología</b>
                           </CardTitle>
-                          <ul className="text-white">
+                          <br />
+                          <ul
+                            className="text-white flex-grow-1"
+                            style={{ fontWeight: "bold" }}
+                          >
                             <li>Aprendizaje significativo</li>
                             <li>Desarrollo de competencias</li>
                             <li>Trabajo colaborativo</li>
@@ -136,17 +224,30 @@ function EdBasicaPage() {
                 <TabPane tabId="2">
                   <Row>
                     <Col md="6">
-                      <Card>
+                      <Card className="d-flex flex-column h-100">
                         <CardImg
                           alt="Básica Media"
                           src={require("assets/img/Alinambi/fotoAlinambiSiete.jpg")}
                           top
                         />
-                        <CardBody className="bg-info">
-                          <CardTitle tag="h4" className="text-white">
-                            Plan Curricular
+                        <CardBody
+                          className="flex-grow-1 d-flex flex-column"
+                          style={{
+                            backgroundColor: "rgba(180, 155, 200, 0.9)",
+                          }}
+                        >
+                          <CardTitle
+                            tag="h4"
+                            className="text-white text-center"
+                            style={{ fontWeight: "bold" }}
+                          >
+                            <b style={{ color: "#343a40" }}>Plan Curricular</b>
                           </CardTitle>
-                          <ul className="text-white">
+                          <br />
+                          <ul
+                            className="text-white flex-grow-1"
+                            style={{ fontWeight: "bold" }}
+                          >
                             <li>Lengua y Literatura avanzada</li>
                             <li>Matemáticas con razonamiento lógico</li>
                             <li>Ciencias Naturales experimentales</li>
@@ -159,17 +260,32 @@ function EdBasicaPage() {
                       </Card>
                     </Col>
                     <Col md="6">
-                      <Card>
+                      <Card className="d-flex flex-column h-100">
                         <CardImg
                           alt="Actividades Media"
                           src={require("assets/img/Alinambi/fotoAlinambiOcho.jpg")}
                           top
                         />
-                        <CardBody className="bg-info">
-                          <CardTitle tag="h4" className="text-white">
-                            Actividades Complementarias
+                        <CardBody
+                          className="flex-grow-1 d-flex flex-column"
+                          style={{
+                            backgroundColor: "rgba(255, 183, 128, 0.9)",
+                          }}
+                        >
+                          <CardTitle
+                            tag="h4"
+                            className="text-white text-center"
+                            style={{ fontWeight: "bold" }}
+                          >
+                            <b style={{ color: "#343a40" }}>
+                              Actividades Complementarias{" "}
+                            </b>
                           </CardTitle>
-                          <ul className="text-white">
+                          <br />
+                          <ul
+                            className="text-white flex-grow-1"
+                            style={{ fontWeight: "bold" }}
+                          >
                             <li>Clubes académicos</li>
                             <li>Proyectos de investigación</li>
                             <li>Salidas pedagógicas</li>
@@ -186,23 +302,60 @@ function EdBasicaPage() {
           </Row>
           <Row className="mt-5">
             <Col md="12">
-              <Card className="card-plain bg-info">
+              <Card className="card-plain bg-primary">
                 <CardBody>
-                  <h3 className="text-white text-center">Horario Académico</h3>
+                  <h3
+                    className="text-white text-center"
+                    style={{
+                      fontWeight: "bold",
+                      fontSize: "1.75rem",
+                      marginBottom: "2rem",
+                    }}
+                  >
+                    Horario Académico
+                  </h3>
                   <Row>
                     <Col md="6" className="text-center">
-                      <h5 className="text-white">Jornada Matutina</h5>
-                      <p className="text-white">
+                      <h5
+                        className="text-white"
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "1.25rem",
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        Jornada Matutina
+                      </h5>
+                      <p
+                        className="text-white"
+                        style={{
+                          fontWeight: "normal",
+                          fontSize: "1rem",
+                        }}
+                      >
                         Lunes a Viernes
                         <br />
                         7:15 AM - 13:45 PM
                       </p>
                     </Col>
                     <Col md="6" className="text-center">
-                      <h5 className="text-white">
+                      <h5
+                        className="text-white"
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "1.25rem",
+                          marginBottom: "1rem",
+                        }}
+                      >
                         Actividades Extracurriculares
                       </h5>
-                      <p className="text-white">
+                      <p
+                        className="text-white"
+                        style={{
+                          fontWeight: "normal",
+                          fontSize: "1rem",
+                        }}
+                      >
                         Lunes a Jueves
                         <br />
                         14:00 PM - 15:30 PM

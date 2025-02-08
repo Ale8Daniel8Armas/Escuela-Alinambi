@@ -62,7 +62,7 @@ const TeamSection = () => {
                 className={`shadow-lg bg-${member.color} card-profile text-center`}
                 style={{
                   height: "100%",
-                  minHeight: "100px", // Ajusta según necesidad
+                  minHeight: "100px",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",

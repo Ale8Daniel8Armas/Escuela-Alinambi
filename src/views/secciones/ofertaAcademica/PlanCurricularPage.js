@@ -52,10 +52,29 @@ function PlanCurricularPage() {
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
-              <h2 className="text-center title">
+              <h2
+                className="text-center"
+                style={{
+                  fontSize: "33px",
+                  fontWeight: "bold",
+                  color: "#1E90FF",
+                  letterSpacing: "1.5px",
+                  marginBottom: "15px",
+                  textTransform: "uppercase",
+                  marginTop: "35px",
+                }}
+              >
                 Plan Curricular Institucional
               </h2>
-              <h5 className="text-center description">
+              <h5
+                className="text-center justify-content-center description"
+                style={{
+                  fontSize: "22px",
+                  color: "black",
+                  marginTop: "30px",
+                  fontWeight: "500",
+                }}
+              >
                 Nuestro plan curricular está diseñado para formar estudiantes
                 integrales, con sólidos conocimientos académicos y valores
                 humanos.
@@ -64,65 +83,185 @@ function PlanCurricularPage() {
           </Row>
           <Row className="mt-5">
             <Col className="ml-auto mr-auto" md="10">
-              <Nav className="justify-content-center" role="tablist" tabs>
-                <NavItem>
-                  <NavLink
-                    className={classnames({ active: activeTab === "1" })}
-                    onClick={() => {
-                      toggle("1");
-                    }}
-                  >
-                    Fundamentos
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    className={classnames({ active: activeTab === "2" })}
-                    onClick={() => {
-                      toggle("2");
-                    }}
-                  >
-                    Metodología
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    className={classnames({ active: activeTab === "3" })}
-                    onClick={() => {
-                      toggle("3");
-                    }}
-                  >
-                    Evaluación
-                  </NavLink>
-                </NavItem>
-              </Nav>
+              <div
+                className="nav-tabs-navigation"
+                style={{
+                  borderTop: "2px solid navy",
+                  width: "100%",
+                  margin: "10px 0",
+                }}
+              >
+                <div className="nav-tabs-wrapper">
+                  <Nav className="justify-content-center" role="tablist" tabs>
+                    <NavItem>
+                      <NavLink
+                        className={activeTab === "1" ? "active" : ""}
+                        onClick={() => {
+                          toggle("1");
+                        }}
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: "600",
+                          textTransform: "uppercase",
+                          letterSpacing: "1.5px",
+                          transition: "all 0.3s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.textShadow =
+                            "2px 2px 10px rgba(0, 0, 0, 0.3)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.textShadow = "none";
+                        }}
+                      >
+                        Fundamentos
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink
+                        className={activeTab === "2" ? "active" : ""}
+                        onClick={() => {
+                          toggle("2");
+                        }}
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: "600",
+                          textTransform: "uppercase",
+                          letterSpacing: "1.5px",
+                          transition: "all 0.3s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.textShadow =
+                            "2px 2px 10px rgba(0, 0, 0, 0.3)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.textShadow = "none";
+                        }}
+                      >
+                        Metodología
+                      </NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink
+                        className={activeTab === "3" ? "active" : ""}
+                        onClick={() => {
+                          toggle("3");
+                        }}
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: "600",
+                          textTransform: "uppercase",
+                          letterSpacing: "1.5px",
+                          transition: "all 0.3s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.target.style.textShadow =
+                            "2px 2px 10px rgba(0, 0, 0, 0.3)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.target.style.textShadow = "none";
+                        }}
+                      >
+                        Evaluación
+                      </NavLink>
+                    </NavItem>
+                  </Nav>
+                </div>
+              </div>
+              <br />
               <TabContent activeTab={activeTab}>
                 <TabPane tabId="1">
                   <Row>
                     <Col md="6">
-                      <Card className="card-plain">
+                      <Card
+                        className="shadow-lg border-0"
+                        style={{
+                          background:
+                            "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)",
+                          color: "white",
+                          borderRadius: "12px",
+                        }}
+                      >
                         <CardBody>
-                          <CardTitle tag="h4">Principios Pedagógicos</CardTitle>
-                          <ul>
-                            <li>Educación centrada en el estudiante</li>
-                            <li>Aprendizaje significativo y contextualizado</li>
-                            <li>Desarrollo de competencias</li>
-                            <li>Formación en valores</li>
-                            <li>Innovación educativa</li>
+                          <CardTitle
+                            tag="h4"
+                            style={{
+                              fontSize: "22px",
+                              fontWeight: "bold",
+                              textTransform: "uppercase",
+                              letterSpacing: "1px",
+                            }}
+                          >
+                            Principios Pedagógicos
+                          </CardTitle>
+                          <ul
+                            style={{ listStyleType: "none", paddingLeft: "0" }}
+                          >
+                            {[
+                              "Educación centrada en el estudiante",
+                              "Aprendizaje significativo y contextualizado",
+                              "Desarrollo de competencias",
+                              "Formación en valores",
+                              "Innovación educativa",
+                            ].map((item, index) => (
+                              <li
+                                key={index}
+                                style={{
+                                  padding: "5px 0",
+                                  fontSize: "16px",
+                                  fontWeight: "500",
+                                }}
+                              >
+                                ✅ {item}
+                              </li>
+                            ))}
                           </ul>
                         </CardBody>
                       </Card>
                     </Col>
                     <Col md="6">
-                      <Card className="card-plain">
+                      <Card
+                        className="shadow-lg border-0"
+                        style={{
+                          background:
+                            "linear-gradient(135deg, #ff7eb3 0%, #ff758c 100%)",
+                          color: "white",
+                          borderRadius: "12px",
+                        }}
+                      >
                         <CardBody>
-                          <CardTitle tag="h4">Ejes Transversales</CardTitle>
-                          <ul>
-                            <li>Educación en valores</li>
-                            <li>Pensamiento crítico</li>
-                            <li>Competencias digitales</li>
-                            <li>Cuidado del medio ambiente</li>
-                            <li>Responsabilidad social</li>
+                          <CardTitle
+                            tag="h4"
+                            style={{
+                              fontSize: "22px",
+                              fontWeight: "bold",
+                              textTransform: "uppercase",
+                              letterSpacing: "1px",
+                            }}
+                          >
+                            Ejes Transversales
+                          </CardTitle>
+                          <ul
+                            style={{ listStyleType: "none", paddingLeft: "0" }}
+                          >
+                            {[
+                              "Educación en valores",
+                              "Pensamiento crítico",
+                              "Competencias digitales",
+                              "Cuidado del medio ambiente",
+                              "Responsabilidad social",
+                            ].map((item, index) => (
+                              <li
+                                key={index}
+                                style={{
+                                  padding: "5px 0",
+                                  fontSize: "16px",
+                                  fontWeight: "500",
+                                }}
+                              >
+                                🌍 {item}
+                              </li>
+                            ))}
                           </ul>
                         </CardBody>
                       </Card>
@@ -132,31 +271,95 @@ function PlanCurricularPage() {
                 <TabPane tabId="2">
                   <Row>
                     <Col md="6">
-                      <Card className="card-plain">
+                      <Card
+                        className="shadow-lg border-0"
+                        style={{
+                          background:
+                            "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)",
+                          color: "white",
+                          borderRadius: "12px",
+                        }}
+                      >
                         <CardBody>
-                          <CardTitle tag="h4">
+                          <CardTitle
+                            tag="h4"
+                            style={{
+                              fontSize: "22px",
+                              fontWeight: "bold",
+                              textTransform: "uppercase",
+                              letterSpacing: "1px",
+                            }}
+                          >
                             Estrategias de Enseñanza
                           </CardTitle>
-                          <ul>
-                            <li>Aprendizaje basado en proyectos</li>
-                            <li>Trabajo colaborativo</li>
-                            <li>Uso de tecnología educativa</li>
-                            <li>Investigación y experimentación</li>
-                            <li>Desarrollo del pensamiento</li>
+                          <ul
+                            style={{ listStyleType: "none", paddingLeft: "0" }}
+                          >
+                            {[
+                              "Aprendizaje basado en proyectos",
+                              "Trabajo colaborativo",
+                              "Uso de tecnología educativa",
+                              "Investigación y experimentación",
+                              "Desarrollo del pensamiento",
+                            ].map((item, index) => (
+                              <li
+                                key={index}
+                                style={{
+                                  padding: "5px 0",
+                                  fontSize: "16px",
+                                  fontWeight: "500",
+                                }}
+                              >
+                                ✅ {item}
+                              </li>
+                            ))}
                           </ul>
                         </CardBody>
                       </Card>
                     </Col>
                     <Col md="6">
-                      <Card className="card-plain">
+                      <Card
+                        className="shadow-lg border-0"
+                        style={{
+                          background:
+                            "linear-gradient(135deg, #ff7eb3 0%, #ff758c 100%)",
+                          color: "white",
+                          borderRadius: "12px",
+                        }}
+                      >
                         <CardBody>
-                          <CardTitle tag="h4">Recursos Educativos</CardTitle>
-                          <ul>
-                            <li>Plataformas digitales</li>
-                            <li>Laboratorios especializados</li>
-                            <li>Material didáctico innovador</li>
-                            <li>Biblioteca virtual</li>
-                            <li>Espacios de aprendizaje flexibles</li>
+                          <CardTitle
+                            tag="h4"
+                            style={{
+                              fontSize: "22px",
+                              fontWeight: "bold",
+                              textTransform: "uppercase",
+                              letterSpacing: "1px",
+                            }}
+                          >
+                            Recursos Educativos
+                          </CardTitle>
+                          <ul
+                            style={{ listStyleType: "none", paddingLeft: "0" }}
+                          >
+                            {[
+                              "Plataformas digitales",
+                              "Laboratorios especializados",
+                              "Material didáctico innovador",
+                              "Biblioteca virtual",
+                              "Espacios de aprendizaje flexibles",
+                            ].map((item, index) => (
+                              <li
+                                key={index}
+                                style={{
+                                  padding: "5px 0",
+                                  fontSize: "16px",
+                                  fontWeight: "500",
+                                }}
+                              >
+                                🌍 {item}
+                              </li>
+                            ))}
                           </ul>
                         </CardBody>
                       </Card>
@@ -166,29 +369,95 @@ function PlanCurricularPage() {
                 <TabPane tabId="3">
                   <Row>
                     <Col md="6">
-                      <Card className="card-plain">
+                      <Card
+                        className="shadow-lg border-0"
+                        style={{
+                          background:
+                            "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)",
+                          color: "white",
+                          borderRadius: "12px",
+                        }}
+                      >
                         <CardBody>
-                          <CardTitle tag="h4">Sistema de Evaluación</CardTitle>
-                          <ul>
-                            <li>Evaluación diagnóstica</li>
-                            <li>Evaluación formativa</li>
-                            <li>Evaluación sumativa</li>
-                            <li>Autoevaluación y coevaluación</li>
-                            <li>Rúbricas de desempeño</li>
+                          <CardTitle
+                            tag="h4"
+                            style={{
+                              fontSize: "22px",
+                              fontWeight: "bold",
+                              textTransform: "uppercase",
+                              letterSpacing: "1px",
+                            }}
+                          >
+                            Sistema de Evaluación
+                          </CardTitle>
+                          <ul
+                            style={{ listStyleType: "none", paddingLeft: "0" }}
+                          >
+                            {[
+                              "Evaluación diagnóstica",
+                              "Evaluación formativa",
+                              "Evaluación sumativa",
+                              "Autoevaluación y coevaluación",
+                              "Rúbricas de desempeño",
+                            ].map((item, index) => (
+                              <li
+                                key={index}
+                                style={{
+                                  padding: "5px 0",
+                                  fontSize: "16px",
+                                  fontWeight: "500",
+                                }}
+                              >
+                                ✅ {item}
+                              </li>
+                            ))}
                           </ul>
                         </CardBody>
                       </Card>
                     </Col>
                     <Col md="6">
-                      <Card className="card-plain">
+                      <Card
+                        className="shadow-lg border-0"
+                        style={{
+                          background:
+                            "linear-gradient(135deg, #ff7eb3 0%, #ff758c 100%)",
+                          color: "white",
+                          borderRadius: "12px",
+                        }}
+                      >
                         <CardBody>
-                          <CardTitle tag="h4">Seguimiento Académico</CardTitle>
-                          <ul>
-                            <li>Tutorías personalizadas</li>
-                            <li>Reportes de progreso</li>
-                            <li>Acompañamiento estudiantil</li>
-                            <li>Refuerzo académico</li>
-                            <li>Comunicación con padres</li>
+                          <CardTitle
+                            tag="h4"
+                            style={{
+                              fontSize: "22px",
+                              fontWeight: "bold",
+                              textTransform: "uppercase",
+                              letterSpacing: "1px",
+                            }}
+                          >
+                            Seguimiento Académico
+                          </CardTitle>
+                          <ul
+                            style={{ listStyleType: "none", paddingLeft: "0" }}
+                          >
+                            {[
+                              "Tutorías personalizadas",
+                              "Reportes de progreso",
+                              "Acompañamiento estudiantil",
+                              "Refuerzo académico",
+                              "Comunicación con padres",
+                            ].map((item, index) => (
+                              <li
+                                key={index}
+                                style={{
+                                  padding: "5px 0",
+                                  fontSize: "16px",
+                                  fontWeight: "500",
+                                }}
+                              >
+                                🌍 {item}
+                              </li>
+                            ))}
                           </ul>
                         </CardBody>
                       </Card>
