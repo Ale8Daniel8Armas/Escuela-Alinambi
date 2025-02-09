@@ -17,18 +17,32 @@ const ContactAgenda = () => {
 
   return (
     <div className="container text-center mt-4">
-      <h1 className="display-4">Agenda de contactos</h1>
+      <h1 className="display-4" style={{ color: "#1E90FF" }}>
+        Agenda de contactos
+      </h1>
       <div className="h1">📖</div>
 
       <Card className="mt-4 p-4">
-        <h2>Contáctanos</h2>
-        <p className="fst-italic">Estaremos gustosos de atenderte...</p>
+        <h2
+          className="text-center"
+          style={{
+            fontSize: "33px",
+            fontWeight: "bold",
+            color: "#1E90FF",
+            letterSpacing: "1.5px",
+            marginBottom: "15px",
+            textTransform: "uppercase",
+            marginTop: "35px",
+          }}
+        >
+          Contáctanos
+        </h2>
+        <p className="fst-italic">¡Estaremos gustosos de atenderte!</p>
         <p>
           <strong>Teléfonos:</strong> 3033284 - 3033988
         </p>
         <p>
-          <strong>Dirección:</strong> Parque Central de Chillogallo, Calles Luis
-          Francisco López y Joaquín Ruales
+          <strong>Dirección:</strong> Calle Panzaleo - E8-213 e Isla Isabela
         </p>
 
         <div className="d-flex justify-content-center gap-3 fs-2 mt-3">
@@ -42,8 +56,8 @@ const ContactAgenda = () => {
       <Card className="mt-4">
         <CardBody>
           <div className="btn-group d-flex">
-            <Button color="primary">Primaria</Button>
-            <Button color="secondary">Secundaria</Button>
+            <Button color="primary">Departamento Escolar</Button>
+            <Button color="secondary">Fundación</Button>
             <Button color="info">Oficinas</Button>
           </div>
 
@@ -71,7 +85,9 @@ const ContactAgenda = () => {
         </CardBody>
       </Card>
 
-      <h2 className="mt-4">Ubicación</h2>
+      <h2 className="mt-4" style={{ color: "#1E90FF" }}>
+        Ubicación
+      </h2>
       <div className="mt-2" style={{ height: "300px", width: "100%" }}>
         <MapContainer
           center={[-0.2746, -78.5534]}
@@ -81,6 +97,7 @@ const ContactAgenda = () => {
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         </MapContainer>
       </div>
+      <br />
     </div>
   );
 };

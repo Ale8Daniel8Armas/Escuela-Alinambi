@@ -62,7 +62,7 @@ function HistoriaPage() {
                 style={{
                   fontSize: "33px",
                   fontWeight: "bold",
-                  color: "#2c3e50",
+                  color: "#1E90FF",
                   letterSpacing: "1.5px",
                   marginBottom: "15px",
                   textTransform: "uppercase",

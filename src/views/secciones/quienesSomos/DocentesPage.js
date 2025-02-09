@@ -66,7 +66,7 @@ function DocentesPage() {
                 className="mx-auto"
                 style={{
                   fontWeight: "bold",
-                  color: "#2c3e50",
+                  color: "#1E90FF",
                   marginBottom: "35px",
                 }}
               >

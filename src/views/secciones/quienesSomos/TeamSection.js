@@ -49,7 +49,7 @@ const TeamSection = () => {
           <Col className="text-center mb-6">
             <h2
               className="text-center"
-              style={{ fontWeight: "bold", color: "#2c3e50" }}
+              style={{ fontWeight: "bold", color: "#1E90FF" }}
             >
               Conozca nuestro consejo estudiantil
             </h2>

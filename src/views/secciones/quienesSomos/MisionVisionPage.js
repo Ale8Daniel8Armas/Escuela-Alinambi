@@ -60,7 +60,7 @@ function SeccionVisionMision() {
               style={{
                 fontSize: "33px",
                 fontWeight: "bold",
-                color: "#2c3e50",
+                color: "#1E90FF",
                 letterSpacing: "1.5px",
                 marginBottom: "25px",
                 textTransform: "uppercase",
@@ -136,7 +136,7 @@ function SeccionVisionMision() {
           <TabContent className="following" activeTab={activeTab}>
             <TabPane tabId="1" id="follows">
               <Row>
-                <Col className="ml-auto mr-auto" md="8">
+                <Col className="ml-auto mr-auto" md="12">
                   <div
                     className="text-center"
                     style={{
@@ -149,7 +149,11 @@ function SeccionVisionMision() {
                       alt="Misión"
                       className="img-rounded img-responsive"
                       src={require("assets/img/Alinambi/fotoAlinambiVeintiCinco.jpg")}
-                      style={{ maxWidth: "300px", marginBottom: "20px" }}
+                      style={{
+                        maxWidth: "500px",
+                        marginBottom: "20px",
+                        height: "350px",
+                      }}
                     />
                     <h3
                       style={{
@@ -183,7 +187,7 @@ function SeccionVisionMision() {
             </TabPane>
             <TabPane className="text-center" tabId="2" id="following">
               <Row>
-                <Col className="ml-auto mr-auto" md="8">
+                <Col className="ml-auto mr-auto" md="12">
                   <div
                     className="text-center"
                     style={{
@@ -196,7 +200,11 @@ function SeccionVisionMision() {
                       alt="Visión"
                       className="img-rounded img-responsive"
                       src={require("assets/img/Alinambi/fotoAlinambiVentiuno.jpg")}
-                      style={{ maxWidth: "300px", marginBottom: "20px" }}
+                      style={{
+                        maxWidth: "500px",
+                        marginBottom: "20px",
+                        height: "350px",
+                      }}
                     />
                     <h3
                       style={{

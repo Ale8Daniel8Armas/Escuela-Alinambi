@@ -18,6 +18,7 @@ import {
   CardBody,
   CardTitle,
   CardText,
+  CardImg,
 } from "reactstrap";
 
 // core components
@@ -59,6 +60,43 @@ function ValoresPage() {
         }}
       >
         <Container>
+          <Row className="justify-content-center">
+            <Col className="text-center" md="12">
+              <h3
+                className="mx-auto"
+                style={{
+                  fontSize: "33px",
+                  fontWeight: "bold",
+                  color: "#1E90FF",
+                  letterSpacing: "1.5px",
+                  marginBottom: "15px",
+                  textTransform: "uppercase",
+                  marginTop: "35px",
+                }}
+              >
+                Lema Aliñambi
+              </h3>
+              <br />
+              <Card
+                className="shadow-lg border-0 rounded-4"
+                style={{ maxWidth: "70rem", margin: "0 auto" }}
+              >
+                <CardImg
+                  top
+                  src={require("assets/img/Alinambi/LemaAlinambi.jpeg")}
+                  alt="imagen de lema de la institución"
+                  className="img-fluid rounded-top-4"
+                  style={{
+                    height: "410px",
+                    objectFit: "cover",
+                    objectPosition: "center 20%",
+                    width: "100%",
+                  }}
+                />
+              </Card>
+            </Col>
+          </Row>
+          <br />
           {/* Sección de Valores Institucionales */}
           <Row>
             <Col className="text-center" md="12">
@@ -67,7 +105,7 @@ function ValoresPage() {
                 style={{
                   fontSize: "33px",
                   fontWeight: "bold",
-                  color: "#2c3e50",
+                  color: "#1E90FF",
                   letterSpacing: "1.5px",
                   marginBottom: "15px",
                   textTransform: "uppercase",
@@ -93,7 +131,7 @@ function ValoresPage() {
               </p>
             </Col>
           </Row>
-          <br></br>
+          <br />
           <Row className="mt-8">
             {[
               {

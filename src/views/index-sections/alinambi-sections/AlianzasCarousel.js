@@ -53,7 +53,7 @@ const AlianzaCarousel = () => {
           <h2
             className="title"
             style={{
-              color: "#2c3e50",
+              color: "#1E90FF",
               fontSize: "2.5rem",
               fontWeight: "600",
               marginBottom: "1.5rem",

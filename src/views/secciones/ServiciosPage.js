@@ -55,7 +55,25 @@ function ServiciosPage() {
         }}
       >
         <Container>
-        <ServiciosContent />
+          <Row className="justify-content-center">
+            <Col md="12">
+              <h3
+                className="text-center"
+                style={{
+                  fontSize: "28px",
+                  fontWeight: "bold",
+                  color: "#1E90FF",
+                  letterSpacing: "1.5px",
+                  marginBottom: "15px",
+                  textTransform: "uppercase",
+                  marginTop: "35px",
+                }}
+              >
+                Contamos con servicios de calidad
+              </h3>
+            </Col>
+          </Row>
+          <ServiciosContent />
         </Container>
       </div>
       <DemoFooter />

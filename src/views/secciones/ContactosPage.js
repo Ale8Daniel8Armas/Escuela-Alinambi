@@ -65,6 +65,10 @@ function ContactosPage() {
         <Container>
           <Row>
             <Col className="ml-auto mr-auto" md="8">
+              <h2 className="mt-4 text-center" style={{ color: "#1E90FF" }}>
+                Envíanos un mensaje
+              </h2>
+              <br />
               <Form className="contact-form">
                 <Row>
                   <Col md="6">

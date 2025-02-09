@@ -62,9 +62,10 @@ function LandingPage() {
                     fontSize: "33px",
                     fontWeight: "bold",
                     color: "#2c3e50",
-                    textTransform: "uppercase",
                     letterSpacing: "1.5px",
                     marginBottom: "15px",
+                    textTransform: "uppercase",
+                    marginTop: "35px",
                   }}
                 >
                   Bienvenidos a la Unidad Educativa Fiscomisional Aliñambi
@@ -94,7 +95,7 @@ function LandingPage() {
                 style={{
                   fontSize: "33px",
                   fontWeight: "bold",
-                  color: "#2c3e50",
+                  color: "#1E90FF",
                   textTransform: "uppercase",
                   letterSpacing: "1.5px",
                   marginBottom: "15px",
@@ -113,33 +114,33 @@ function LandingPage() {
                 estratégicas.
               </h3>
               <br></br>
-              <h3
+              <h2
                 className="text-center"
                 style={{
                   fontSize: "20px",
                   fontWeight: "bold",
-                  color: "#2c3e50",
+                  color: "#1E90FF",
                   textTransform: "uppercase",
                   letterSpacing: "1.5px",
                   marginBottom: "15px",
                 }}
               >
                 ¡Descubre nuestros programas!
-              </h3>
+              </h2>
             </Col>
           </Row>
           <Row className="mt-5">
             <Col md="4">
-              <Card>
+              <Card className="d-flex flex-column h-100">
                 <CardImg
                   alt="Convenios Académicos"
                   src={require("assets/img/Alinambi/fotoAlinambiUno.jpg")}
                   top
                 />
-                <CardBody className="bg-info">
+                <CardBody className="bg-info flex-grow-1 d-flex flex-column">
                   <CardTitle
                     tag="h4"
-                    className="text-white"
+                    className="text-white text-center"
                     style={{ marginBottom: "10px" }}
                   >
                     Proyecto de Agricultura
@@ -156,16 +157,16 @@ function LandingPage() {
               </Card>
             </Col>
             <Col md="4">
-              <Card>
+              <Card className="d-flex flex-column h-100">
                 <CardImg
                   alt="Convenios Deportivos"
                   src={require("assets/img/Alinambi/fotoAlinambiDos.jpg")}
                   top
                 />
-                <CardBody className="bg-info">
+                <CardBody className="bg-primary flex-grow-1 d-flex flex-column">
                   <CardTitle
                     tag="h4"
-                    className="text-white"
+                    className="text-white text-center"
                     style={{ marginBottom: "10px" }}
                   >
                     Proyecto Centro de Capacitación Técnica Productiva
@@ -181,16 +182,16 @@ function LandingPage() {
               </Card>
             </Col>
             <Col md="4">
-              <Card>
+              <Card className="d-flex flex-column h-100">
                 <CardImg
                   alt="Convenios Culturales"
                   src={require("assets/img/Alinambi/fotoAlinambiTres.jpg")}
                   top
                 />
-                <CardBody className="bg-info">
+                <CardBody className="bg-info flex-grow-1 d-flex flex-column">
                   <CardTitle
                     tag="h4"
-                    className="text-white"
+                    className="text-white text-center"
                     style={{ marginBottom: "10px" }}
                   >
                     Actividades caritativas y festivas
@@ -207,179 +208,192 @@ function LandingPage() {
             </Col>
           </Row>
         </div>
+        <br />
         <div className="section section-dark text-center">
           <Container>
-            <h2 className="title">Áreas Destacadas</h2>
+            <h2 className="title" style={{ marginTop: "15px" }}>
+              Áreas Destacadas
+            </h2>
             <Container>
               <Row>
                 {/* Primera fila */}
                 <Col md="3">
-                <Link to="/matricula-page" style={{ textDecoration: "none" }}>
-                  <Card
-                    data-background="image"
-                    style={{
-                      backgroundImage:
-                        "url(" +
-                        require("assets/img/Alinambi/divinoNinioAlinambi.jpg") +
-                        ")",
-                    }}
-                  >
-                    <CardBody>
-                      <h6 className="card-category">Matriculación</h6>
-                      <p>
-                        Accede a información sobre el proceso de inscripción y
-                        matrícula para nuevos estudiantes.
-                      </p>
-                    </CardBody>
-                  </Card>
+                  <Link to="/matricula-page" style={{ textDecoration: "none" }}>
+                    <Card
+                      data-background="image"
+                      style={{
+                        backgroundImage:
+                          "url(" +
+                          require("assets/img/Alinambi/divinoNinioAlinambi.jpg") +
+                          ")",
+                      }}
+                    >
+                      <CardBody>
+                        <h6 className="card-category">Matriculación</h6>
+                        <p>
+                          Accede a información sobre el proceso de inscripción y
+                          matrícula para nuevos estudiantes.
+                        </p>
+                      </CardBody>
+                    </Card>
                   </Link>
                 </Col>
                 <Col md="3">
-                <Link to="/admisiones-page" style={{ textDecoration: "none" }}>
-                  <Card
-                    data-background="image"
-                    style={{
-                      backgroundImage:
-                        "url(" +
-                        require("assets/img/Alinambi/fotoAlinambiOcho.jpg") +
-                        ")",
-                    }}
+                  <Link
+                    to="/admisiones-page"
+                    style={{ textDecoration: "none" }}
                   >
-                    <CardBody>
-                      <h6 className="card-category">Admisiones</h6>
-                      <p>
-                        Conoce los requisitos y pasos para formar parte de
-                        nuestra comunidad educativa.
-                      </p>
-                    </CardBody>
-                  </Card>
+                    <Card
+                      data-background="image"
+                      style={{
+                        backgroundImage:
+                          "url(" +
+                          require("assets/img/Alinambi/fotoAlinambiOcho.jpg") +
+                          ")",
+                      }}
+                    >
+                      <CardBody>
+                        <h6 className="card-category">Admisiones</h6>
+                        <p>
+                          Conoce los requisitos y pasos para formar parte de
+                          nuestra comunidad educativa.
+                        </p>
+                      </CardBody>
+                    </Card>
                   </Link>
                 </Col>
                 <Col md="3">
-                <Link to="/historia-page" style={{ textDecoration: "none" }}>
-                  <Card
-                    data-background="image"
-                    style={{
-                      backgroundImage:
-                        "url(" +
-                        require("assets/img/Alinambi/fotoAlinambiVeinte.jpg") +
-                        ")",
-                    }}
-                  >
-                    <CardBody>
-                      <h6 className="card-category">Historia</h6>
-                      <p>
-                        Descubre nuestra trayectoria y compromiso con la
-                        educación de calidad.
-                      </p>
-                    </CardBody>
-                  </Card>
+                  <Link to="/historia-page" style={{ textDecoration: "none" }}>
+                    <Card
+                      data-background="image"
+                      style={{
+                        backgroundImage:
+                          "url(" +
+                          require("assets/img/Alinambi/fotoAlinambiVeinte.jpg") +
+                          ")",
+                      }}
+                    >
+                      <CardBody>
+                        <h6 className="card-category">Historia</h6>
+                        <p>
+                          Descubre nuestra trayectoria y compromiso con la
+                          educación de calidad.
+                        </p>
+                      </CardBody>
+                    </Card>
                   </Link>
                 </Col>
                 <Col md="3">
-                <Link to="/servicios-page" style={{ textDecoration: "none" }}>
-                  <Card
-                    data-background="image"
-                    style={{
-                      backgroundImage:
-                        "url(" +
-                        require("assets/img/Alinambi/LemaAlinambi.jpeg") +
-                        ")",
-                    }}
-                  >
-                    <CardBody>
-                      <h6 className="card-category">Servicios</h6>
-                      <p>
-                        Conoce los servicios que ofrecemos para garantizar un
-                        aprendizaje integral.
-                      </p>
-                    </CardBody>
-                  </Card>
+                  <Link to="/servicios-page" style={{ textDecoration: "none" }}>
+                    <Card
+                      data-background="image"
+                      style={{
+                        backgroundImage:
+                          "url(" +
+                          require("assets/img/Alinambi/LemaAlinambi.jpeg") +
+                          ")",
+                      }}
+                    >
+                      <CardBody>
+                        <h6 className="card-category">Servicios</h6>
+                        <p>
+                          Conoce los servicios que ofrecemos para garantizar un
+                          aprendizaje integral.
+                        </p>
+                      </CardBody>
+                    </Card>
                   </Link>
                 </Col>
               </Row>
               <Row>
                 {/* Segunda fila */}
                 <Col md="3">
-                <Link to="/contactos-page" style={{ textDecoration: "none" }}>
-                  <Card
-                    data-background="image"
-                    style={{
-                      backgroundImage:
-                        "url(" +
-                        require("assets/img/Alinambi/barAlinambi.jpg") +
-                        ")",
-                    }}
-                  >
-                    <CardBody>
-                      <h6 className="card-category">Contactos</h6>
-                      <p>
-                        Contáctanos para resolver tus dudas y obtener más
-                        información.
-                      </p>
-                    </CardBody>
-                  </Card>
+                  <Link to="/contactos-page" style={{ textDecoration: "none" }}>
+                    <Card
+                      data-background="image"
+                      style={{
+                        backgroundImage:
+                          "url(" +
+                          require("assets/img/Alinambi/barAlinambi.jpg") +
+                          ")",
+                      }}
+                    >
+                      <CardBody>
+                        <h6 className="card-category">Contactos</h6>
+                        <p>
+                          Contáctanos para resolver tus dudas y obtener más
+                          información.
+                        </p>
+                      </CardBody>
+                    </Card>
                   </Link>
                 </Col>
                 <Col md="3">
-                <Link to="/actividades-page" style={{ textDecoration: "none" }}>
-                  <Card
-                    data-background="image"
-                    style={{
-                      backgroundImage:
-                        "url(" +
-                        require("assets/img/Alinambi/agendasAlinambi.jpg") +
-                        ")",
-                    }}
+                  <Link
+                    to="/actividades-page"
+                    style={{ textDecoration: "none" }}
                   >
-                    <CardBody>
-                      <h6 className="card-category">Actividades</h6>
-                      <p>
-                        {" "}
-                        Participa en nuestras actividades extracurriculares y
-                        eventos especiales.
-                      </p>
-                    </CardBody>
-                  </Card>
+                    <Card
+                      data-background="image"
+                      style={{
+                        backgroundImage:
+                          "url(" +
+                          require("assets/img/Alinambi/agendasAlinambi.jpg") +
+                          ")",
+                      }}
+                    >
+                      <CardBody>
+                        <h6 className="card-category">Actividades</h6>
+                        <p>
+                          {" "}
+                          Participa en nuestras actividades extracurriculares y
+                          eventos especiales.
+                        </p>
+                      </CardBody>
+                    </Card>
                   </Link>
                 </Col>
                 <Col md="3">
-                <Link to="/boletines-page" style={{ textDecoration: "none" }}>
-                  <Card
-                    data-background="image"
-                    style={{
-                      backgroundImage:
-                        "url(" +
-                        require("assets/img/Alinambi/letreroAlinambi.jpg") +
-                        ")",
-                    }}
-                  >
-                    <CardBody>
-                      <h6 className="card-category">Boletines Informativos</h6>
-                      <p>Encuentra documentos y archivos de nuestra entidad.</p>
-                    </CardBody>
-                  </Card>
+                  <Link to="/boletines-page" style={{ textDecoration: "none" }}>
+                    <Card
+                      data-background="image"
+                      style={{
+                        backgroundImage:
+                          "url(" +
+                          require("assets/img/Alinambi/letreroAlinambi.jpg") +
+                          ")",
+                      }}
+                    >
+                      <CardBody>
+                        <h6 className="card-category">
+                          Boletines Informativos
+                        </h6>
+                        <p>
+                          Encuentra documentos y archivos de nuestra entidad.
+                        </p>
+                      </CardBody>
+                    </Card>
                   </Link>
                 </Col>
                 <Col md="3">
-                <Link to="/fundacion-page" style={{ textDecoration: "none" }}>
-                  <Card
-                    data-background="image"
-                    style={{
-                      backgroundImage:
-                        "url(" +
-                        require("assets/img/Alinambi/niñosAlinambi.jpg") +
-                        ")",
-                    }}
-                  >
-                    <CardBody>
-                      <h6 className="card-category">Nuestra Fundación</h6>
-                      <p>
-                        Aprende más sobre los valores y objetivos que guían
-                        nuestra institución.
-                      </p>
-                    </CardBody>
-                  </Card>
+                  <Link to="/fundacion-page" style={{ textDecoration: "none" }}>
+                    <Card
+                      data-background="image"
+                      style={{
+                        backgroundImage:
+                          "url(" +
+                          require("assets/img/Alinambi/niñosAlinambi.jpg") +
+                          ")",
+                      }}
+                    >
+                      <CardBody>
+                        <h6 className="card-category">Nuestra Fundación</h6>
+                        <p>
+                          Aprende más sobre los valores y objetivos que guían
+                          nuestra institución.
+                        </p>
+                      </CardBody>
+                    </Card>
                   </Link>
                 </Col>
               </Row>
@@ -387,6 +401,15 @@ function LandingPage() {
           </Container>
         </div>
         <AlianzaCarousel />
+        <div className="d-flex justify-content-center align-items-center">
+          <Link to="/convenios-page">
+            <Button className="btn-round text-center" color="primary" outline>
+              <i className="fa fa-heart" />
+              Conoce más
+            </Button>
+          </Link>
+        </div>
+        <br />
         <DemoFooter />
       </div>
     </>

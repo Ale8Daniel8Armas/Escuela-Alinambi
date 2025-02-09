@@ -200,7 +200,7 @@ function AdmisionesPage() {
                     <li>Proceso de matrícula</li>
                   </ol>
                   <Button
-                    className="btn-lg btn-dark d-block mx-auto mt-4"
+                    className="btn-lg btn-danger d-block mx-auto mt-4"
                     style={{
                       fontWeight: "bold",
                       padding: "12px 25px",
@@ -246,7 +246,7 @@ function AdmisionesPage() {
                     <li>Carnet de vacunación</li>
                   </ul>
                   <Button
-                    className="btn-lg btn-dark d-block mx-auto mt-4"
+                    className="btn-lg btn-success d-block mx-auto mt-4"
                     style={{
                       fontWeight: "bold",
                       padding: "12px 25px",
@@ -295,7 +295,7 @@ function AdmisionesPage() {
                   </Row>
                   <div className="text-center mt-4">
                     <Button
-                      className="btn-lg btn-neutral text-dark px-5"
+                      className="btn-lg btn-info text-dark px-5"
                       style={{
                         fontWeight: "bold",
                         fontSize: "1.2rem",
