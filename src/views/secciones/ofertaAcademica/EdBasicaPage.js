@@ -356,9 +356,9 @@ function EdBasicaPage() {
                           fontSize: "1rem",
                         }}
                       >
-                        Lunes a Jueves
+                        Lunes a Viernes
                         <br />
-                        14:00 PM - 15:30 PM
+                        Hora coordinada con el tutor
                       </p>
                     </Col>
                   </Row>

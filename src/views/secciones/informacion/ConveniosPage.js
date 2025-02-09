@@ -14,12 +14,76 @@ import {
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ConveniosHeader from "components/Headers/ConveniosHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
+import AlianzaCarousel from "views/index-sections/alinambi-sections/AlianzasCarousel.js";
 
 function ConveniosPage() {
   React.useEffect(() => {
     document.documentElement.classList.remove("nav-open");
     window.scrollTo(0, 0);
   }, []);
+
+  const conveniosData = [
+    {
+      title: "Convenios Académicos",
+      image: require("assets/img/Alinambi/convenios-academicos.jpg"),
+      items: [
+        "Pontificia Universidad Católica del Ecuador (PUCE)",
+        "Universidad de las Fuerzas Armadas (ESPE)",
+        "Instituto Tecnológico Rumiñahui",
+        "Programas de intercambio",
+        "Certificaciones internacionales",
+      ],
+    },
+    {
+      title: "Convenios Deportivos",
+      image: require("assets/img/Alinambi/convenios-deportivos.jpg"),
+      items: [
+        "Clubes deportivos locales",
+        "Federaciones deportivas",
+        "Competencias intercolegiales",
+        "Escuelas de formación",
+        "Eventos deportivos nacionales",
+      ],
+    },
+    {
+      title: "Convenios Culturales",
+      image: require("assets/img/Alinambi/fotoAlinambiUno.jpg"),
+      items: [
+        "Centros culturales",
+        "Museos y galerías",
+        "Escuelas de arte",
+        "Programas de teatro",
+        "Intercambios culturales",
+      ],
+    },
+  ];
+
+  const benefitsData = [
+    {
+      title: "Académicos",
+      items: [
+        "Acceso a recursos educativos",
+        "Programas de mentoría",
+        "Becas y descuentos",
+      ],
+    },
+    {
+      title: "Deportivos",
+      items: [
+        "Uso de instalaciones",
+        "Entrenamiento especializado",
+        "Participación en torneos",
+      ],
+    },
+    {
+      title: "Culturales",
+      items: [
+        "Talleres artísticos",
+        "Eventos culturales",
+        "Exposiciones y muestras",
+      ],
+    },
+  ];
 
   return (
     <>
@@ -40,124 +104,160 @@ function ConveniosPage() {
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
-              <h2 className="text-center title">Convenios Institucionales</h2>
-              <h5 className="text-center description">
+              <h2
+                className="text-center"
+                style={{
+                  fontSize: "33px",
+                  fontWeight: "bold",
+                  color: "#1E90FF",
+                  letterSpacing: "1.5px",
+                  marginBottom: "15px",
+                  textTransform: "uppercase",
+                  marginTop: "35px",
+                }}
+              >
+                Convenios Institucionales
+              </h2>
+              <h5
+                className="text-center justify-content-center description"
+                style={{
+                  fontSize: "22px",
+                  color: "black",
+                  marginTop: "30px",
+                  fontWeight: "500",
+                }}
+              >
                 Mantenemos alianzas estratégicas con instituciones nacionales e
                 internacionales para enriquecer la experiencia educativa de
                 nuestros estudiantes.
               </h5>
             </Col>
           </Row>
-          <Row className="mt-5">
-            <Col md="4">
-              <Card>
-                <CardImg
-                  alt="Convenios Académicos"
-                  src={require("assets/img/Alinambi/fotoAlinambiUno.jpg")}
-                  top
-                />
-                <CardBody className="bg-info">
-                  <CardTitle tag="h4" className="text-white">
-                    Convenios Académicos
-                  </CardTitle>
-                  <CardText className="text-white">
-                    <ul>
-                      <li>
-                        Pontificia Universidad Católica del Ecuador (PUCE)
-                      </li>
-                      <li>Universidad de las Fuerzas Armadas (ESPE)</li>
-                      <li>Instituto Tecnológico Rumiñahui</li>
-                      <li>Programas de intercambio</li>
-                      <li>Certificaciones internacionales</li>
-                    </ul>
-                  </CardText>
-                </CardBody>
-              </Card>
-            </Col>
-            <Col md="4">
-              <Card>
-                <CardImg
-                  alt="Convenios Deportivos"
-                  src={require("assets/img/Alinambi/fotoAlinambiDos.jpg")}
-                  top
-                />
-                <CardBody className="bg-info">
-                  <CardTitle tag="h4" className="text-white">
-                    Convenios Deportivos
-                  </CardTitle>
-                  <CardText className="text-white">
-                    <ul>
-                      <li>Clubes deportivos locales</li>
-                      <li>Federaciones deportivas</li>
-                      <li>Competencias intercolegiales</li>
-                      <li>Escuelas de formación</li>
-                      <li>Eventos deportivos nacionales</li>
-                    </ul>
-                  </CardText>
-                </CardBody>
-              </Card>
-            </Col>
-            <Col md="4">
-              <Card>
-                <CardImg
-                  alt="Convenios Culturales"
-                  src={require("assets/img/Alinambi/fotoAlinambiTres.jpg")}
-                  top
-                />
-                <CardBody className="bg-info">
-                  <CardTitle tag="h4" className="text-white">
-                    Convenios Culturales
-                  </CardTitle>
-                  <CardText className="text-white">
-                    <ul>
-                      <li>Centros culturales</li>
-                      <li>Museos y galerías</li>
-                      <li>Escuelas de arte</li>
-                      <li>Programas de teatro</li>
-                      <li>Intercambios culturales</li>
-                    </ul>
-                  </CardText>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-          <Row className="mt-5">
-            <Col md="12">
-              <Card className="card-plain bg-info">
-                <CardBody>
-                  <h3 className="text-white text-center">
-                    Beneficios para Estudiantes
-                  </h3>
-                  <Row>
-                    <Col md="4">
-                      <h5 className="text-white text-center">Académicos</h5>
-                      <ul className="text-white">
-                        <li>Acceso a recursos educativos</li>
-                        <li>Programas de mentoría</li>
-                        <li>Becas y descuentos</li>
-                      </ul>
-                    </Col>
-                    <Col md="4">
-                      <h5 className="text-white text-center">Deportivos</h5>
-                      <ul className="text-white">
-                        <li>Uso de instalaciones</li>
-                        <li>Entrenamiento especializado</li>
-                        <li>Participación en torneos</li>
-                      </ul>
-                    </Col>
-                    <Col md="4">
-                      <h5 className="text-white text-center">Culturales</h5>
-                      <ul className="text-white">
-                        <li>Talleres artísticos</li>
-                        <li>Eventos culturales</li>
-                        <li>Exposiciones y muestras</li>
-                      </ul>
-                    </Col>
-                  </Row>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
+          <div className="px-3">
+            <Row className="mt-5">
+              {conveniosData.map((convenio, index) => (
+                <Col md="4" key={index}>
+                  <Card className="shadow-lg border-0 h-100">
+                    <CardImg
+                      alt={convenio.title}
+                      src={convenio.image}
+                      style={{
+                        height: "270px",
+                        width: "100%",
+                        objectFit: "cover",
+                      }}
+                      top
+                    />
+                    <CardBody
+                      className="d-flex flex-column"
+                      style={{
+                        background:
+                          "linear-gradient(45deg, rgba(255, 187, 89, 0.95), rgba(255, 187, 89, 0.85))",
+                        borderBottomLeftRadius: "8px",
+                        borderBottomRightRadius: "8px",
+                      }}
+                    >
+                      <CardTitle
+                        tag="h4"
+                        className="text-center mb-4"
+                        style={{
+                          fontWeight: "800",
+                          color: "#343a40",
+                          textTransform: "uppercase",
+                          letterSpacing: "1px",
+                        }}
+                      >
+                        {convenio.title}
+                      </CardTitle>
+                      <CardText className="flex-grow-1">
+                        <ul
+                          className="list-unstyled mb-0"
+                          style={{
+                            fontWeight: "600",
+                            fontSize: "1.1rem",
+                            color: "#fff",
+                          }}
+                        >
+                          {convenio.items.map((item, i) => (
+                            <li
+                              key={i}
+                              className="mb-3 d-flex align-items-start"
+                            >
+                              <i
+                                className="nc-icon nc-check-2 mr-2 mt-1"
+                                style={{ color: "#343a40" }}
+                              ></i>
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </CardText>
+                    </CardBody>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+            <AlianzaCarousel />
+            <Row className="mt-5 mb-5">
+              <Col md="12">
+                <Card
+                  className="shadow-lg border-0"
+                  style={{
+                    background: "linear-gradient(45deg, #007bff, #0056b3)",
+                    borderRadius: "12px",
+                  }}
+                >
+                  <CardBody className="py-5">
+                    <h3
+                      className="text-white text-center mb-5"
+                      style={{
+                        fontWeight: "800",
+                        fontSize: "2rem",
+                        textTransform: "uppercase",
+                        letterSpacing: "2px",
+                      }}
+                    >
+                      Beneficios para Estudiantes
+                    </h3>
+                    <Row>
+                      {benefitsData.map((benefit, index) => (
+                        <Col md="4" key={index} className="text-center">
+                          <div className="benefit-section p-3">
+                            <h5
+                              className="text-white mb-4"
+                              style={{
+                                fontWeight: "700",
+                                fontSize: "1.4rem",
+                                textTransform: "uppercase",
+                                letterSpacing: "1px",
+                              }}
+                            >
+                              <i className="nc-icon nc-trophy mr-2"></i>
+                              {benefit.title}
+                            </h5>
+                            <ul
+                              className="list-unstyled text-left"
+                              style={{ fontSize: "1.1rem" }}
+                            >
+                              {benefit.items.map((item, i) => (
+                                <li
+                                  key={i}
+                                  className="text-white mb-3 d-flex align-items-start"
+                                >
+                                  <i className="nc-icon nc-check-2 mr-2 mt-1"></i>
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </Col>
+                      ))}
+                    </Row>
+                  </CardBody>
+                </Card>
+              </Col>
+            </Row>
+          </div>
         </Container>
       </div>
       <DemoFooter />

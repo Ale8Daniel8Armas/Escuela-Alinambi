@@ -39,46 +39,68 @@ function FundacionPage() {
         }}
       >
         <Container>
-          <Row className="justify-content-center">
-            <Col md="8">
-              <h2 className="text-center title">Somos parte de la fundación Aliñambi</h2>
-              <h5 className="text-center description">
+          <Row className="justify-content-center text-center">
+            <Col md="10">
+              <h2
+                className="text-center"
+                style={{
+                  fontSize: "33px",
+                  fontWeight: "bold",
+                  color: "#1E90FF",
+                  letterSpacing: "1.5px",
+                  marginBottom: "15px",
+                  textTransform: "uppercase",
+                  marginTop: "35px",
+                }}
+              >
+                <i className="fas fa-hands-helping me-2"></i>
+                Somos parte de la fundación Aliñambi
+              </h2>
+              <h5
+                className="text-center description justify-content-center description"
+                style={{
+                  fontSize: "22px",
+                  color: "black",
+                  marginTop: "30px",
+                  fontWeight: "500",
+                }}
+              >
                 Alinambi es una institución que busca fortalecer la educación
                 general básica en la comunidad de Alinambi, de manera que todos
                 los niños y niñas puedan desarrollar habilidades y valores
                 necesarios para el siglo XXI.
               </h5>
-              <div className="text-center mt-4">
+              <div className="mt-4">
                 <Button
-                  className="btn-round"
-                  color="info"
+                  className="btn-round btn-lg"
+                  color="primary"
                   href="https://lorenzojumbo.wixsite.com/fualinambi/nosotros"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  <i className="fas fa-external-link-alt me-2"></i>
                   Visitar Fundación Alinambi
                 </Button>
               </div>
             </Col>
           </Row>
-          <Row className="mt-5">
+          <Row className="mt-5 g-4">
             <Col md="6">
-              <Card>
+              <Card className="shadow-lg border-0">
                 <CardImg
                   alt="Historia"
                   src={require("assets/img/Alinambi/fotoAlinambiUno.jpg")}
                   top
                 />
                 <CardBody>
-                  <CardTitle tag="h4">Fundación y Trayectoria</CardTitle>
+                  <CardTitle tag="h4" className="text-primary">
+                    <i className="fas fa-book me-2"></i>
+                    Fundación y Trayectoria
+                  </CardTitle>
+                  <br />
                   <CardText>
-                    <p>
-                      La Unidad Educativa Alinambi fue fundada con el propósito
-                      de brindar una educación integral y de calidad a la
-                      comunidad. Desde sus inicios, ha mantenido un compromiso
-                      inquebrantable con la excelencia académica y la formación
-                      en valores.
-                    </p>
+                    La Unidad Educativa Alinambi fue fundada con el propósito de
+                    brindar una educación integral y de calidad a la comunidad.
                     <ul>
                       <li>Fundación: 1990</li>
                       <li>Primera promoción: 1996</li>
@@ -91,20 +113,22 @@ function FundacionPage() {
               </Card>
             </Col>
             <Col md="6">
-              <Card>
+              <Card className="shadow-lg border-0">
                 <CardImg
                   alt="Valores"
                   src={require("assets/img/Alinambi/fotoAlinambiDos.jpg")}
                   top
                 />
                 <CardBody>
-                  <CardTitle tag="h4">Valores Institucionales</CardTitle>
+                  <CardTitle tag="h4" className="text-primary">
+                    <i className="fas fa-star me-2"></i>
+                    Valores Institucionales
+                  </CardTitle>
+                  <br />
+
                   <CardText>
-                    <p>
-                      Nuestros valores son el pilar fundamental que guía todas
-                      nuestras acciones y decisiones, formando estudiantes
-                      íntegros y comprometidos con la sociedad.
-                    </p>
+                    Nuestros valores son el pilar fundamental que guía todas
+                    nuestras acciones y decisiones.
                     <ul>
                       <li>Excelencia académica</li>
                       <li>Integridad y honestidad</li>
@@ -117,50 +141,73 @@ function FundacionPage() {
               </Card>
             </Col>
           </Row>
-          <Row className="mt-5">
+          <Row className="mt-5 g-4">
             <Col md="4">
-              <Card className="card-plain bg-info">
-                <CardBody>
-                  <CardTitle tag="h4" className="text-white">
+              <Card className="shadow border-0 bg-info text-light-emphasis text-center d-flex flex-column h-100 p-4">
+                <CardBody className="flex-grow-1 d-flex flex-column justify-content-between">
+                  <CardTitle
+                    tag="h4"
+                    className="mb-3 text-light-emphasis text-white"
+                  >
+                    <i className="fas fa-bullseye fa-lg me-2"></i>
                     Misión
                   </CardTitle>
-                  <CardText className="text-white">
+                  <CardText className="opacity-75 text-white">
                     Formar estudiantes integrales con excelencia académica,
-                    valores sólidos y compromiso social, preparados para
-                    enfrentar los desafíos del mundo contemporáneo y contribuir
-                    positivamente a la sociedad.
+                    valores sólidos y compromiso social.
                   </CardText>
                 </CardBody>
               </Card>
             </Col>
             <Col md="4">
-              <Card className="card-plain bg-info">
-                <CardBody>
-                  <CardTitle tag="h4" className="text-white">
+              <Card className="shadow border-0 bg-info text-light-emphasis text-center d-flex flex-column h-100 p-4">
+                <CardBody className="flex-grow-1 d-flex flex-column justify-content-between">
+                  <CardTitle
+                    tag="h4"
+                    className="mb-3 text-light-emphasis text-white"
+                  >
+                    <i className="fas fa-eye fa-lg me-2"></i>
                     Visión
                   </CardTitle>
-                  <CardText className="text-white">
+                  <CardText className="opacity-75 text-white">
                     Ser reconocidos como una institución educativa líder en
-                    innovación pedagógica, formación integral y compromiso con
-                    la excelencia, inspirando a las futuras generaciones a
-                    alcanzar su máximo potencial.
+                    innovación pedagógica y formación integral.
                   </CardText>
                 </CardBody>
               </Card>
             </Col>
             <Col md="4">
-              <Card className="card-plain bg-info">
-                <CardBody>
-                  <CardTitle tag="h4" className="text-white">
+              <Card className="shadow border-0 bg-info text-light-emphasis text-center d-flex flex-column h-100 p-4">
+                <CardBody className="flex-grow-1 d-flex flex-column justify-content-between">
+                  <CardTitle
+                    tag="h4"
+                    className="mb-3 text-light-emphasis text-white"
+                  >
+                    <i className="fas fa-clipboard-list fa-lg me-2"></i>
                     Objetivos
                   </CardTitle>
-                  <CardText className="text-white">
-                    <ul>
-                      <li>Excelencia académica</li>
-                      <li>Formación integral</li>
-                      <li>Innovación educativa</li>
-                      <li>Desarrollo sostenible</li>
-                      <li>Vinculación comunitaria</li>
+                  <CardText className="opacity-75 text-white">
+                    <ul className="list-unstyled mb-0">
+                      <li>
+                        <i className="fas fa-check-circle me-2"></i> Excelencia
+                        académica
+                      </li>
+                      <li>
+                        <i className="fas fa-check-circle me-2"></i> Formación
+                        integral
+                      </li>
+                      <li>
+                        <i className="fas fa-check-circle me-2"></i> Innovación
+                        educativa
+                      </li>
+                      <li>
+                        <i className="fas fa-check-circle me-2"></i> Desarrollo
+                        sostenible
+                      </li>
+                      <li>
+                        <i className="fas fa-check-circle me-2"></i> Vinculación
+                        comunitaria
+                      </li>
                     </ul>
                   </CardText>
                 </CardBody>

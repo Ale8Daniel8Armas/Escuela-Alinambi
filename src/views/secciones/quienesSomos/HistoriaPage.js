@@ -188,7 +188,7 @@ function HistoriaPage() {
                         />
                         <img
                           alt="imagen3"
-                          src={require("assets/img/Alinambi/fotoAlinambiTrece.jpg")}
+                          src={require("assets/img/Alinambi/fotoAlinambiOcho.jpg")}
                           style={{ maxWidth: "320px" }}
                         />
                       </div>

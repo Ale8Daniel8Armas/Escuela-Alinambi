@@ -41,6 +41,12 @@ const BoletinesContenido = () => {
       color: "#2e8b57",
       link: "#",
     },
+    {
+      title: "Carta de Solicitud",
+      icon: "fa fa-file-signature",
+      color: "#8B0000",
+      link: "#",
+    },
   ];
 
   return (
@@ -48,17 +54,33 @@ const BoletinesContenido = () => {
       <Container>
         <Row className="mb-4">
           <Col className="text-center">
-            <h2 className="title" style={{ color: "#003366" }}>
+            <h2
+              className="text-center"
+              style={{
+                fontSize: "33px",
+                fontWeight: "bold",
+                color: "#1E90FF",
+                letterSpacing: "1.5px",
+                marginBottom: "15px",
+                textTransform: "uppercase",
+                marginTop: "35px",
+              }}
+            >
               <i className="fa fa-file-text fa-2x mb-3"></i>
               <br />
               Boletines Informativos
             </h2>
-            <p
-              className="description text-muted"
-              style={{ fontSize: "1rem", fontWeight: "normal" }}
+            <h5
+              className="text-center description justify-content-center description"
+              style={{
+                fontSize: "22px",
+                color: "black",
+                marginTop: "30px",
+                fontWeight: "500",
+              }}
             >
               Accede a toda la información importante de nuestra institución
-            </p>
+            </h5>
           </Col>
         </Row>
         <Row>

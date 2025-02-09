@@ -73,29 +73,44 @@ function AdmisionesPage() {
 
           <Row className="mt-5">
             <Col md="6">
-              <Card>
+              <Card
+                className="shadow-sm rounded-lg"
+                style={{ overflow: "hidden" }}
+              >
                 <CardImg
                   alt="Inicial 2"
                   src={require("assets/img/Alinambi/fotoAlinambiTres.jpg")}
                   top
+                  style={{
+                    objectFit: "cover",
+                    height: "250px",
+                    transition: "transform 0.3s ease-in-out",
+                  }}
+                  onMouseOver={(e) => (e.target.style.transform = "scale(1.1)")}
+                  onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
                 />
-
                 <CardBody
-                  style={{ backgroundColor: "rgba(247, 143, 8, 0.93)" }}
+                  style={{
+                    backgroundColor: "#F98B0A",
+                    borderTopLeftRadius: 0,
+                    borderTopRightRadius: 0,
+                  }}
                 >
                   <CardTitle
                     tag="h3"
-                    className="text-white text-center"
-                    style={{ fontWeight: "bold" }}
+                    className="text-white text-center font-weight-bold"
+                    style={{ textTransform: "uppercase", fontSize: "1.6rem" }}
                   >
                     Inicial 2
                   </CardTitle>
-                  <br />
-                  <p className="text-white" style={{ fontWeight: "normal" }}>
-                    Ofrecemos educación para niños de 4 años, con un programa
-                    educativo que incluye:
+                  <p className="text-white mb-4" style={{ fontSize: "1rem" }}>
+                    Ofrecemos educación para niños de 4 años con un programa
+                    integral que incluye:
                   </p>
-                  <ul className="text-white">
+                  <ul
+                    className="text-white pl-3"
+                    style={{ fontSize: "1rem", lineHeight: "1.8" }}
+                  >
                     <li>Desarrollo motriz y sensorial</li>
                     <li>Iniciación a la lectoescritura</li>
                     <li>Expresión artística y musical</li>
@@ -105,29 +120,46 @@ function AdmisionesPage() {
                 </CardBody>
               </Card>
             </Col>
+
             <Col md="6">
-              <Card>
+              <Card
+                className="shadow-sm rounded-lg"
+                style={{ overflow: "hidden" }}
+              >
                 <CardImg
-                  alt="Educación General Basica (hasta 7mo grado)"
+                  alt="Educación Básica"
                   src={require("assets/img/Alinambi/fotoAlinambiCuatro.jpg")}
                   top
+                  style={{
+                    objectFit: "cover",
+                    height: "250px",
+                    transition: "transform 0.3s ease-in-out",
+                  }}
+                  onMouseOver={(e) => (e.target.style.transform = "scale(1.1)")}
+                  onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
                 />
                 <CardBody
-                  style={{ backgroundColor: "rgba(48, 146, 23, 0.93)" }}
+                  style={{
+                    backgroundColor: "#309217",
+                    borderTopLeftRadius: 0,
+                    borderTopRightRadius: 0,
+                  }}
                 >
                   <CardTitle
                     tag="h3"
-                    className="text-white text-center"
-                    style={{ fontWeight: "bold" }}
+                    className="text-white text-center font-weight-bold"
+                    style={{ textTransform: "uppercase", fontSize: "1.6rem" }}
                   >
                     Educación Básica
                   </CardTitle>
-                  <br />
-                  <p className="text-white" style={{ fontWeight: "normal" }}>
-                    Formación integral para estudiantes de educación básica
-                    elemental y media hasta séptimo grado:
+                  <p className="text-white mb-4" style={{ fontSize: "1rem" }}>
+                    Formación integral para estudiantes desde primero hasta
+                    séptimo grado:
                   </p>
-                  <ul className="text-white">
+                  <ul
+                    className="text-white pl-3"
+                    style={{ fontSize: "1rem", lineHeight: "1.8" }}
+                  >
                     <li>Materias básicas del currículo nacional</li>
                     <li>Programa avanzado de inglés</li>
                     <li>Desarrollo de pensamiento lógico-matemático</li>
@@ -142,33 +174,22 @@ function AdmisionesPage() {
           <Row className="mt-5">
             <Col md="6">
               <Card
-                className="card-plain"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  height: "100%",
-                  backgroundColor: "#f1f1f1",
-                  borderRadius: "10px",
-                }}
+                className="shadow-lg rounded-lg"
+                style={{ backgroundColor: "#F1F1F1", height: "100%" }}
               >
-                <CardBody>
+                <CardBody className="d-flex flex-column justify-content-between p-4">
                   <CardTitle
                     tag="h4"
-                    className="text-center"
-                    style={{
-                      fontWeight: "bold",
-                      color: "#343a40",
-                    }}
+                    className="text-center font-weight-bold"
+                    style={{ color: "#333", fontSize: "1.4rem" }}
                   >
-                    <b style={{ color: "#343a40" }}>Proceso de Inscripción</b>
+                    <span style={{ color: "#333" }}>
+                      Proceso de Inscripción
+                    </span>
                   </CardTitle>
                   <ol
-                    style={{
-                      fontSize: "18px",
-                      color: "black",
-                      marginTop: "10px",
-                      fontWeight: "400",
-                    }}
+                    className="text-dark"
+                    style={{ fontSize: "1.1rem", lineHeight: "2" }}
                   >
                     <li>Llenar formulario de inscripción en línea</li>
                     <li>Presentar documentación requerida</li>
@@ -179,8 +200,15 @@ function AdmisionesPage() {
                     <li>Proceso de matrícula</li>
                   </ol>
                   <Button
-                    className="btn-round d-flex justify-content-center"
-                    color="danger"
+                    className="btn-lg btn-dark d-block mx-auto mt-4"
+                    style={{
+                      fontWeight: "bold",
+                      padding: "12px 25px",
+                      fontSize: "1rem",
+                      textTransform: "uppercase",
+                      letterSpacing: "2px",
+                      borderRadius: "30px",
+                    }}
                     href="#pablo"
                     onClick={(e) => e.preventDefault()}
                   >
@@ -192,44 +220,41 @@ function AdmisionesPage() {
 
             <Col md="6">
               <Card
-                className="card-plain"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  height: "100%",
-                  backgroundColor: "#f1f1f1",
-                  borderRadius: "10px",
-                }}
+                className="shadow-lg rounded-lg"
+                style={{ backgroundColor: "#F1F1F1", height: "100%" }}
               >
-                <CardBody>
+                <CardBody className="d-flex flex-column justify-content-between p-4">
                   <CardTitle
                     tag="h4"
-                    className="text-center"
-                    style={{
-                      fontWeight: "bold",
-                    }}
+                    className="text-center font-weight-bold"
+                    style={{ color: "#333", fontSize: "1.4rem" }}
                   >
-                    <b style={{ color: "#343a40" }}>Documentación Requerida</b>
+                    <span style={{ color: "#333" }}>
+                      Documentación Requerida
+                    </span>
                   </CardTitle>
                   <ul
-                    style={{
-                      fontSize: "18px",
-                      color: "black",
-                      marginTop: "10px",
-                      fontWeight: "400",
-                    }}
+                    className="text-dark"
+                    style={{ fontSize: "1.1rem", lineHeight: "2" }}
                   >
                     <li>Partida de nacimiento</li>
                     <li>Cédula de identidad del estudiante y representantes</li>
-                    <li> Certificados de promoción anteriores</li>
-                    <li> Certificado de conducta</li>
-                    <li> Certificado médico</li>
-                    <li> 4 fotografías tamaño carnet</li>
-                    <li> Carnet de vacunación</li>
+                    <li>Certificados de promoción anteriores</li>
+                    <li>Certificado de conducta</li>
+                    <li>Certificado médico</li>
+                    <li>4 fotografías tamaño carnet</li>
+                    <li>Carnet de vacunación</li>
                   </ul>
                   <Button
-                    className="btn-round d-flex justify-content-center"
-                    color="success"
+                    className="btn-lg btn-dark d-block mx-auto mt-4"
+                    style={{
+                      fontWeight: "bold",
+                      padding: "12px 25px",
+                      fontSize: "1rem",
+                      textTransform: "uppercase",
+                      letterSpacing: "2px",
+                      borderRadius: "30px",
+                    }}
                     href="#pablo"
                     onClick={(e) => e.preventDefault()}
                   >
@@ -242,12 +267,15 @@ function AdmisionesPage() {
 
           <Row className="mt-5">
             <Col md="12">
-              <Card className="card-plain bg-primary">
-                <CardBody>
-                  <h3 className="text-white text-center">
+              <Card className="bg-dark text-white shadow-lg rounded-lg">
+                <CardBody className="p-5">
+                  <h3
+                    className="text-center"
+                    style={{ fontSize: "2rem", fontWeight: "bold" }}
+                  >
                     Información de Contacto
                   </h3>
-                  <Row>
+                  <Row className="mt-4">
                     <Col md="6" className="text-center">
                       <h5 className="text-white">Dirección</h5>
                       <p className="text-white">
@@ -265,10 +293,15 @@ function AdmisionesPage() {
                       </p>
                     </Col>
                   </Row>
-                  <div className="text-center mt-3">
+                  <div className="text-center mt-4">
                     <Button
-                      className="btn-round"
-                      color="neutral"
+                      className="btn-lg btn-neutral text-dark px-5"
+                      style={{
+                        fontWeight: "bold",
+                        fontSize: "1.2rem",
+                        textTransform: "uppercase",
+                        borderRadius: "30px",
+                      }}
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                     >
