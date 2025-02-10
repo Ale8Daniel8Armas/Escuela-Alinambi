@@ -152,7 +152,7 @@ function EdBasicaPage() {
                       <Card className="d-flex flex-column h-100">
                         <CardImg
                           alt="Básica Elemental"
-                          src={require("assets/img/Alinambi/fotoAlinambiCinco.jpg")}
+                          src={require("assets/img/Alinambi/edBasicaPic0ne.jpg")}
                           top
                         />
                         <CardBody
@@ -189,7 +189,7 @@ function EdBasicaPage() {
                       <Card className="d-flex flex-column h-100">
                         <CardImg
                           alt="Metodología Elemental"
-                          src={require("assets/img/Alinambi/fotoAlinambiSeis.jpg")}
+                          src={require("assets/img/Alinambi/edBasicaPicTwo.jpg")}
                           top
                         />
                         <CardBody
@@ -227,7 +227,7 @@ function EdBasicaPage() {
                       <Card className="d-flex flex-column h-100">
                         <CardImg
                           alt="Básica Media"
-                          src={require("assets/img/Alinambi/fotoAlinambiSiete.jpg")}
+                          src={require("assets/img/Alinambi/edBasicaPicThree.jpg")}
                           top
                         />
                         <CardBody
@@ -241,7 +241,7 @@ function EdBasicaPage() {
                             className="text-white text-center"
                             style={{ fontWeight: "bold" }}
                           >
-                            <b style={{ color: "#343a40" }}>Plan Curricular</b>
+                            <b style={{ color: "#343a40" }}>Áreas Académicas</b>
                           </CardTitle>
                           <br />
                           <ul
@@ -263,7 +263,10 @@ function EdBasicaPage() {
                       <Card className="d-flex flex-column h-100">
                         <CardImg
                           alt="Actividades Media"
-                          src={require("assets/img/Alinambi/fotoAlinambiOcho.jpg")}
+                          src={require("assets/img/Alinambi/fotoAlinambiTrece.jpg")}
+                          style={{
+                            height: "330px",
+                          }}
                           top
                         />
                         <CardBody
@@ -298,6 +301,39 @@ function EdBasicaPage() {
                   </Row>
                 </TabPane>
               </TabContent>
+            </Col>
+          </Row>
+          <br />
+          <Row>
+            <Col md="6">
+              <Card className="card-plain">
+                <CardBody>
+                  <CardTitle tag="h4">Perfil de Salida</CardTitle>
+                  <br />
+                  <ul>
+                    <li>Pensamiento crítico y analítico</li>
+                    <li>Competencias digitales</li>
+                    <li>Habilidades de comunicación</li>
+                    <li>Valores y ética</li>
+                    <li>Preparación para bachillerato</li>
+                  </ul>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col md="6">
+              <Card className="card-plain">
+                <CardBody>
+                  <CardTitle tag="h4">Proyectos Especiales</CardTitle>
+                  <br />
+                  <ul>
+                    <li>Ferias y eventos especiales</li>
+                    <li>Visitas a colectivos e intituciones colaboradores</li>
+                    <li>Concursos académicos</li>
+                    <li>Proyectos comunitarios</li>
+                    <li>Intercambios culturales</li>
+                  </ul>
+                </CardBody>
+              </Card>
             </Col>
           </Row>
           <Row className="mt-5">

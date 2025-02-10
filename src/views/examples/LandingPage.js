@@ -185,7 +185,7 @@ function LandingPage() {
               <Card className="d-flex flex-column h-100">
                 <CardImg
                   alt="Convenios Culturales"
-                  src={require("assets/img/Alinambi/fotoAlinambiTres.jpg")}
+                  src={require("assets/img/Alinambi/ActividadesFestivas.jpg")}
                   top
                 />
                 <CardBody className="bg-info flex-grow-1 d-flex flex-column">
@@ -209,6 +209,15 @@ function LandingPage() {
           </Row>
         </div>
         <br />
+        <div className="d-flex justify-content-center align-items-center">
+          <Link to="/actividades-page">
+            <Button className="btn-round text-center" color="danger" outline>
+              <i className="fa fa-pen" />
+              Más Actividades
+            </Button>
+          </Link>
+        </div>
+        <br />
         <div className="section section-dark text-center">
           <Container>
             <h2 className="title" style={{ marginTop: "15px" }}>
@@ -224,12 +233,18 @@ function LandingPage() {
                       style={{
                         backgroundImage:
                           "url(" +
-                          require("assets/img/Alinambi/divinoNinioAlinambi.jpg") +
+                          require("assets/img/Alinambi/matriculacionPic.jpg") +
                           ")",
                       }}
                     >
                       <CardBody>
-                        <h6 className="card-category">Matriculación</h6>
+                        <h6
+                          className="card-category"
+                          style={{ fontWeight: "bold" }}
+                        >
+                          Matriculación
+                        </h6>
+                        <br />
                         <p>
                           Accede a información sobre el proceso de inscripción y
                           matrícula para nuevos estudiantes.
@@ -248,12 +263,18 @@ function LandingPage() {
                       style={{
                         backgroundImage:
                           "url(" +
-                          require("assets/img/Alinambi/fotoAlinambiOcho.jpg") +
+                          require("assets/img/Alinambi/admisionesPic.jpg") +
                           ")",
                       }}
                     >
                       <CardBody>
-                        <h6 className="card-category">Admisiones</h6>
+                        <h6
+                          className="card-category"
+                          style={{ fontWeight: "bold" }}
+                        >
+                          Admisiones
+                        </h6>
+                        <br />
                         <p>
                           Conoce los requisitos y pasos para formar parte de
                           nuestra comunidad educativa.
@@ -269,12 +290,18 @@ function LandingPage() {
                       style={{
                         backgroundImage:
                           "url(" +
-                          require("assets/img/Alinambi/fotoAlinambiVeinte.jpg") +
+                          require("assets/img/Alinambi/AlinambiInicios.jpg") +
                           ")",
                       }}
                     >
                       <CardBody>
-                        <h6 className="card-category">Historia</h6>
+                        <h6
+                          className="card-category"
+                          style={{ fontWeight: "bold" }}
+                        >
+                          Historia
+                        </h6>
+                        <br />
                         <p>
                           Descubre nuestra trayectoria y compromiso con la
                           educación de calidad.
@@ -290,12 +317,18 @@ function LandingPage() {
                       style={{
                         backgroundImage:
                           "url(" +
-                          require("assets/img/Alinambi/LemaAlinambi.jpeg") +
+                          require("assets/img/Alinambi/divinoNinioAlinambi.jpg") +
                           ")",
                       }}
                     >
                       <CardBody>
-                        <h6 className="card-category">Servicios</h6>
+                        <h6
+                          className="card-category"
+                          style={{ fontWeight: "bold" }}
+                        >
+                          Servicios
+                        </h6>
+                        <br />
                         <p>
                           Conoce los servicios que ofrecemos para garantizar un
                           aprendizaje integral.
@@ -314,12 +347,18 @@ function LandingPage() {
                       style={{
                         backgroundImage:
                           "url(" +
-                          require("assets/img/Alinambi/barAlinambi.jpg") +
+                          require("assets/img/Alinambi/contactosPic.jpg") +
                           ")",
                       }}
                     >
                       <CardBody>
-                        <h6 className="card-category">Contactos</h6>
+                        <h6
+                          className="card-category"
+                          style={{ fontWeight: "bold" }}
+                        >
+                          Contactos
+                        </h6>
+                        <br />
                         <p>
                           Contáctanos para resolver tus dudas y obtener más
                           información.
@@ -338,12 +377,18 @@ function LandingPage() {
                       style={{
                         backgroundImage:
                           "url(" +
-                          require("assets/img/Alinambi/agendasAlinambi.jpg") +
+                          require("assets/img/Alinambi/fotoAlinambiCatorce.jpg") +
                           ")",
                       }}
                     >
                       <CardBody>
-                        <h6 className="card-category">Actividades</h6>
+                        <h6
+                          className="card-category"
+                          style={{ fontWeight: "bold" }}
+                        >
+                          Actividades
+                        </h6>
+                        <br />
                         <p>
                           {" "}
                           Participa en nuestras actividades extracurriculares y
@@ -360,14 +405,18 @@ function LandingPage() {
                       style={{
                         backgroundImage:
                           "url(" +
-                          require("assets/img/Alinambi/letreroAlinambi.jpg") +
+                          require("assets/img/Alinambi/agendasAlinambi.jpg") +
                           ")",
                       }}
                     >
                       <CardBody>
-                        <h6 className="card-category">
+                        <h6
+                          className="card-category"
+                          style={{ fontWeight: "bold" }}
+                        >
                           Boletines Informativos
                         </h6>
+                        <br />
                         <p>
                           Encuentra documentos y archivos de nuestra entidad.
                         </p>
@@ -382,12 +431,18 @@ function LandingPage() {
                       style={{
                         backgroundImage:
                           "url(" +
-                          require("assets/img/Alinambi/niñosAlinambi.jpg") +
+                          require("assets/img/Alinambi/fotoAlinambiVeintiCuatro.jpg") +
                           ")",
                       }}
                     >
                       <CardBody>
-                        <h6 className="card-category">Nuestra Fundación</h6>
+                        <h6
+                          className="card-category"
+                          style={{ fontWeight: "bold" }}
+                        >
+                          Nuestra Fundación
+                        </h6>
+                        <br />
                         <p>
                           Aprende más sobre los valores y objetivos que guían
                           nuestra institución.

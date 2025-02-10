@@ -148,7 +148,7 @@ function SeccionVisionMision() {
                     <img
                       alt="Misión"
                       className="img-rounded img-responsive"
-                      src={require("assets/img/Alinambi/fotoAlinambiVeintiCinco.jpg")}
+                      src={require("assets/img/Alinambi/graduacionV2.jpg")}
                       style={{
                         maxWidth: "500px",
                         marginBottom: "20px",
@@ -199,7 +199,7 @@ function SeccionVisionMision() {
                     <img
                       alt="Visión"
                       className="img-rounded img-responsive"
-                      src={require("assets/img/Alinambi/fotoAlinambiVentiuno.jpg")}
+                      src={require("assets/img/Alinambi/fotoAlinambiVeintiCinco.jpg")}
                       style={{
                         maxWidth: "500px",
                         marginBottom: "20px",

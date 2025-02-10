@@ -104,14 +104,16 @@ function AdmisionesPage() {
                     <li>• Servicios complementarios</li>
                     <li>• Programa de becas</li>
                   </ul>
-                  <Button
-                    className="btn-round"
-                    color="danger"
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    Ver Información
-                  </Button>
+                  <Link to="/actividades-page">
+                    <Button
+                      className="btn-round"
+                      color="danger"
+                      href="#pablo"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      Ver Información
+                    </Button>
+                  </Link>
                 </CardBody>
               </Card>
             </Col>

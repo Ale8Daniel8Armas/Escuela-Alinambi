@@ -178,17 +178,17 @@ function HistoriaPage() {
                       >
                         <img
                           alt="imagen1"
-                          src={require("assets/img/Alinambi/fotoAlinambiSeis.jpg")}
+                          src={require("assets/img/Alinambi/grado-AlinambiTwo.jpg")}
                           style={{ maxWidth: "320px" }}
                         />
                         <img
                           alt="imagen2"
-                          src={require("assets/img/Alinambi/fotoAlinambiOnce.jpg")}
+                          src={require("assets/img/Alinambi/fotoAlinambiSeis.jpg")}
                           style={{ maxWidth: "320px" }}
                         />
                         <img
                           alt="imagen3"
-                          src={require("assets/img/Alinambi/fotoAlinambiOcho.jpg")}
+                          src={require("assets/img/Alinambi/grado-AlinambiOne.jpg")}
                           style={{ maxWidth: "320px" }}
                         />
                       </div>

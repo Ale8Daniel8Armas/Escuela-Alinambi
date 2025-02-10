@@ -15,8 +15,6 @@ import {
 import classnames from "classnames";
 
 // components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import DemoFooter from "components/Footers/DemoFooter.js";
 
 function EducacionBasicaPage() {
   const [activeTab, setActiveTab] = React.useState("1");
@@ -34,7 +32,6 @@ function EducacionBasicaPage() {
 
   return (
     <>
-      <ExamplesNavbar />
       <div
         className="section"
         style={{
@@ -199,7 +196,6 @@ function EducacionBasicaPage() {
           </Row>
         </Container>
       </div>
-      <DemoFooter />
     </>
   );
 }

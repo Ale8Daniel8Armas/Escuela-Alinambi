@@ -11,8 +11,6 @@ import {
 } from "reactstrap";
 
 // components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import DemoFooter from "components/Footers/DemoFooter.js";
 
 function EducacionInicialPage() {
   React.useEffect(() => {
@@ -22,7 +20,6 @@ function EducacionInicialPage() {
 
   return (
     <>
-      <ExamplesNavbar />
       <div
         className="section"
         style={{
@@ -36,24 +33,9 @@ function EducacionInicialPage() {
         }}
       >
         <Container>
-          <Row className="justify-content-center">
-            <Col md="8">
-              <h2 className="text-center title">Educación Inicial</h2>
-              <h5 className="text-center description">
-                Formamos a nuestros pequeños estudiantes en un ambiente seguro,
-                estimulante y lleno de amor, desarrollando sus habilidades y
-                competencias de manera integral.
-              </h5>
-            </Col>
-          </Row>
           <Row className="mt-5">
             <Col md="4">
               <Card>
-                <CardImg
-                  alt="..."
-                  src="https://via.placeholder.com/350x200"
-                  top
-                />
                 <CardBody>
                   <CardTitle tag="h4">Metodología</CardTitle>
                   <CardText>
@@ -70,11 +52,6 @@ function EducacionInicialPage() {
             </Col>
             <Col md="4">
               <Card>
-                <CardImg
-                  alt="..."
-                  src="https://via.placeholder.com/350x200"
-                  top
-                />
                 <CardBody>
                   <CardTitle tag="h4">Áreas de Desarrollo</CardTitle>
                   <CardText>
@@ -91,11 +68,6 @@ function EducacionInicialPage() {
             </Col>
             <Col md="4">
               <Card>
-                <CardImg
-                  alt="..."
-                  src="https://via.placeholder.com/350x200"
-                  top
-                />
                 <CardBody>
                   <CardTitle tag="h4">Servicios Complementarios</CardTitle>
                   <CardText>
@@ -113,21 +85,54 @@ function EducacionInicialPage() {
           </Row>
           <Row className="mt-5">
             <Col md="12">
-              <Card className="card-plain bg-info">
+              <Card className="card-plain bg-primary">
                 <CardBody>
-                  <h3 className="text-white">Horarios y Niveles</h3>
+                  <h3
+                    className="text-white text-center"
+                    style={{
+                      fontWeight: "bold",
+                      fontSize: "1.75rem",
+                      marginBottom: "2rem",
+                    }}
+                  >
+                    Horarios y Niveles
+                  </h3>
                   <Row>
                     <Col md="6">
-                      <h5 className="text-white">Inicial 1 (3 años)</h5>
-                      <ul className="text-white">
+                      <h5
+                        className="text-white text-center"
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "1.50rem",
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        Inicial 2 (4 años)
+                      </h5>
+                      <ul
+                        className="text-white"
+                        style={{ paddingLeft: "40px", fontSize: "1.05rem" }}
+                      >
                         <li>Jornada matutina: 8:00 AM - 12:30 PM</li>
                         <li>Grupos reducidos</li>
                         <li>Docentes especializados</li>
                       </ul>
                     </Col>
                     <Col md="6">
-                      <h5 className="text-white">Inicial 2 (4 años)</h5>
-                      <ul className="text-white">
+                      <h5
+                        className="text-white text-center"
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "1.50rem",
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        Preparatoria (5 años)
+                      </h5>
+                      <ul
+                        className="text-white"
+                        style={{ paddingLeft: "40px", fontSize: "1.05rem" }}
+                      >
                         <li>Jornada matutina: 8:00 AM - 12:30 PM</li>
                         <li>Preparación para Primaria</li>
                         <li>Actividades de integración</li>
@@ -140,7 +145,6 @@ function EducacionInicialPage() {
           </Row>
         </Container>
       </div>
-      <DemoFooter />
     </>
   );
 }

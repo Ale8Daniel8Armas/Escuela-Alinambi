@@ -1,4 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+// reactstrap components
 import {
   Container,
   Row,
@@ -63,10 +66,9 @@ function AdmisionesPage() {
                   fontWeight: "500",
                 }}
               >
-                La Unidad Educativa Alinambi ofrece una educación de excelencia
-                centrada en el estudiante para formar seres competentes,
-                críticos y sensibles a diferentes perspectivas, que contribuyan
-                a un mundo más justo, equitativo y solidario.
+                Bienvenidos al proceso de admisión de la Unidad Educativa
+                Alinambi. Aquí encontrarás toda la información necesaria para
+                formar parte de nuestra comunidad educativa.
               </h5>
             </Col>
           </Row>
@@ -199,21 +201,21 @@ function AdmisionesPage() {
                     <li>Resultados de admisión</li>
                     <li>Proceso de matrícula</li>
                   </ol>
-                  <Button
-                    className="btn-lg btn-danger d-block mx-auto mt-4"
-                    style={{
-                      fontWeight: "bold",
-                      padding: "12px 25px",
-                      fontSize: "1rem",
-                      textTransform: "uppercase",
-                      letterSpacing: "2px",
-                      borderRadius: "30px",
-                    }}
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    Contáctanos
-                  </Button>
+                  <Link to="/matricula-page">
+                    <Button
+                      className="btn-lg btn-danger d-block mx-auto mt-4"
+                      style={{
+                        fontWeight: "bold",
+                        padding: "12px 25px",
+                        fontSize: "1rem",
+                        textTransform: "uppercase",
+                        letterSpacing: "2px",
+                        borderRadius: "30px",
+                      }}
+                    >
+                      Matrícula
+                    </Button>
+                  </Link>
                 </CardBody>
               </Card>
             </Col>
@@ -255,8 +257,6 @@ function AdmisionesPage() {
                       letterSpacing: "2px",
                       borderRadius: "30px",
                     }}
-                    href="#pablo"
-                    onClick={(e) => e.preventDefault()}
                   >
                     Descargar Lista Completa
                   </Button>
@@ -294,19 +294,19 @@ function AdmisionesPage() {
                     </Col>
                   </Row>
                   <div className="text-center mt-4">
-                    <Button
-                      className="btn-lg btn-info text-dark px-5"
-                      style={{
-                        fontWeight: "bold",
-                        fontSize: "1.2rem",
-                        textTransform: "uppercase",
-                        borderRadius: "30px",
-                      }}
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      Contactar Admisiones
-                    </Button>
+                    <Link to="/contactos-page">
+                      <Button
+                        className="btn-lg btn-info text-dark px-5"
+                        style={{
+                          fontWeight: "bold",
+                          fontSize: "1.2rem",
+                          textTransform: "uppercase",
+                          borderRadius: "30px",
+                        }}
+                      >
+                        Contáctanos
+                      </Button>
+                    </Link>
                   </div>
                 </CardBody>
               </Card>

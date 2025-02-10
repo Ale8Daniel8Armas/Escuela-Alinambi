@@ -14,7 +14,7 @@ import {
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import EdInicialHeader from "components/Headers/EdInicialHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
-
+import EducacionInicialPage from "views/secciones/EducacionInicialPage.js";
 function EdInicialPage() {
   React.useEffect(() => {
     document.documentElement.classList.remove("nav-open");
@@ -74,7 +74,11 @@ function EdInicialPage() {
               <Card>
                 <CardImg
                   alt="Inicial 2 - 4 años"
-                  src={require("assets/img/Alinambi/fotoAlinambiTres.jpg")}
+                  src={require("assets/img/Alinambi/InicialPicOne.jpg")}
+                  style={{
+                    maxWidth: "550px",
+                    height: "400px",
+                  }}
                   top
                 />
                 <CardBody
@@ -104,7 +108,7 @@ function EdInicialPage() {
               <Card>
                 <CardImg
                   alt="Preparatoria - 5 años"
-                  src={require("assets/img/Alinambi/fotoAlinambiCuatro.jpg")}
+                  src={require("assets/img/Alinambi/preparatoriaPicOne.jpg")}
                   top
                 />
                 <CardBody
@@ -131,66 +135,7 @@ function EdInicialPage() {
               </Card>
             </Col>
           </Row>
-          <Row className="mt-5">
-            <Col md="12">
-              <Card className="card-plain bg-primary">
-                <CardBody className="p-4">
-                  <h3
-                    className="text-white text-center"
-                    style={{
-                      fontWeight: "bold",
-                      fontSize: "1.75rem",
-                      marginBottom: "2rem",
-                    }}
-                  >
-                    Horarios y Metodología
-                  </h3>
-                  <Row>
-                    <Col md="6">
-                      <h5
-                        className="text-white text-center"
-                        style={{
-                          fontWeight: "bold",
-                          fontSize: "1.50rem",
-                          marginBottom: "1rem",
-                        }}
-                      >
-                        Horario
-                      </h5>
-                      <ul
-                        className="text-white"
-                        style={{ paddingLeft: "40px", fontSize: "1.05rem" }}
-                      >
-                        <li>Jornada matutina: 8:00 AM - 12:30 PM</li>
-                        <li>Grupos reducidos</li>
-                        <li>Docentes especializados</li>
-                      </ul>
-                    </Col>
-                    <Col md="6">
-                      <h5
-                        className="text-white text-center"
-                        style={{
-                          fontWeight: "bold",
-                          fontSize: "1.50rem",
-                          marginBottom: "1rem",
-                        }}
-                      >
-                        Metodología
-                      </h5>
-                      <ul
-                        className="text-white"
-                        style={{ paddingLeft: "40px", fontSize: "1.05rem" }}
-                      >
-                        <li>Aprendizaje basado en el juego</li>
-                        <li>Estimulación temprana</li>
-                        <li>Educación personalizada</li>
-                      </ul>
-                    </Col>
-                  </Row>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
+          <EducacionInicialPage />
         </Container>
       </div>
       <DemoFooter />

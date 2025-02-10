@@ -27,9 +27,7 @@ function LandingPageHeader() {
       <div
         style={{
           backgroundImage:
-            "url(" +
-            require("assets/img/Alinambi/panoramicaAlinambi.JPG") +
-            ")",
+            "url(" + require("assets/img/Alinambi/CasaAlinambi.jpg") + ")",
           minHeight: "550px",
           width: "100%",
           overflow: "hidden",
