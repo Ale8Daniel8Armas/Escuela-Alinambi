@@ -27,11 +27,9 @@ function ConveniosPage() {
       title: "Convenios Académicos",
       image: require("assets/img/Alinambi/convenios-academicos.jpg"),
       items: [
-        "Pontificia Universidad Católica del Ecuador (PUCE)",
-        "Universidad de las Fuerzas Armadas (ESPE)",
-        "Instituto Tecnológico Rumiñahui",
         "Programas de intercambio",
         "Certificaciones internacionales",
+        "Alianzas con Universidades e Intitutos de Prestigios como la ESPE, PUCE o el Instituto Tecnológico de Rumiñahui",
       ],
     },
     {
@@ -152,7 +150,7 @@ function ConveniosPage() {
                       className="d-flex flex-column"
                       style={{
                         background:
-                          "linear-gradient(45deg, rgba(255, 187, 89, 0.95), rgba(255, 187, 89, 0.85))",
+                          "linear-gradient(45deg, rgba(255, 187, 89, 0.95), rgba(60, 120, 180, 0.85))",
                         borderBottomLeftRadius: "8px",
                         borderBottomRightRadius: "8px",
                       }}
@@ -197,6 +195,7 @@ function ConveniosPage() {
                 </Col>
               ))}
             </Row>
+            <br />
             <AlianzaCarousel />
             <Row className="mt-5 mb-5">
               <Col md="12">

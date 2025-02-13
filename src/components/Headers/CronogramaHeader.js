@@ -27,11 +27,14 @@ function CronogramaHeader() {
       <div
         style={{
           backgroundImage:
-            "url(" + require("assets/img/Alinambi/fotoAlinambiVeintidos.jpg") + ")",
+            "url(" +
+            require("assets/img/Alinambi/estudiantes-Alinambi.jpg") +
+            ")",
         }}
         className="page-header page-header-small"
         data-parallax={true}
         ref={pageHeader}
+        s
       >
         <div className="filter" />
       </div>

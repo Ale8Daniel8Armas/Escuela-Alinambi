@@ -23,7 +23,7 @@ const ActivitiesContent = () => {
       title: "Eventos y competencias deportivas",
       description:
         "Competencia deportiva que fomenta el espíritu deportivo, trabajo en equipo y vida saludable entre nuestros estudiantes en nuestro terreno de fútbol.",
-      image: require("assets/img/Alinambi/futbol-alinambi.jpg"),
+      image: require("assets/img/Alinambi/campeonato-Alinambi.jpg"),
       color: "light",
     },
     {
@@ -34,10 +34,10 @@ const ActivitiesContent = () => {
       color: "light",
     },
     {
-      title: "Día de los difuntos",
+      title: "Campaña de Reciclaje",
       description:
-        "En Aliñambi honramos a los seres queridos que partieron de este mundo mediante los ritos y ceremonias tradicionales de esta tierra sin dejar de lado la guagua de pana y la colada morada.",
-      image: require("assets/img/Alinambi/difuntos-alinambi.jpg"),
+        "En Alinambi amamos y cuidamos la naturaleza, por eso siempre realizamos campañas de reciclaje para cultivar el espíritu ambiental de nuestros estudiantes.",
+      image: require("assets/img/Alinambi/campaniaReciclaje.jpg"),
       color: "light",
     },
     {

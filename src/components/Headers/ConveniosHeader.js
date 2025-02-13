@@ -13,7 +13,7 @@ function ConveniosHeader() {
         className="page-header section-dark"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/Alinambi/PortadaGeneral.jpg") + ")",
+            "url(" + require("assets/img/Alinambi/estudiantes-Alinambi.jpg") + ")",
           minHeight: "600px",
           width: "100%",
           overflow: "hidden",
