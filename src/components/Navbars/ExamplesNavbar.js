@@ -87,7 +87,7 @@ function ExamplesNavbar() {
             }}
           >
             <img
-              src={require("assets/img/Alinambi/LogoAlinambi.png")}
+              src={require("assets/img/Alinambi/LogoAlinambiT.png")}
               alt="Logo de Empresa"
               style={{
                 maxHeight: "75px",
@@ -108,7 +108,7 @@ function ExamplesNavbar() {
                 style={{
                   fontSize: "22px",
                   fontWeight: "600",
-                  color: "#B8C38B",
+                  color: navbarColor === "navbar-transparent" ? "#98FF98" : "#FFFFFF",
                   lineHeight: "1.1",
                   fontFamily: "'Montserrat', sans-serif",
                 }}

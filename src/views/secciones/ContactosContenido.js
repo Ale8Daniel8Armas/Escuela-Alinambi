@@ -4,6 +4,20 @@ import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { Button, Card, CardBody, Collapse } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import L from "leaflet";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
+import {Marker, Popup } from "react-leaflet";
+
+
+const customIcon = L.icon({
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+  iconSize: [25, 41], 
+  iconAnchor: [12, 41], 
+  popupAnchor: [1, -34], 
+});
+
 
 const ContactAgenda = () => {
   const [openSections, setOpenSections] = useState({});
@@ -88,14 +102,18 @@ const ContactAgenda = () => {
       <h2 className="mt-4" style={{ color: "#1E90FF" }}>
         Ubicación
       </h2>
-      <div className="mt-2" style={{ height: "300px", width: "100%" }}>
-        <MapContainer
-          center={[-0.2746, -78.5534]}
-          zoom={13}
-          style={{ height: "100%", width: "100%" }}
-        >
-          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-        </MapContainer>
+      <div className="mt-2" style={{ height: "400px", width: "100%" }}>
+       <MapContainer
+        center={[-0.324162, -78.479500]}
+        zoom={15} 
+        style={{ height: "100%", width: "100%" }}
+      >
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        
+        <Marker position={[-0.324162, -78.479500]} icon={customIcon}>
+          <Popup>📍 Aquí está la institución</Popup>
+        </Marker>
+      </MapContainer>
       </div>
       <br />
     </div>

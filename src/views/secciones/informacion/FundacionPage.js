@@ -89,7 +89,7 @@ function FundacionPage() {
               <Card className="shadow-lg border-0">
                 <CardImg
                   alt="Historia"
-                  src={require("assets/img/Alinambi/fotoAlinambiUno.jpg")}
+                  src={require("assets/img/Alinambi/fotoAlinambiDos.jpg")}
                   top
                 />
                 <CardBody>
@@ -116,7 +116,7 @@ function FundacionPage() {
               <Card className="shadow-lg border-0">
                 <CardImg
                   alt="Valores"
-                  src={require("assets/img/Alinambi/fotoAlinambiDos.jpg")}
+                  src={require("assets/img/Alinambi/fotoAlinambiUno.jpg")}
                   top
                 />
                 <CardBody>

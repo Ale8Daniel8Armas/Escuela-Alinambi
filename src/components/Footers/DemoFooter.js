@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Link } from "react-router-dom";
+
 
 function DemoFooter() {
   return (
@@ -9,8 +11,8 @@ function DemoFooter() {
       style={{
         backgroundColor: "#23294A",
         color: "white",
-        padding: "20px 0", // Reducido de 30px
-        fontFamily: "Montserrat, sans-serif", // Cambiado a Montserrat para mejor legibilidad
+        padding: "20px 0", 
+        fontFamily: "Montserrat, sans-serif", 
         textAlign: "center",
       }}
     >
@@ -25,7 +27,7 @@ function DemoFooter() {
                 justifyContent: "center",
                 alignItems: "center",
                 width: "50%",
-                marginBottom: "8px", // Reducido de 10px
+                marginBottom: "8px", 
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
@@ -34,7 +36,7 @@ function DemoFooter() {
                 style={{
                   color: "#4CAF50",
                   fontFamily: "Montserrat, sans-serif",
-                  fontSize: "24px", // Reducido de 28px
+                  fontSize: "24px", 
                   fontWeight: "600",
                   textAlign: "center",
                   width: "100%",
@@ -59,9 +61,9 @@ function DemoFooter() {
                 <span
                   style={{
                     fontFamily: "Montserrat, sans-serif",
-                    fontSize: "16px", // Reducido de 20px
+                    fontSize: "16px", 
                     fontWeight: "normal",
-                    marginLeft: "8px", // Reducido de 12px
+                    marginLeft: "8px", 
                   }}
                 >
                   Calle Panzaleo - E8-213
@@ -178,6 +180,7 @@ function DemoFooter() {
               className="nc-icon-ul"
               style={{ padding: 0, listStyle: "none" }}
             >
+              <Link to="/docentes-page" style={{ textDecoration: "none", color: "white" }}>        
               <li
                 style={{
                   display: "flex",
@@ -197,6 +200,8 @@ function DemoFooter() {
                   Nuestro Equipo
                 </span>
               </li>
+              </Link>
+              <Link to="/admisiones-page" style={{ textDecoration: "none", color: "white" }}>        
               <li
                 style={{
                   display: "flex",
@@ -216,6 +221,8 @@ function DemoFooter() {
                   Admisiones
                 </span>
               </li>
+              </Link>
+              <Link to="/convenios-page" style={{ textDecoration: "none", color: "white" }}>        
               <li
                 style={{
                   display: "flex",
@@ -235,6 +242,8 @@ function DemoFooter() {
                   Convenios
                 </span>
               </li>
+              </Link>
+              <Link to="/matricula-page" style={{ textDecoration: "none", color: "white" }}>        
               <li
                 style={{
                   display: "flex",
@@ -254,6 +263,8 @@ function DemoFooter() {
                   Matricula
                 </span>
               </li>
+              </Link>
+              <Link to="/servicios-page" style={{ textDecoration: "none", color: "white"}}>        
               <li
                 style={{
                   display: "flex",
@@ -273,6 +284,7 @@ function DemoFooter() {
                   Servicios
                 </span>
               </li>
+              </Link>
             </ul>
           </Col>
 
@@ -301,20 +313,20 @@ function DemoFooter() {
                   marginBottom: "0px",
                 }}
               >
+
+
                 Redes Sociales
               </h5>
             </Row>
             <div style={{ marginTop: "20px" }}>
               {" "}
-              {/* Reducido de 30px */}
               <a
-                href="https://www.facebook.com/p/Unidad-de-Educaci%C3%B3n-Especializada-Fiscomisional-Ali%C3%B1ambi-100070174182530/?locale=es_LA"
+                href="https://www.facebook.com/profile.php?id=100083706603948"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ margin: "0px 12px", color: "white" }} // Reducido el margen
+                style={{ margin: "0px 12px", color: "white" }} 
               >
                 <i className="fab fa-facebook-square fa-2x"></i>{" "}
-                {/* Reducido de fa-3x */}
               </a>
               <a
                 href="https://www.instagram.com/explore/locations/498223400195631/fundacion-alinambi-conocoto-ecuador/"
@@ -332,7 +344,6 @@ function DemoFooter() {
                   }}
                 >
                   <i className="fab fa-instagram fa-2x"></i>{" "}
-                  {/* Reducido de fa-3x */}
                 </span>
               </a>
             </div>

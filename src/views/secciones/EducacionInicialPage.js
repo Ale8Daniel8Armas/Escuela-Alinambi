@@ -28,7 +28,7 @@ function EducacionInicialPage() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
-          minHeight: "100vh",
+          minHeight: "60vh",
           paddingTop: "0",
         }}
       >
@@ -83,7 +83,7 @@ function EducacionInicialPage() {
               </Card>
             </Col>
           </Row>
-          <Row className="mt-5">
+          <Row className="mt-4">
             <Col md="12">
               <Card className="card-plain bg-primary">
                 <CardBody>

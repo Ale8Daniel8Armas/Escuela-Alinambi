@@ -134,7 +134,7 @@ function LandingPage() {
               <Card className="d-flex flex-column h-100">
                 <CardImg
                   alt="Convenios Académicos"
-                  src={require("assets/img/Alinambi/fotoAlinambiUno.jpg")}
+                  src={require("assets/img/Alinambi/campaniaReciclaje.jpg")}
                   top
                 />
                 <CardBody className="bg-info flex-grow-1 d-flex flex-column">
@@ -143,15 +143,10 @@ function LandingPage() {
                     className="text-white text-center"
                     style={{ marginBottom: "10px" }}
                   >
-                    Proyecto de Agricultura
+                    Proyecto de Reciclaje
                   </CardTitle>
                   <CardText className="text-white">
-                    El objetivo fue la consolidación de un invernadero donde se
-                    realizaron la siembra, el mantenimiento y la cosecha de
-                    diferentes tipos de vegetales, los cuales fueron consumidos
-                    internamente y comercializados. El propósito era que los
-                    recursos obtenidos se invirtieran en las actividades
-                    realizadas.
+                  Este proyecto busca sensibilizar a estudiantes, docentes y personal administrativo sobre la importancia del reciclaje, incentivando la separación adecuada de desechos y el uso responsable de los recursos, con el propósito de contribuir a la conservación del medio ambiente y generar un impacto positivo en la sociedad.
                   </CardText>
                 </CardBody>
               </Card>

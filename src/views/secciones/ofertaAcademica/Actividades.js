@@ -34,17 +34,17 @@ const ActivitiesContent = () => {
       color: "light",
     },
     {
-      title: "Campaña de Reciclaje",
+      title: "Debate y elección del consejo estudiantil",
       description:
-        "En Alinambi amamos y cuidamos la naturaleza, por eso siempre realizamos campañas de reciclaje para cultivar el espíritu ambiental de nuestros estudiantes.",
-      image: require("assets/img/Alinambi/campaniaReciclaje.jpg"),
+        "Cada período lectivo se llevan a cabo las elecciones del consejo estudiantil, un proceso que refleja de manera cercana el ejercicio democrático ciudadano. A través de esta iniciativa, se fomentan valores éticos y patrióticos en los estudiantes.",
+      image: require("assets/img/Alinambi/debate.jpg"),
       color: "light",
     },
     {
-      title: "Día del niño",
+      title: "Ceremonia de Graduacion",
       description:
-        "En esta escuela siempre damos prioridad la vida y la felicidad de nuestros niños y en su día, los agasajos y las celebraciones hacia ellos nunca faltan.",
-      image: require("assets/img/Alinambi/fotoAlinambiTrece.jpg"),
+      "Celebramos el esfuerzo, la dedicación y los logros académicos de nuestros estudiantes al culminar una etapa fundamental de su formación.",
+      image: require("assets/img/Alinambi/grado-AlinambiOne.jpg"),
       color: "light",
     },
     {

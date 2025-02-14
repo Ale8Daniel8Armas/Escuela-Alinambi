@@ -45,7 +45,7 @@ function ConveniosPage() {
     },
     {
       title: "Convenios Culturales",
-      image: require("assets/img/Alinambi/fotoAlinambiUno.jpg"),
+      image: require("assets/img/Alinambi/fotoAlinambiDoce.jpg"),
       items: [
         "Centros culturales",
         "Museos y galerías",
