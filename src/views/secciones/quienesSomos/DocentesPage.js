@@ -105,6 +105,7 @@ function DocentesPage() {
           </Row>
           {/* Sección Ejecutivos*/}
           <TeamSection />
+          
         </Container>
       </div>
       <DemoFooter />

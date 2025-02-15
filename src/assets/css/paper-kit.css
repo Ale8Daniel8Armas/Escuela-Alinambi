@@ -1,27 +1,4 @@
-/*!
 
- =========================================================
- * Paper Kit React - v1.3.2 based on Paper Kit - v2.2.0
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/paper-kit-2
- * Copyright 2023 Creative Tim (http://www.creative-tim.com)
-
- * Designed by www.invisionapp.com Coded by www.creative-tim.com
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
-/*      light colors - used for select dropdown         */
-/* ========================================================================
- * bootstrap-switch - v3.3.2
- * http://www.bootstrap-switch.org
- * ========================================================================
- * Copyright 2012-2013 Mattia Larentis
- * http://www.apache.org/licenses/LICENSE-2.0
- */
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -4327,7 +4304,7 @@ License - nucleoapp.com/license/
   padding-right: 10px;
 }
 .navbar .navbar-collapse:after {
-  background-color: #fffcf5;
+  background-color:rgb(224, 234, 250);
 }
 .navbar #navbarSupportedContent .nav-item {
   position: relative;
@@ -4369,7 +4346,7 @@ License - nucleoapp.com/license/
   color: #ffffff;
 }
 .navbar.navbar-transparent .navbar-toggler .navbar-toggler-bar {
-  background: #ffffff !important;
+  background: #000000 !important;
 }
 .navbar .logo-container {
   margin-top: 5px;
@@ -6671,8 +6648,15 @@ License - nucleoapp.com/license/
     position: relative;
   }
   .navbar .navbar-nav .dropdown-menu {
-    height: 400px;
-    overflow-y: scroll;
+    position: static; /* Evita que el menú desplegable se desborde */
+    float: none;
+    width: 100%;
+    margin-top: 0;
+    border: none;
+    box-shadow: none;
+  }
+  .navbar .navbar-nav .dropdown-item {
+    padding: 8px 16px; 
   }
   .demo-header .motto {
     padding-top: 30% !important;
@@ -6680,7 +6664,7 @@ License - nucleoapp.com/license/
   .navbar-toggle .icon-bar {
     display: block;
     position: relative;
-    background: #fff;
+    background: #000;
     width: 24px;
     height: 2px;
     border-radius: 1px;
@@ -7238,14 +7222,15 @@ License - nucleoapp.com/license/
   }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1165px) {
   .navbar-collapse {
     position: fixed;
     display: block !important;
     top: 0;
     height: 100%;
-    width: 230px;
-    right: 0;
+    width: 290px;
+    right: 0px; 
+    margin-right: 10px;
     z-index: 1032;
     visibility: visible;
     background-color: #999;
@@ -7254,7 +7239,7 @@ License - nucleoapp.com/license/
     text-align: left;
     border-left: 1px solid #ccc5b9;
     padding-right: 0px;
-    padding-left: 40px;
+    padding-left: 0px;
     padding-top: 15px;
     -webkit-transform: translateX(230px);
     -moz-transform: translateX(230px);
@@ -7281,7 +7266,7 @@ License - nucleoapp.com/license/
     text-transform: uppercase;
     font-weight: 600;
     font-size: 12px;
-    line-height: 1.5em;
+    line-height: 0em;
     padding: 15px 0;
   }
   .navbar-collapse .navbar-nav > .nav-item > .nav-link:hover,
@@ -7457,7 +7442,7 @@ License - nucleoapp.com/license/
   }
 }
 
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 1165px) {
   .burger-menu .navbar-collapse {
     position: fixed;
     display: block;
@@ -7467,7 +7452,7 @@ License - nucleoapp.com/license/
     right: 0px;
     z-index: 1032;
     visibility: visible;
-    background-color: #999;
+    background-color: #000;
     overflow-y: visible;
     border-top: none;
     text-align: left;
@@ -8569,7 +8554,7 @@ td.rdtYear:hover {
   border-right: 1px solid #dddddd;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1165px) {
   .navbar-collapse {
     height: 100% !important;
   }

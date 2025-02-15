@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import classnames from "classnames";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // Iconos para indicar submenús
+
 
 import {
   Collapse,
@@ -14,6 +16,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
+  Button,
 } from "reactstrap";
 
 function ExamplesNavbar() {
@@ -23,12 +26,29 @@ function ExamplesNavbar() {
   const [quienesSomosOpen, setQuienesSomosOpen] = React.useState(false);
   const [ofertaEducativaOpen, setOfertaEducativaOpen] = React.useState(false);
   const [infoOpen, setInfoOpen] = React.useState(false);
+  const [isLargeScreen, setIsLargeScreen] = React.useState(window.innerWitdh < 1165);
 
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
     document.documentElement.classList.toggle("nav-open");
   };
 
+  const toggleQuienesSomosOpen = () => {
+    setQuienesSomosOpen(!quienesSomosOpen);
+  };
+
+  const toggleOfertaOpen = () => {
+    setOfertaEducativaOpen(!ofertaEducativaOpen);
+  };
+
+  const toggleInfoOpen = () => {
+    setInfoOpen(!infoOpen);
+  };
+
+  const handleMenuClick = (e) => {
+    e.stopPropagation(); // Detiene la propagación del evento
+  };
+  
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
@@ -44,15 +64,28 @@ function ExamplesNavbar() {
       }
     };
 
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWitdh < 1165);
+    }
+
     window.addEventListener("scroll", updateNavbarColor);
+    window.addEventListener("rezise", handleResize);
 
     return function cleanup() {
       window.removeEventListener("scroll", updateNavbarColor);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
     <>
+    <div
+        style={{
+          width: "0%",
+          height: "14vh", 
+          backgroundColor: "#000000",
+        }}
+      >
       <Navbar
         className={classnames("fixed-top", navbarColor)}
         color-on-scroll="300"
@@ -75,7 +108,37 @@ function ExamplesNavbar() {
             maxWidth: "100%",
           }}
         >
-          <NavbarBrand
+          <Button
+            aria-expanded={navbarCollapse}
+            className={classnames("navbar-toggler burger-menu", {
+              toggled: navbarCollapse,
+            })}
+            onClick={toggleNavbarCollapse} 
+            style={{
+              display: isLargeScreen ? "none" : "block",
+              border: "none",
+              background: "transparent",
+              padding: "5px",
+            }}
+          >
+            <span className="navbar-toggler-bar bar1"/>
+            <span className="navbar-toggler-bar bar2"/>
+            <span className="navbar-toggler-bar bar3"/>
+          </Button>
+          <Collapse
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+            navbar
+            isOpen={navbarCollapse}
+          >        
+            <Nav navbar style={{ gap: "20px" }}>
+              {" "}
+              {/* Añadido gap entre items */}
+              <NavItem>
+              <NavbarBrand
             to="/homePage"
             target="_blank"
             tag={Link}
@@ -83,14 +146,14 @@ function ExamplesNavbar() {
               display: "flex",
               alignItems: "center",
               gap: "10px",
-              marginLeft: "-15px",
+              marginRight: "40px"
             }}
           >
             <img
               src={require("assets/img/Alinambi/LogoAlinambiT.png")}
               alt="Logo de Empresa"
               style={{
-                maxHeight: "75px",
+                maxHeight: "65px",
                 width: "auto",
                 objectFit: "contain",
               }}
@@ -106,10 +169,10 @@ function ExamplesNavbar() {
             >
               <span
                 style={{
-                  fontSize: "22px",
-                  fontWeight: "600",
+                  fontSize: "20px",
+                  fontWeight: "500",
                   color: navbarColor === "navbar-transparent" ? "#98FF98" : "#FFFFFF",
-                  lineHeight: "1.1",
+                  lineHeight: "1.0",
                   fontFamily: "'Montserrat', sans-serif",
                 }}
               >
@@ -117,10 +180,10 @@ function ExamplesNavbar() {
               </span>
               <span
                 style={{
-                  fontSize: "24px",
-                  fontWeight: "700",
+                  fontSize: "22px",
+                  fontWeight: "600",
                   color: "#1A9BD5",
-                  lineHeight: "1.1",
+                  lineHeight: "1.0",
                   fontFamily: "'Montserrat', sans-serif",
                 }}
               >
@@ -128,67 +191,54 @@ function ExamplesNavbar() {
               </span>
             </div>
           </NavbarBrand>
-          <button
-            aria-expanded={navbarCollapse}
-            className={classnames("navbar-toggler navbar-toggler", {
-              toggled: navbarCollapse,
-            })}
-            onClick={toggleNavbarCollapse}
-            style={{
-              border: "none",
-              background: "transparent",
-              padding: "5px",
-            }}
-          >
-            <span className="navbar-toggler-bar bar1" />
-            <span className="navbar-toggler-bar bar2" />
-            <span className="navbar-toggler-bar bar3" />
-          </button>
-          <Collapse
-            className="justify-content-end"
-            navbar
-            isOpen={navbarCollapse}
-          >
-            <Nav navbar style={{ gap: "10px" }}>
-              {" "}
-              {/* Añadido gap entre items */}
+               </NavItem> 
               <NavItem>
                 <UncontrolledDropdown
-                  nav
-                  isOpen={quienesSomosOpen}
-                  onMouseEnter={() => setQuienesSomosOpen(true)}
-                  onMouseLeave={() => setQuienesSomosOpen(false)}
+                nav
+                isOpen={quienesSomosOpen}
+                toggle={toggleQuienesSomosOpen}
                 >
                   <DropdownToggle
+                    nav
                     data-toggle="dropdown"
                     href="/misionYvision-page"
                     id="quienesSomosNavbarDropdownMenu"
-                    nav
-                    style={{ padding: "8px 12px" }}
+                    style={{ padding: "8px 12px", display: "flex", alignItems: "center",
+                      display: isLargeScreen ? "none" : "block",
+                    }}
                   >
-                    <h6
+                    <h1
                       style={{
                         fontSize: "14px",
                         color: "#000000",
-                        margin: 0,
+                        marginTop: "30px",
                         fontFamily: "'Montserrat', sans-serif",
                       }}
                     >
                       <b>Quienes Somos</b>
-                    </h6>
-                  </DropdownToggle>
+                    </h1>
+                    </DropdownToggle>
                   <DropdownMenu
                     aria-labelledby="quienesSomosNavbarDropdownMenu"
-                    style={{ fontFamily: "'Montserrat', sans-serif" }}
+                    style={{ fontFamily: "'Montserrat', sans-serif",  marginBottom:"-230px" }}
                   >
-                    <DropdownItem to="/misionYvision-page" tag={Link}>
+                    <DropdownItem to="/misionYvision-page" tag={Link} 
+                    style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
+                    >
                       Mision - Vision
                     </DropdownItem>
-                    <DropdownItem href="/historia-page">Historia</DropdownItem>
-                    <DropdownItem href="/valores-page">
+                    <DropdownItem href="/historia-page" 
+                    style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
+                    >Historia
+                    </DropdownItem>
+                    <DropdownItem href="/valores-page" 
+                    style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
+                    >
                       Valores y Compromiso
                     </DropdownItem>
-                    <DropdownItem href="/docentes-page">
+                    <DropdownItem href="/docentes-page"
+                    style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
+                    >
                       Nuestro Equipo
                     </DropdownItem>
                   </DropdownMenu>
@@ -199,44 +249,53 @@ function ExamplesNavbar() {
                 <UncontrolledDropdown
                   nav
                   isOpen={ofertaEducativaOpen}
-                  onMouseEnter={() => setOfertaEducativaOpen(true)}
-                  onMouseLeave={() => setOfertaEducativaOpen(false)}
+                  toggle={toggleOfertaOpen}
                 >
                   <DropdownToggle
                     data-toggle="dropdown"
                     href="/admisiones-page"
                     id="ofertaEducativaNavbarDropdownMenu"
                     nav
-                    style={{ padding: "8px 12px" }}
+                    style={{ padding: "8px 12px", display: "flex", alignItems: "center"}}
                   >
-                    <h6
+                    <h1
                       style={{
                         fontSize: "14px",
                         color: "#000000",
-                        margin: 0,
+                        marginTop: "30px",
                         fontFamily: "'Montserrat', sans-serif",
                       }}
                     >
                       <b>Oferta Educativa</b>
-                    </h6>
-                  </DropdownToggle>
+                    </h1>
+                    </DropdownToggle>
                   <DropdownMenu
                     aria-labelledby="ofertaEducativaNavbarDropdownMenu"
-                    style={{ fontFamily: "'Montserrat', sans-serif" }}
+                    style={{ fontFamily: "'Montserrat', sans-serif",  marginBottom:"-270px" }}
                   >
-                    <DropdownItem href="/admisiones-page">
+                    <DropdownItem href="/admisiones-page" tag={Link}
+                     style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
+                    >
                       Admisiones
                     </DropdownItem>
-                    <DropdownItem href="/edInicial-page">
+                    <DropdownItem href="/edInicial-page" tag={Link}
+                    style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
+                    >
                       Educación Inicial
                     </DropdownItem>
-                    <DropdownItem href="/edBasica-page">
+                    <DropdownItem href="/edBasica-page" tag={Link}
+                    style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}                
+                    >
                       Educación Básica
                     </DropdownItem>
-                    <DropdownItem href="/planCurricular-page">
+                    <DropdownItem href="/planCurricular-page" tag={Link}
+                    style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
+                    >
                       Plan Curricular
                     </DropdownItem>
-                    <DropdownItem href="/actividades-page">
+                    <DropdownItem href="/actividades-page" tag={Link}
+                    style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
+                    >
                       Actividades
                     </DropdownItem>
                   </DropdownMenu>
@@ -246,45 +305,53 @@ function ExamplesNavbar() {
                 <UncontrolledDropdown
                   nav
                   isOpen={infoOpen}
-                  onMouseEnter={() => setInfoOpen(true)}
-                  onMouseLeave={() => setInfoOpen(false)}
+                  toggle={toggleInfoOpen}
                 >
                   <DropdownToggle
                     data-toggle="dropdown"
                     href="/convenios-page"
                     id="infoNavbarDropdownMenu"
                     nav
-                    onClick={(e) => e.preventDefault()}
-                    style={{ padding: "8px 12px" }}
+                    style={{ padding: "8px 12px", display: "flex", alignItems: "center"}}
                   >
-                    <h6
+                    <h1
                       style={{
                         fontSize: "14px",
                         color: "#000000",
-                        margin: 0,
+                        marginTop: "30px",
                         fontFamily: "'Montserrat', sans-serif",
                       }}
                     >
                       <b>Información</b>
-                    </h6>
-                  </DropdownToggle>
+                    </h1>
+                    </DropdownToggle>
                   <DropdownMenu
                     aria-labelledby="infoNavbarDropdownMenu"
-                    style={{ fontFamily: "'Montserrat', sans-serif" }}
+                    style={{ fontFamily: "'Montserrat', sans-serif", marginBottom:"-260px" }}
                   >
-                    <DropdownItem href="/convenios-page">
+                    <DropdownItem href="/convenios-page" tag={Link}
+                    style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}         
+                    >
                       Convenios
                     </DropdownItem>
-                    <DropdownItem href="/matricula-page">
+                    <DropdownItem href="/matricula-page" tag={Link}
+                    style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}             
+                    >
                       Matricula
                     </DropdownItem>
-                    <DropdownItem href="/cronogramas-page">
+                    <DropdownItem href="/cronogramas-page" tag={Link}
+                    style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
+                    >
                       Cronogramas
                     </DropdownItem>
-                    <DropdownItem href="/boletines-page">
+                    <DropdownItem href="/boletines-page" tag={Link}
+                    style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
+                    >
                       Boletines
                     </DropdownItem>
-                    <DropdownItem href="/fundacion-page">
+                    <DropdownItem href="/fundacion-page" tag={Link}
+                    style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
+                    >
                       Fundación
                     </DropdownItem>
                   </DropdownMenu>
@@ -300,7 +367,7 @@ function ExamplesNavbar() {
                     style={{
                       fontSize: "14px",
                       color: "#000000",
-                      margin: 0,
+                      marginTop: "30px",
                       fontFamily: "'Montserrat', sans-serif",
                     }}
                   >
@@ -318,7 +385,7 @@ function ExamplesNavbar() {
                     style={{
                       fontSize: "14px",
                       color: "#000000",
-                      margin: 0,
+                      marginTop: "30px",
                       fontFamily: "'Montserrat', sans-serif",
                     }}
                   >
@@ -330,18 +397,7 @@ function ExamplesNavbar() {
           </Collapse>
         </Container>
       </Navbar>
-
-      <div
-        style={{
-          position: "relative",
-          width: "50%",
-          height: "15vh", // Reducido de 25vh
-          backgroundImage: `url('path-to-your-image.jpg')`,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
-      ></div>
+      </div>
     </>
   );
 }

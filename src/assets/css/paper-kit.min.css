@@ -6526,7 +6526,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     margin: 0 auto;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1165px) {
   .navbar-collapse {
     position: fixed;
     display: block !important;
@@ -6744,7 +6744,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     padding-left: 0 !important;
   }
 }
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 1165px) {
   .burger-menu .navbar-collapse {
     position: fixed;
     display: block;
@@ -7686,7 +7686,7 @@ td.rdtYear:hover {
 .input-group .input-group-append .input-group-text {
   border-right: 1px solid #ddd;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1165px) {
   .navbar-collapse {
     height: 100% !important;
   }
