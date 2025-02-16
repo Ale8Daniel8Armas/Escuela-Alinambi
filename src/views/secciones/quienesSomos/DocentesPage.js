@@ -91,21 +91,16 @@ function DocentesPage() {
                 <CardBody className="p-4">
                   <CardText
                     className="fw-semibold text-muted"
-                    style={{ fontSize: "16px", fontWeight: "bold" }}
+                    style={{ fontSize: "24px", fontWeight: "bold" }}
                   >
-                    Contamos con varias docentes especializadas para cada grado
-                    y área, entre ellas podemos encontrar a la Lcda. Isabel
-                    Sandoval, encargada de los cursos de segundo y tercero
-                    E.G.B. y la Mgsc. Marina Gomez...., todas ellas conforman el
-                    equipo de esta noble institución.
+                    Este es nuestro personal docente para este periodo académico
                   </CardText>
                 </CardBody>
               </Card>
             </Col>
           </Row>
           {/* Sección Ejecutivos*/}
-          <TeamSection />
-          
+          <TeamSection />         
         </Container>
       </div>
       <DemoFooter />

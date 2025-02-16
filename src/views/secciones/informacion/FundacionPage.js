@@ -99,14 +99,13 @@ function FundacionPage() {
                   </CardTitle>
                   <br />
                   <CardText>
-                    La Unidad Educativa Alinambi fue fundada con el propósito de
-                    brindar una educación integral y de calidad a la comunidad.
+                    La fundación Aliñambi fue creada con el propósito de
+                    brindar una educación integral y de calidad a la comunidad
+                    y ofrecer acceso a la educación a niños afectados o marginados.
                     <ul>
-                      <li>Fundación: 1990</li>
-                      <li>Primera promoción: 1996</li>
-                      <li>Acreditación internacional: 2005</li>
-                      <li>Renovación infraestructura: 2015</li>
-                      <li>Innovación tecnológica: 2020</li>
+                      <li>Fundación: 1993</li>
+                      <li>Acreditación y reconocimiento: 2005</li>
+                      <li>Renovación infraestructura: 2016</li>
                     </ul>
                   </CardText>
                 </CardBody>
@@ -122,20 +121,17 @@ function FundacionPage() {
                 <CardBody>
                   <CardTitle tag="h4" className="text-primary">
                     <i className="fas fa-star me-2"></i>
-                    Valores Institucionales
-                  </CardTitle>
+                    Objetivo General
+                  </CardTitle>             
                   <br />
-
                   <CardText>
-                    Nuestros valores son el pilar fundamental que guía todas
-                    nuestras acciones y decisiones.
-                    <ul>
-                      <li>Excelencia académica</li>
-                      <li>Integridad y honestidad</li>
-                      <li>Responsabilidad social</li>
-                      <li>Innovación y creatividad</li>
-                      <li>Respeto y tolerancia</li>
-                    </ul>
+                  Llevar un programa de reinserción social con hijos de padres privados de libertad de las cárceles de Pichincha, hijos de drogadictos y otros niños cuyos derechos han sido vulnerados.
+                  <br />
+                  <ul>
+                  <li>
+                  Se realizan talleres de agricultura y panadería para que se integren en un futuro al mercado laboral siguiendo un plan de desarrollo especializado y curricular planificado.
+                  </li>
+                  </ul>
                   </CardText>
                 </CardBody>
               </Card>
@@ -170,43 +166,29 @@ function FundacionPage() {
                     Visión
                   </CardTitle>
                   <CardText className="opacity-75 text-white">
-                    Ser reconocidos como una institución educativa líder en
+                    Ser reconocidos como una institución  líder en
                     innovación pedagógica y formación integral.
                   </CardText>
                 </CardBody>
               </Card>
             </Col>
             <Col md="4">
-              <Card className="shadow border-0 bg-info text-light-emphasis text-center d-flex flex-column h-100 p-4">
+              <Card className="shadow border-0 bg-info text-light-emphasis d-flex flex-column h-100 p-4">
                 <CardBody className="flex-grow-1 d-flex flex-column justify-content-between">
                   <CardTitle
                     tag="h4"
                     className="mb-3 text-light-emphasis text-white"
                   >
                     <i className="fas fa-clipboard-list fa-lg me-2"></i>
-                    Objetivos
+                    Objetivos 
                   </CardTitle>
                   <CardText className="opacity-75 text-white">
                     <ul className="list-unstyled mb-0">
                       <li>
-                        <i className="fas fa-check-circle me-2"></i> Excelencia
-                        académica
+                        <i className="fas fa-check-circle me-2"></i> Devolver a los niños sus derechos.
                       </li>
                       <li>
-                        <i className="fas fa-check-circle me-2"></i> Formación
-                        integral
-                      </li>
-                      <li>
-                        <i className="fas fa-check-circle me-2"></i> Innovación
-                        educativa
-                      </li>
-                      <li>
-                        <i className="fas fa-check-circle me-2"></i> Desarrollo
-                        sostenible
-                      </li>
-                      <li>
-                        <i className="fas fa-check-circle me-2"></i> Vinculación
-                        comunitaria
+                        <i className="fas fa-check-circle me-2"></i> Educar a niños y jóvenes para integrarlos a la sociedad.
                       </li>
                     </ul>
                   </CardText>

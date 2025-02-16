@@ -273,27 +273,27 @@ function ExamplesNavbar() {
                     aria-labelledby="ofertaEducativaNavbarDropdownMenu"
                     style={{ fontFamily: "'Montserrat', sans-serif",  marginBottom:"-270px" }}
                   >
-                    <DropdownItem href="/admisiones-page" tag={Link}
+                    <DropdownItem href="/admisiones-page" 
                      style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
                     >
                       Admisiones
                     </DropdownItem>
-                    <DropdownItem href="/edInicial-page" tag={Link}
+                    <DropdownItem href="/edInicial-page"
                     style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
                     >
                       Educación Inicial
                     </DropdownItem>
-                    <DropdownItem href="/edBasica-page" tag={Link}
+                    <DropdownItem href="/edBasica-page"
                     style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}                
                     >
                       Educación Básica
                     </DropdownItem>
-                    <DropdownItem href="/planCurricular-page" tag={Link}
+                    <DropdownItem href="/planCurricular-page"
                     style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
                     >
                       Plan Curricular
                     </DropdownItem>
-                    <DropdownItem href="/actividades-page" tag={Link}
+                    <DropdownItem href="/actividades-page" 
                     style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
                     >
                       Actividades
@@ -329,27 +329,27 @@ function ExamplesNavbar() {
                     aria-labelledby="infoNavbarDropdownMenu"
                     style={{ fontFamily: "'Montserrat', sans-serif", marginBottom:"-260px" }}
                   >
-                    <DropdownItem href="/convenios-page" tag={Link}
+                    <DropdownItem href="/convenios-page" 
                     style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}         
                     >
                       Convenios
                     </DropdownItem>
-                    <DropdownItem href="/matricula-page" tag={Link}
+                    <DropdownItem href="/matricula-page" 
                     style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}             
                     >
                       Matricula
                     </DropdownItem>
-                    <DropdownItem href="/cronogramas-page" tag={Link}
+                    <DropdownItem href="/cronogramas-page" 
                     style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
                     >
                       Cronogramas
                     </DropdownItem>
-                    <DropdownItem href="/boletines-page" tag={Link}
+                    <DropdownItem href="/boletines-page" 
                     style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
                     >
                       Boletines
                     </DropdownItem>
-                    <DropdownItem href="/fundacion-page" tag={Link}
+                    <DropdownItem href="/fundacion-page" 
                     style={{ fontFamily: "'Montserrat', sans-serif", backgroundColor: "#98FF98" }}
                     >
                       Fundación

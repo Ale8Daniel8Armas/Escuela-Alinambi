@@ -11,6 +11,7 @@ import {
   NavLink,
   TabContent,
   TabPane,
+  Button,
 } from "reactstrap";
 import classnames from "classnames";
 
@@ -21,6 +22,15 @@ import DemoFooter from "components/Footers/DemoFooter.js";
 
 function PlanCurricularPage() {
   const [activeTab, setActiveTab] = React.useState("1");
+
+  const bulletins = [
+    {
+      title: "Plan Curricular Aliñambi",
+      icon: "fa fa-book",
+      color: "#2e8b57",
+      link: "#",
+    }, 
+  ];
 
   const toggle = (tab) => {
     if (activeTab !== tab) {
@@ -467,6 +477,46 @@ function PlanCurricularPage() {
               </TabContent>
             </Col>
           </Row>
+          <br />
+          <Row className="justify-content-center">
+          {bulletins.map((bulletin, index) => (
+            <Col md="3" className="mb-3" key={index}>
+              <Card className="h-100 shadow-sm hover-lift">
+                <CardBody className="text-center">
+                  <div style={{ color: bulletin.color }} className="mb-3">
+                    <i className={`${bulletin.icon} fa-2x`}></i>
+                  </div>
+                  <CardTitle tag="h5" className="mb-3">
+                    {bulletin.title}
+                  </CardTitle>
+                  <Button
+                    color="primary"
+                    className="btn-round"
+                    outline
+                    href={bulletin.link}
+                    target="_blank"
+                    style={{
+                      borderColor: bulletin.color,
+                      color: bulletin.color,
+                      transition: "all 0.3s ease",
+                    }}
+                    onMouseOver={(e) => {
+                      e.target.style.backgroundColor = bulletin.color;
+                      e.target.style.color = "white";
+                    }}
+                    onMouseOut={(e) => {
+                      e.target.style.backgroundColor = "transparent";
+                      e.target.style.color = bulletin.color;
+                    }}
+                  >
+                    <i className="fa fa-download mr-1"></i>
+                    Descargar
+                  </Button>
+                </CardBody>
+              </Card>
+            </Col>
+          ))}
+        </Row>
         </Container>
       </div>
       <DemoFooter />

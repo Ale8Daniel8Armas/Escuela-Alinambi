@@ -386,7 +386,7 @@ function LandingPage() {
                         <br />
                         <p>
                           {" "}
-                          Participa en nuestras actividades extracurriculares y
+                          Conoce nuestras actividades extracurriculares y
                           eventos especiales.
                         </p>
                       </CardBody>
@@ -413,7 +413,7 @@ function LandingPage() {
                         </h6>
                         <br />
                         <p>
-                          Encuentra documentos y archivos de nuestra entidad.
+                          Encuentra documentos y archivos de nuestra entidad para cualquier información.
                         </p>
                       </CardBody>
                     </Card>
@@ -440,7 +440,7 @@ function LandingPage() {
                         <br />
                         <p>
                           Aprende más sobre los valores y objetivos que guían
-                          nuestra institución.
+                          nuestra fundación.
                         </p>
                       </CardBody>
                     </Card>

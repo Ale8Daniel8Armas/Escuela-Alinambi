@@ -56,7 +56,7 @@ const ContactAgenda = () => {
           <strong>Teléfonos:</strong> 3033284 - 3033988
         </p>
         <p>
-          <strong>Dirección:</strong> Calle Panzaleo - E8-213 e Isla Isabela
+          <strong>Dirección:</strong> Calle Panzaleo - E8-213 y Fajardo
         </p>
 
         <div className="d-flex justify-content-center gap-3 fs-2 mt-3">
@@ -70,17 +70,15 @@ const ContactAgenda = () => {
       <Card className="mt-4">
         <CardBody>
           <div className="btn-group d-flex">
-            <Button color="primary">Departamento Escolar</Button>
-            <Button color="secondary">Fundación</Button>
-            <Button color="info">Oficinas</Button>
+            <Button color="primary">Departamentos y oficinas</Button>
           </div>
 
           <div className="mt-3">
             {[
-              "Secretaría General",
-              "Transporte Aliñambi",
-              "Contabilidad",
-              "WhatsApp",
+              "Secretaría General 2389283",
+              "Centro Médico 2390293",
+              "Fundación 232039",
+              "WhatsApp 29839283",
             ].map((item) => (
               <div key={item} className="border-bottom p-2">
                 <Button
@@ -88,11 +86,8 @@ const ContactAgenda = () => {
                   className="w-100 text-start"
                   onClick={() => toggleSection(item)}
                 >
-                  {item} {openSections[item] ? "−" : "+"}
+                  {item} {openSections[item] ? "" : ""}
                 </Button>
-                <Collapse isOpen={openSections[item]}>
-                  <p className="text-muted">Información de {item}</p>
-                </Collapse>
               </div>
             ))}
           </div>

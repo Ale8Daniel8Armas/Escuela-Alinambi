@@ -28,8 +28,8 @@ function ConveniosPage() {
       image: require("assets/img/Alinambi/convenios-academicos.jpg"),
       items: [
         "Programas de intercambio",
-        "Certificaciones internacionales",
-        "Alianzas con Universidades e Intitutos de Prestigios como la ESPE, PUCE o el Instituto Tecnológico de Rumiñahui",
+        "Certificaciones especializadas",
+        "Alianzas con Universidades e Intitutos de prestigio como la ESPE, PUCE o el Instituto Tecnológico de Rumiñahui",
       ],
     },
     {
@@ -38,9 +38,8 @@ function ConveniosPage() {
       items: [
         "Clubes deportivos locales",
         "Federaciones deportivas",
-        "Competencias intercolegiales",
         "Escuelas de formación",
-        "Eventos deportivos nacionales",
+        "Eventos deportivos locales",
       ],
     },
     {
@@ -48,8 +47,8 @@ function ConveniosPage() {
       image: require("assets/img/Alinambi/fotoAlinambiDoce.jpg"),
       items: [
         "Centros culturales",
-        "Museos y galerías",
-        "Escuelas de arte",
+        "Galerías",
+        "Actividades de arte",
         "Programas de teatro",
         "Intercambios culturales",
       ],

@@ -34,7 +34,7 @@ function ActividadesHeader() {
               </div>
             </div>
             <h2 className="presentation-subtitle text-center">
-              Estos son los programas que generalmente realizamos
+              Sé participe de nuestras gradiosas actividades y programas
             </h2>
           </Container>
         </div>

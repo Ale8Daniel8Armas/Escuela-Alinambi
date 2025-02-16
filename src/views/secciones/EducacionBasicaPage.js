@@ -116,7 +116,7 @@ function EducacionBasicaPage() {
                             <li>Desarrollo de competencias</li>
                             <li>Trabajo colaborativo</li>
                             <li>Proyectos interdisciplinarios</li>
-                            <li>Uso de tecnología educativa</li>
+                            <li>Uso de recursos didácticos modernos</li>
                           </ul>
                         </CardBody>
                       </Card>
@@ -148,11 +148,11 @@ function EducacionBasicaPage() {
                             Actividades Complementarias
                           </CardTitle>
                           <ul>
-                            <li>Clubes académicos</li>
-                            <li>Proyectos de investigación</li>
+                            <li>Concursos académicos</li>
                             <li>Salidas pedagógicas</li>
                             <li>Actividades deportivas</li>
                             <li>Talleres artísticos</li>
+                            <li>Proyectos de integración comunitaria</li>
                           </ul>
                         </CardBody>
                       </Card>
@@ -167,7 +167,7 @@ function EducacionBasicaPage() {
                           <CardTitle tag="h4">Perfil de Salida</CardTitle>
                           <ul>
                             <li>Pensamiento crítico y analítico</li>
-                            <li>Competencias digitales</li>
+                            <li>Actitudes competitivas</li>
                             <li>Habilidades de comunicación</li>
                             <li>Valores y ética</li>
                             <li>Preparación para bachillerato</li>
@@ -180,11 +180,11 @@ function EducacionBasicaPage() {
                         <CardBody>
                           <CardTitle tag="h4">Proyectos Especiales</CardTitle>
                           <ul>
-                            <li>Feria de ciencias</li>
-                            <li>Modelo de Naciones Unidas</li>
-                            <li>Olimpiadas académicas</li>
+                            <li>Ferias y ceremonias de integración</li>
+                            <li>Modelo gubernamental</li>
                             <li>Proyectos comunitarios</li>
                             <li>Intercambios culturales</li>
+                            <li>Elecciones y consejo estudiantil</li>
                           </ul>
                         </CardBody>
                       </Card>

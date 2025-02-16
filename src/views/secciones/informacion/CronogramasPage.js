@@ -131,9 +131,10 @@ function CronogramasPage() {
                           </h3>
                           <p
                             style={{
-                              fontSize: "1.1rem",
+                              fontSize: "1.2rem",
+                              fontWeight: "normal",
                               lineHeight: "1.8",
-                              color: "#666",
+                              color: "#000",
                               textAlign: "justify",
                             }}
                           >
@@ -177,9 +178,10 @@ function CronogramasPage() {
                           </h3>
                           <p
                             style={{
-                              fontSize: "1.1rem",
+                              fontSize: "1.2em",
+                              fontWeight: "normal",
                               lineHeight: "1.8",
-                              color: "#666",
+                              color: "#000",
                               textAlign: "justify",
                             }}
                           >

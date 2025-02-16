@@ -174,6 +174,7 @@ function EdBasicaPage() {
                             style={{ fontWeight: "bold" }}
                           >
                             <li>Lengua y Literatura</li>
+                            <li>Lectura y dictado</li>
                             <li>Matemáticas</li>
                             <li>Ciencias Naturales</li>
                             <li>Estudios Sociales</li>
@@ -214,7 +215,7 @@ function EdBasicaPage() {
                             <li>Desarrollo de competencias</li>
                             <li>Trabajo colaborativo</li>
                             <li>Proyectos interdisciplinarios</li>
-                            <li>Uso de tecnología educativa</li>
+                            <li>Uso de recursos didácticos modernos</li>
                           </ul>
                         </CardBody>
                       </Card>
@@ -248,12 +249,13 @@ function EdBasicaPage() {
                             className="text-white flex-grow-1"
                             style={{ fontWeight: "bold" }}
                           >
-                            <li>Lengua y Literatura avanzada</li>
+                            <li>Lengua y Literatura</li>
+                            <li>Lectura y acompañamiento</li>
                             <li>Matemáticas con razonamiento lógico</li>
                             <li>Ciencias Naturales experimentales</li>
                             <li>Estudios Sociales y ciudadanía</li>
-                            <li>Arte y cultura</li>
-                            <li>Educación Física y salud</li>
+                            <li>Educación Cultural Artística</li>
+                            <li>Educación Física</li>
                             <li>Inglés intermedio</li>
                           </ul>
                         </CardBody>
@@ -289,11 +291,11 @@ function EdBasicaPage() {
                             className="text-white flex-grow-1"
                             style={{ fontWeight: "bold" }}
                           >
-                            <li>Clubes académicos</li>
-                            <li>Proyectos de investigación</li>
+                            <li>Concursos académicos</li>
                             <li>Salidas pedagógicas</li>
                             <li>Actividades deportivas</li>
                             <li>Talleres artísticos</li>
+                            <li>Proyectos de integración comunitaria</li>
                           </ul>
                         </CardBody>
                       </Card>
@@ -311,11 +313,11 @@ function EdBasicaPage() {
                   <CardTitle tag="h4">Perfil de Salida</CardTitle>
                   <br />
                   <ul>
-                    <li>Pensamiento crítico y analítico</li>
-                    <li>Competencias digitales</li>
-                    <li>Habilidades de comunicación</li>
-                    <li>Valores y ética</li>
-                    <li>Preparación para bachillerato</li>
+                  <li>Pensamiento crítico y analítico</li>
+                            <li>Actitudes competitivas</li>
+                            <li>Habilidades de comunicación</li>
+                            <li>Valores y ética</li>
+                            <li>Preparación para bachillerato</li>
                   </ul>
                 </CardBody>
               </Card>
@@ -326,11 +328,11 @@ function EdBasicaPage() {
                   <CardTitle tag="h4">Proyectos Especiales</CardTitle>
                   <br />
                   <ul>
-                    <li>Ferias y eventos especiales</li>
-                    <li>Visitas a colectivos e intituciones colaboradores</li>
-                    <li>Concursos académicos</li>
-                    <li>Proyectos comunitarios</li>
-                    <li>Intercambios culturales</li>
+                  <li>Ferias y ceremonias de integración</li>
+                            <li>Modelo gubernamental</li>
+                            <li>Proyectos comunitarios</li>
+                            <li>Intercambios culturales</li>
+                            <li>Elecciones y consejo estudiantil</li>
                   </ul>
                 </CardBody>
               </Card>

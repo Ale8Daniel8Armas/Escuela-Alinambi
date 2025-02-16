@@ -72,7 +72,7 @@ function HistoriaPage() {
                 Historia de la Unidad Educativa Aliñambi
               </h2>
               <p
-                className="descripcion-valores justify-content-center description"
+                className="descripcion-valores description"
                 style={{
                   fontSize: "22px",
                   color: "black",
@@ -83,9 +83,9 @@ function HistoriaPage() {
                 Somos una institución educativa fiscomisional comprometida con
                 los valores de igualdad, equidad e inclusión social desde
                 nuestra fundación en 2016, bajo la normativa
-                MINEDUC-ME-2016-00124-A, otorgada por el Ministerio de
-                Educación. Impuslado por la fundación Aliñambi, a lo largo de
-                los años, hemos implementado diversos proyectos que han
+                MINEDUC-ME-2016-
+                00124-A, otorgada por el Ministerio de
+                Educación. Impulsado por la fundación Aliñambi hemos implementado diversos proyectos que han
                 fortalecido tanto la calidad humana de nuestra comunidad como el
                 compromiso con la defensa de los derechos humanos y los valores
                 que nos definen y enorgullecen.
@@ -152,12 +152,12 @@ function HistoriaPage() {
                             fontWeight: "400",
                           }}
                         >
-                          En la década de los 90, nuestra institución creció
+                          En el transcurso del tiempo, nuestra institución creció
                           considerablemente, con programas educativos
-                          innovadores y la construcción de un nuevo campus. La
-                          excelencia académica y el liderazgo en competiciones
-                          nacionales nos posicionaron como una de las
-                          principales instituciones educativas del país.
+                          innovadores y la ampliación del campus. El amor y la responsabilidad
+                          junto con el compromiso que tenemos como sociedad, nos distinguen como
+                          una institución única, capaz de formar personas con calidad humana
+                          y de construir y alimentar sueños.
                         </p>
                       </Col>
                     </Row>
@@ -173,7 +173,7 @@ function HistoriaPage() {
                         style={{
                           display: "flex",
                           justifyContent: "center",
-                          gap: "10px",
+                          gap: "15px",
                         }}
                       >
                         <img
@@ -201,29 +201,26 @@ function HistoriaPage() {
                         }}
                       >
                         Hoy, la U.E. Aliñambi es referente en innovación
-                        educativa, con más de 1000 estudiantes y un equipo
-                        docente altamente calificado. Nuestros logros incluyen
-                        la acreditación internacional de calidad educativa y un
-                        compromiso firme con la excelencia.
+                        educativa, con más de 500 estudiantes y un equipo
+                        docente altamente preparado y profesional. Nuestros logros incluyen
+                        el apoyo de diversas instituciones reconocidas más el aval 
+                        de calidad primaria dentro de las mejores escuelas de enseñanza
+                        a nivel local.
                       </p>
                     </Row>
-                    <br />
                     <div className="text-center mt-4">
-                      <h5>Logros Destacados</h5>
-                      <ul className="list-unstyled">
+                      <Col style={{ backgroundColor: "#1E90FF" }}>
+                      <h5                   
+                      style={{ color: "#ffffff" }}>
+                        Logros Destacados</h5>
+                      <ul className="list-unstyled" style={{ fontSize: "16px", fontWeight: "bold", lineHeight: "1.9"}} >
                         <li>
-                          ✓ Acreditación Internacional de Calidad Educativa
+                          ✓ Acreditación Ministerial de Calidad Educativa
                         </li>
                         <li>✓ Reconocimiento por Innovación Pedagógica</li>
-                        <li>✓ Centro de Excelencia en Educación Ambiental</li>
+                        <li>✓ Centro integral y de compromiso social</li>
                       </ul>
-                    </div>
-
-                    <div className="text-center mt-4">
-                      <Button className="btn-round" color="info">
-                        <i className="fa fa-book" /> Conoce más sobre nuestra
-                        historia
-                      </Button>
+                      </Col>
                     </div>
                   </CardBody>
                 </Card>
