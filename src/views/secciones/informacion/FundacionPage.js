@@ -87,7 +87,7 @@ function FundacionPage() {
           <Row className="mt-5 g-4">
             <Col md="6">
               <Card className="shadow-lg border-0">
-                <CardImgs
+                <CardImg
                   alt="Historia"
                   src={require("assets/img/Alinambi/fotoAlinambiVeinte.jpg")}
                   top
@@ -99,9 +99,9 @@ function FundacionPage() {
                   </CardTitle>
                   <br />
                   <CardText>
-                    La fundación Aliñambi fue creada con el propósito de
-                    brindar una educación integral y de calidad a la comunidad
-                    y ofrecer acceso a la educación a niños afectados o marginados.
+                    La fundación Aliñambi fue creada con el propósito de brindar
+                    una educación integral y de calidad a la comunidad y ofrecer
+                    acceso a la educación a niños afectados o marginados.
                     <ul>
                       <li>Fundación: 1993</li>
                       <li>Acreditación y reconocimiento: 2005</li>
@@ -122,16 +122,22 @@ function FundacionPage() {
                   <CardTitle tag="h4" className="text-primary">
                     <i className="fas fa-star me-2"></i>
                     Objetivo General
-                  </CardTitle>             
+                  </CardTitle>
                   <br />
                   <CardText>
-                  Llevar un programa de reinserción social con hijos de padres privados de libertad de las cárceles de Pichincha, hijos de drogadictos y otros niños cuyos derechos han sido vulnerados.
-                  <br />
-                  <ul>
-                  <li>
-                  Se realizan talleres de agricultura y panadería para que se integren en un futuro al mercado laboral siguiendo un plan de desarrollo especializado y curricular planificado.
-                  </li>
-                  </ul>
+                    Llevar un programa de reinserción social con hijos de padres
+                    privados de libertad de las cárceles de Pichincha, hijos de
+                    drogadictos y otros niños cuyos derechos han sido
+                    vulnerados.
+                    <br />
+                    <ul>
+                      <li>
+                        Se realizan talleres de agricultura y panadería para que
+                        se integren en un futuro al mercado laboral siguiendo un
+                        plan de desarrollo especializado y curricular
+                        planificado.
+                      </li>
+                    </ul>
                   </CardText>
                 </CardBody>
               </Card>
@@ -166,8 +172,8 @@ function FundacionPage() {
                     Visión
                   </CardTitle>
                   <CardText className="opacity-75 text-white">
-                    Ser reconocidos como una institución  líder en
-                    innovación pedagógica y formación integral.
+                    Ser reconocidos como una institución líder en innovación
+                    pedagógica y formación integral.
                   </CardText>
                 </CardBody>
               </Card>
@@ -180,15 +186,17 @@ function FundacionPage() {
                     className="mb-3 text-light-emphasis text-white"
                   >
                     <i className="fas fa-clipboard-list fa-lg me-2"></i>
-                    Objetivos 
+                    Objetivos
                   </CardTitle>
                   <CardText className="opacity-75 text-white">
                     <ul className="list-unstyled mb-0">
                       <li>
-                        <i className="fas fa-check-circle me-2"></i> Devolver a los niños sus derechos.
+                        <i className="fas fa-check-circle me-2"></i> Devolver a
+                        los niños sus derechos.
                       </li>
                       <li>
-                        <i className="fas fa-check-circle me-2"></i> Educar a niños y jóvenes para integrarlos a la sociedad.
+                        <i className="fas fa-check-circle me-2"></i> Educar a
+                        niños y jóvenes para integrarlos a la sociedad.
                       </li>
                     </ul>
                   </CardText>
