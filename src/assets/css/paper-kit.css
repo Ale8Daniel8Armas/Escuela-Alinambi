@@ -505,7 +505,7 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1165px) {
   .bootstrap-datetimepicker-widget.dropdown-menu.timepicker-sbs {
     width: 38em;
   }
@@ -7227,7 +7227,7 @@ License - nucleoapp.com/license/
     display: block !important;
     top: 0;
     height: 100%;
-    width: 300px;
+    width: 235px;
     right: 0px;
     z-index: 1032;
     visibility: visible;

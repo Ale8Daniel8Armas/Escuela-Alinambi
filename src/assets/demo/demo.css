@@ -636,7 +636,7 @@
   padding-bottom: 0;
 }
 
-@media screen and (max-width: 1065px) {
+@media screen and (max-width: 1165px) {
   .section-navbars .navbar-collapse {
     display: none !important;
   }
