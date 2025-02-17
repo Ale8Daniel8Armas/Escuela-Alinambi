@@ -101,13 +101,13 @@ function LandingPage() {
                   marginBottom: "15px",
                 }}
               >
-                Nuestros Programas
+                Nuestros Proyectos y Actividades
               </h2>
               <h3
                 className="justify-content-center description"
                 style={{ color: "black" }}
               >
-                Como parte de la Fundación Aliñambi, somos un centro educativo
+                La Unidad Educativa Fiscomisional Aliñambi un centro educativo
                 especializado en la educación básica. Contribuimos al desarrollo
                 de la sociedad formando personas de calidad a través de
                 actividades y programas planificados, apoyados por alianzas
@@ -125,7 +125,7 @@ function LandingPage() {
                   marginBottom: "15px",
                 }}
               >
-                ¡Descubre nuestros programas!
+                ¡Descubre nuestros proyectos y actividades!
               </h2>
             </Col>
           </Row>

@@ -120,8 +120,9 @@ function HistoriaPage() {
                             fontWeight: "400",
                           }}
                         >
-                          La Unidad Educativa Aliñambi nació en 1985 con una
-                          visión revolucionaria: crear un espacio educativo que
+                          La Unidad Educativa Aliñambi nació por mediados de la década 
+                          de los noventa afianzándose en el nuevo milenio con una
+                          idea revolucionaria: crear un espacio educativo que
                           combinara la excelencia académica con el desarrollo
                           integral del ser humano. Iniciamos con tres aulas y
                           pocos estudiantes, pero con una gran pasión por la
@@ -218,7 +219,7 @@ function HistoriaPage() {
                           ✓ Acreditación Ministerial de Calidad Educativa
                         </li>
                         <li>✓ Reconocimiento por Innovación Pedagógica</li>
-                        <li>✓ Centro integral y de compromiso social</li>
+                        <li>✓ Centro integral y de Compromiso Social</li>
                       </ul>
                       </Col>
                     </div>

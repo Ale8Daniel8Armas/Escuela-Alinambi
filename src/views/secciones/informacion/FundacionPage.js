@@ -87,9 +87,9 @@ function FundacionPage() {
           <Row className="mt-5 g-4">
             <Col md="6">
               <Card className="shadow-lg border-0">
-                <CardImg
+                <CardImgs
                   alt="Historia"
-                  src={require("assets/img/Alinambi/fotoAlinambiDos.jpg")}
+                  src={require("assets/img/Alinambi/fotoAlinambiVeinte.jpg")}
                   top
                 />
                 <CardBody>

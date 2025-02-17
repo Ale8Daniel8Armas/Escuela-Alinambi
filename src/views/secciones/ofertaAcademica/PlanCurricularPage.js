@@ -356,7 +356,6 @@ function PlanCurricularPage() {
                               "Plataformas digitales",
                               "Laboratorios especializados",
                               "Material didáctico innovador",
-                              "Biblioteca virtual",
                               "Espacios de aprendizaje flexibles",
                             ].map((item, index) => (
                               <li
@@ -454,7 +453,6 @@ function PlanCurricularPage() {
                               "Tutorías personalizadas",
                               "Reportes de progreso",
                               "Acompañamiento estudiantil",
-                              "Refuerzo académico",
                               "Comunicación con padres",
                             ].map((item, index) => (
                               <li
