@@ -15,11 +15,25 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import CronogramasHeader from "components/Headers/CronogramasHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
+//Archivo importado
+import pdfPrueba from "assets/docs/PdfPrueba.pdf";
+import pdfCalendarioFeriados from "assets/docs/CALENDARIO_FERIADOS.pdf";
+
 function CronogramasPage() {
   React.useEffect(() => {
     document.documentElement.classList.remove("nav-open");
     window.scrollTo(0, 0);
   }, []);
+
+  //Gestion de pdfs
+  const handleDownload = (pdfFile) => {
+    const link = document.createElement("a");
+    link.href = pdfFile;
+    link.download = pdfFile.split("/").pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const services = [
     {
@@ -258,6 +272,7 @@ function CronogramasPage() {
                       textTransform: "uppercase",
                       letterSpacing: "1px",
                     }}
+                    onClick={() => handleDownload(pdfPrueba)}
                   >
                     Ver Cronograma del Período Actual
                   </Button>
@@ -318,6 +333,7 @@ function CronogramasPage() {
                       textTransform: "uppercase",
                       letterSpacing: "1px",
                     }}
+                    onClick={() => handleDownload(pdfCalendarioFeriados)}
                   >
                     Descargar Calendario
                   </Button>

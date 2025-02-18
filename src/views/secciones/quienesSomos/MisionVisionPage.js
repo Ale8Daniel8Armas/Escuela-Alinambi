@@ -58,13 +58,13 @@ function SeccionVisionMision() {
             <h2
               className="mx-auto"
               style={{
-                fontSize: "33px",
+                fontSize: "2.5rem",
                 fontWeight: "bold",
                 color: "#1E90FF",
                 letterSpacing: "1.5px",
-                marginBottom: "25px",
+                marginBottom: "1.5rem",
                 textTransform: "uppercase",
-                marginTop: "35px",
+                marginTop: "2rem",
               }}
             >
               Aliñambi construye y guía los sueños de sus estudiantes
@@ -75,7 +75,7 @@ function SeccionVisionMision() {
             style={{
               borderTop: "2px solid navy",
               width: "100%",
-              margin: "10px 0",
+              margin: "1rem 0",
             }}
           >
             <div className="nav-tabs-wrapper">
@@ -87,7 +87,7 @@ function SeccionVisionMision() {
                       toggle("1");
                     }}
                     style={{
-                      fontSize: "18px",
+                      fontSize: "1.125rem",
                       fontWeight: "600",
                       textTransform: "uppercase",
                       letterSpacing: "1.5px",
@@ -111,7 +111,7 @@ function SeccionVisionMision() {
                       toggle("2");
                     }}
                     style={{
-                      fontSize: "18px",
+                      fontSize: "1.125rem",
                       fontWeight: "600",
                       textTransform: "uppercase",
                       letterSpacing: "1.5px",
@@ -132,7 +132,6 @@ function SeccionVisionMision() {
             </div>
           </div>
 
-          {/* Fondo suave con color pastel o gris claro */}
           <TabContent className="following" activeTab={activeTab}>
             <TabPane tabId="1" id="follows">
               <Row>
@@ -141,7 +140,7 @@ function SeccionVisionMision() {
                     className="text-center"
                     style={{
                       backgroundColor: "#f4f4f4",
-                      padding: "30px",
+                      padding: "2rem",
                       borderRadius: "8px",
                     }}
                   >
@@ -150,25 +149,26 @@ function SeccionVisionMision() {
                       className="img-rounded img-responsive"
                       src={require("assets/img/Alinambi/graduacionV2.jpg")}
                       style={{
-                        maxWidth: "500px",
-                        marginBottom: "20px",
-                        height: "350px",
+                        maxWidth: "100%",
+                        height: "500px",
+                        marginBottom: "1.5rem",
                       }}
                     />
                     <h3
                       style={{
                         color: "#34495e",
-                        fontSize: "30px",
+                        fontSize: "2rem",
                         fontWeight: "700",
                       }}
                     >
                       Nuestra Misión
                     </h3>
+                    <br />
                     <p
                       className="description"
                       style={{
                         color: "black",
-                        fontSize: "18px",
+                        fontSize: "1.3rem",
                         lineHeight: "1.8",
                       }}
                     >
@@ -192,7 +192,7 @@ function SeccionVisionMision() {
                     className="text-center"
                     style={{
                       backgroundColor: "#f4f4f4",
-                      padding: "30px",
+                      padding: "2rem",
                       borderRadius: "8px",
                     }}
                   >
@@ -201,15 +201,15 @@ function SeccionVisionMision() {
                       className="img-rounded img-responsive"
                       src={require("assets/img/Alinambi/fotoAlinambiVeintiCinco.jpg")}
                       style={{
-                        maxWidth: "500px",
-                        marginBottom: "20px",
-                        height: "350px",
+                        maxWidth: "100%",
+                        height: "500px",
+                        marginBottom: "1.5rem",
                       }}
                     />
                     <h3
                       style={{
                         color: "#34495e",
-                        fontSize: "30px",
+                        fontSize: "2rem",
                         fontWeight: "700",
                       }}
                     >
@@ -219,7 +219,7 @@ function SeccionVisionMision() {
                       className="description"
                       style={{
                         color: "black",
-                        fontSize: "18px",
+                        fontSize: "1.3rem",
                         lineHeight: "1.8",
                       }}
                     >

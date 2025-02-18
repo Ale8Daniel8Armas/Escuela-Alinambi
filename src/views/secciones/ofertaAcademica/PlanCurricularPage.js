@@ -20,6 +20,9 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import PlanCurricularHeader from "components/Headers/PlanCurricularHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
+//Archivo importado
+import pdfPrueba from "assets/docs/PdfPrueba.pdf";
+
 function PlanCurricularPage() {
   const [activeTab, setActiveTab] = React.useState("1");
 
@@ -29,7 +32,7 @@ function PlanCurricularPage() {
       icon: "fa fa-book",
       color: "#2e8b57",
       link: "#",
-    }, 
+    },
   ];
 
   const toggle = (tab) => {
@@ -42,6 +45,16 @@ function PlanCurricularPage() {
     document.documentElement.classList.remove("nav-open");
     window.scrollTo(0, 0);
   }, []);
+
+  //Gestion de pdfs
+  const handleDownload = (pdfFile) => {
+    const link = document.createElement("a");
+    link.href = pdfFile;
+    link.download = pdfFile.split("/").pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <>
@@ -477,44 +490,45 @@ function PlanCurricularPage() {
           </Row>
           <br />
           <Row className="justify-content-center">
-          {bulletins.map((bulletin, index) => (
-            <Col md="3" className="mb-3" key={index}>
-              <Card className="h-100 shadow-sm hover-lift">
-                <CardBody className="text-center">
-                  <div style={{ color: bulletin.color }} className="mb-3">
-                    <i className={`${bulletin.icon} fa-2x`}></i>
-                  </div>
-                  <CardTitle tag="h5" className="mb-3">
-                    {bulletin.title}
-                  </CardTitle>
-                  <Button
-                    color="primary"
-                    className="btn-round"
-                    outline
-                    href={bulletin.link}
-                    target="_blank"
-                    style={{
-                      borderColor: bulletin.color,
-                      color: bulletin.color,
-                      transition: "all 0.3s ease",
-                    }}
-                    onMouseOver={(e) => {
-                      e.target.style.backgroundColor = bulletin.color;
-                      e.target.style.color = "white";
-                    }}
-                    onMouseOut={(e) => {
-                      e.target.style.backgroundColor = "transparent";
-                      e.target.style.color = bulletin.color;
-                    }}
-                  >
-                    <i className="fa fa-download mr-1"></i>
-                    Descargar
-                  </Button>
-                </CardBody>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+            {bulletins.map((bulletin, index) => (
+              <Col md="3" className="mb-3" key={index}>
+                <Card className="h-100 shadow-sm hover-lift">
+                  <CardBody className="text-center">
+                    <div style={{ color: bulletin.color }} className="mb-3">
+                      <i className={`${bulletin.icon} fa-2x`}></i>
+                    </div>
+                    <CardTitle tag="h5" className="mb-3">
+                      {bulletin.title}
+                    </CardTitle>
+                    <Button
+                      color="primary"
+                      className="btn-round"
+                      outline
+                      href={bulletin.link}
+                      target="_blank"
+                      style={{
+                        borderColor: bulletin.color,
+                        color: bulletin.color,
+                        transition: "all 0.3s ease",
+                      }}
+                      onMouseOver={(e) => {
+                        e.target.style.backgroundColor = bulletin.color;
+                        e.target.style.color = "white";
+                      }}
+                      onMouseOut={(e) => {
+                        e.target.style.backgroundColor = "transparent";
+                        e.target.style.color = bulletin.color;
+                      }}
+                      onClick={() => handleDownload(pdfPrueba)}
+                    >
+                      <i className="fa fa-download mr-1"></i>
+                      Descargar
+                    </Button>
+                  </CardBody>
+                </Card>
+              </Col>
+            ))}
+          </Row>
         </Container>
       </div>
       <DemoFooter />

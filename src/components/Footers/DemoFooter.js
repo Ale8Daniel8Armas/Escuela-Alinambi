@@ -3,7 +3,6 @@ import { Container, Row, Col } from "reactstrap";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Link } from "react-router-dom";
 
-
 function DemoFooter() {
   return (
     <footer
@@ -11,15 +10,15 @@ function DemoFooter() {
       style={{
         backgroundColor: "#23294A",
         color: "white",
-        padding: "20px 0", 
-        fontFamily: "Montserrat, sans-serif", 
+        padding: "2rem 0",
+        fontFamily: "Montserrat, sans-serif",
         textAlign: "center",
       }}
     >
       <Container>
         <Row>
           {/* Primera columna: Dirección */}
-          <Col md="4">
+          <Col md="4" sm="12">
             <Row
               style={{
                 borderBottom: "2px solid #83A83F",
@@ -27,7 +26,7 @@ function DemoFooter() {
                 justifyContent: "center",
                 alignItems: "center",
                 width: "50%",
-                marginBottom: "8px", 
+                marginBottom: "1rem",
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
@@ -36,11 +35,11 @@ function DemoFooter() {
                 style={{
                   color: "#4CAF50",
                   fontFamily: "Montserrat, sans-serif",
-                  fontSize: "24px", 
+                  fontSize: "1.5rem",
                   fontWeight: "600",
                   textAlign: "center",
                   width: "100%",
-                  marginBottom: "0px",
+                  marginBottom: "0",
                 }}
               >
                 Dirección
@@ -54,16 +53,16 @@ function DemoFooter() {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  marginBottom: "8px",
+                  marginBottom: "0.5rem",
                 }}
               >
                 <i className="icon-alinambi nc-icon nc-pin-3 x2"></i>
                 <span
                   style={{
                     fontFamily: "Montserrat, sans-serif",
-                    fontSize: "16px", 
+                    fontSize: "1rem",
                     fontWeight: "normal",
-                    marginLeft: "8px", 
+                    marginLeft: "0.5rem",
                   }}
                 >
                   Calle Panzaleo - E8-213
@@ -73,16 +72,16 @@ function DemoFooter() {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  marginBottom: "8px",
+                  marginBottom: "0.5rem",
                 }}
               >
                 <i className="icon-alinambi nc-icon nc-map-big x2"></i>
                 <span
                   style={{
                     fontFamily: "Montserrat, sans-serif",
-                    fontSize: "16px",
+                    fontSize: "1rem",
                     fontWeight: "normal",
-                    marginLeft: "8px",
+                    marginLeft: "0.5rem",
                   }}
                 >
                   Conocoto - Ecuador
@@ -92,16 +91,16 @@ function DemoFooter() {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  marginBottom: "8px",
+                  marginBottom: "0.5rem",
                 }}
               >
                 <i className="icon-alinambi nc-icon nc-send x2"></i>
                 <span
                   style={{
                     fontFamily: "Montserrat, sans-serif",
-                    fontSize: "16px",
+                    fontSize: "1rem",
                     fontWeight: "normal",
-                    marginLeft: "8px",
+                    marginLeft: "0.5rem",
                   }}
                 >
                   (02) 234 - 4544 / 099 542 1432
@@ -111,16 +110,16 @@ function DemoFooter() {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  marginBottom: "8px",
+                  marginBottom: "0.5rem",
                 }}
               >
                 <i className="icon-alinambi nc-icon nc-email-85 x2"></i>
                 <span
                   style={{
                     fontFamily: "Montserrat, sans-serif",
-                    fontSize: "16px",
+                    fontSize: "1rem",
                     fontWeight: "normal",
-                    marginLeft: "8px",
+                    marginLeft: "0.5rem",
                   }}
                 >
                   ueefalinambi@gmail.com
@@ -130,16 +129,16 @@ function DemoFooter() {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  marginBottom: "8px",
+                  marginBottom: "0.5rem",
                 }}
               >
                 <i className="icon-alinambi nc-icon nc-globe x2"></i>
                 <span
                   style={{
                     fontFamily: "Montserrat, sans-serif",
-                    fontSize: "16px",
+                    fontSize: "1rem",
                     fontWeight: "normal",
-                    marginLeft: "8px",
+                    marginLeft: "0.5rem",
                   }}
                 >
                   www.uealinambi.com
@@ -149,7 +148,7 @@ function DemoFooter() {
           </Col>
 
           {/* Segunda columna: Somos Aliñambi */}
-          <Col md="4">
+          <Col md="4" sm="12">
             <Row
               style={{
                 borderBottom: "2px solid #83A83F",
@@ -157,7 +156,7 @@ function DemoFooter() {
                 justifyContent: "center",
                 alignItems: "center",
                 width: "70%",
-                marginBottom: "8px",
+                marginBottom: "1rem",
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
@@ -166,11 +165,11 @@ function DemoFooter() {
                 style={{
                   color: "#4CAF50",
                   fontFamily: "Montserrat, sans-serif",
-                  fontSize: "24px",
+                  fontSize: "1.5rem",
                   fontWeight: "600",
                   textAlign: "center",
                   width: "100%",
-                  marginBottom: "0px",
+                  marginBottom: "0",
                 }}
               >
                 Somos Aliñambi
@@ -180,116 +179,131 @@ function DemoFooter() {
               className="nc-icon-ul"
               style={{ padding: 0, listStyle: "none" }}
             >
-              <Link to="/docentes-page" style={{ textDecoration: "none", color: "white" }}>        
-              <li
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginBottom: "8px",
-                }}
+              <Link
+                to="/docentes-page"
+                style={{ textDecoration: "none", color: "white" }}
               >
-                <i className="icon-alinambi nc-icon nc-single-02 x2"></i>
-                <span
+                <li
                   style={{
-                    fontFamily: "Montserrat, sans-serif",
-                    fontSize: "16px",
-                    fontWeight: "normal",
-                    marginLeft: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "0.5rem",
                   }}
                 >
-                  Nuestro Equipo
-                </span>
-              </li>
+                  <i className="icon-alinambi nc-icon nc-single-02 x2"></i>
+                  <span
+                    style={{
+                      fontFamily: "Montserrat, sans-serif",
+                      fontSize: "1rem",
+                      fontWeight: "normal",
+                      marginLeft: "0.5rem",
+                    }}
+                  >
+                    Nuestro Equipo
+                  </span>
+                </li>
               </Link>
-              <Link to="/admisiones-page" style={{ textDecoration: "none", color: "white" }}>        
-              <li
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginBottom: "8px",
-                }}
+              <Link
+                to="/admisiones-page"
+                style={{ textDecoration: "none", color: "white" }}
               >
-                <i className="icon-alinambi nc-icon nc-hat-3 x2"></i>
-                <span
+                <li
                   style={{
-                    fontFamily: "Montserrat, sans-serif",
-                    fontSize: "16px",
-                    fontWeight: "normal",
-                    marginLeft: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "0.5rem",
                   }}
                 >
-                  Admisiones
-                </span>
-              </li>
+                  <i className="icon-alinambi nc-icon nc-hat-3 x2"></i>
+                  <span
+                    style={{
+                      fontFamily: "Montserrat, sans-serif",
+                      fontSize: "1rem",
+                      fontWeight: "normal",
+                      marginLeft: "0.5rem",
+                    }}
+                  >
+                    Admisiones
+                  </span>
+                </li>
               </Link>
-              <Link to="/convenios-page" style={{ textDecoration: "none", color: "white" }}>        
-              <li
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginBottom: "8px",
-                }}
+              <Link
+                to="/convenios-page"
+                style={{ textDecoration: "none", color: "white" }}
               >
-                <i className="icon-alinambi nc-icon nc-bank x2"></i>
-                <span
+                <li
                   style={{
-                    fontFamily: "Montserrat, sans-serif",
-                    fontSize: "16px",
-                    fontWeight: "normal",
-                    marginLeft: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "0.5rem",
                   }}
                 >
-                  Convenios
-                </span>
-              </li>
+                  <i className="icon-alinambi nc-icon nc-bank x2"></i>
+                  <span
+                    style={{
+                      fontFamily: "Montserrat, sans-serif",
+                      fontSize: "1rem",
+                      fontWeight: "normal",
+                      marginLeft: "0.5rem",
+                    }}
+                  >
+                    Convenios
+                  </span>
+                </li>
               </Link>
-              <Link to="/matricula-page" style={{ textDecoration: "none", color: "white" }}>        
-              <li
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginBottom: "8px",
-                }}
+              <Link
+                to="/matricula-page"
+                style={{ textDecoration: "none", color: "white" }}
               >
-                <i className="icon-alinambi nc-icon nc-briefcase-24 x2"></i>
-                <span
+                <li
                   style={{
-                    fontFamily: "Montserrat, sans-serif",
-                    fontSize: "16px",
-                    fontWeight: "normal",
-                    marginLeft: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "0.5rem",
                   }}
                 >
-                  Matricula
-                </span>
-              </li>
+                  <i className="icon-alinambi nc-icon nc-briefcase-24 x2"></i>
+                  <span
+                    style={{
+                      fontFamily: "Montserrat, sans-serif",
+                      fontSize: "1rem",
+                      fontWeight: "normal",
+                      marginLeft: "0.5rem",
+                    }}
+                  >
+                    Matricula
+                  </span>
+                </li>
               </Link>
-              <Link to="/servicios-page" style={{ textDecoration: "none", color: "white"}}>        
-              <li
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginBottom: "8px",
-                }}
+              <Link
+                to="/servicios-page"
+                style={{ textDecoration: "none", color: "white" }}
               >
-                <i className="icon-alinambi nc-icon nc-ruler-pencil x2"></i>
-                <span
+                <li
                   style={{
-                    fontFamily: "Montserrat, sans-serif",
-                    fontSize: "16px",
-                    fontWeight: "normal",
-                    marginLeft: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    marginBottom: "0.5rem",
                   }}
                 >
-                  Servicios
-                </span>
-              </li>
+                  <i className="icon-alinambi nc-icon nc-ruler-pencil x2"></i>
+                  <span
+                    style={{
+                      fontFamily: "Montserrat, sans-serif",
+                      fontSize: "1rem",
+                      fontWeight: "normal",
+                      marginLeft: "0.5rem",
+                    }}
+                  >
+                    Servicios
+                  </span>
+                </li>
               </Link>
             </ul>
           </Col>
 
           {/* Tercera columna: Redes Sociales */}
-          <Col md="4">
+          <Col md="4" sm="12">
             <Row
               style={{
                 borderBottom: "2px solid #83A83F",
@@ -297,7 +311,7 @@ function DemoFooter() {
                 justifyContent: "center",
                 alignItems: "center",
                 width: "70%",
-                marginBottom: "8px",
+                marginBottom: "1rem",
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
@@ -306,33 +320,30 @@ function DemoFooter() {
                 style={{
                   color: "#4CAF50",
                   fontFamily: "Montserrat, sans-serif",
-                  fontSize: "24px",
+                  fontSize: "1.5rem",
                   fontWeight: "600",
                   textAlign: "center",
                   width: "100%",
-                  marginBottom: "0px",
+                  marginBottom: "0",
                 }}
               >
-
-
                 Redes Sociales
               </h5>
             </Row>
-            <div style={{ marginTop: "20px" }}>
-              {" "}
+            <div style={{ marginTop: "1rem" }}>
               <a
                 href="https://www.facebook.com/profile.php?id=100083706603948"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ margin: "0px 12px", color: "white" }} 
+                style={{ margin: "0 0.75rem", color: "white" }}
               >
-                <i className="fab fa-facebook-square fa-2x"></i>{" "}
+                <i className="fab fa-facebook-square fa-2x"></i>
               </a>
               <a
                 href="https://www.instagram.com/explore/locations/498223400195631/fundacion-alinambi-conocoto-ecuador/"
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ margin: "0px 12px" }}
+                style={{ margin: "0 0.75rem" }}
               >
                 <span
                   style={{
@@ -343,7 +354,7 @@ function DemoFooter() {
                     color: "transparent",
                   }}
                 >
-                  <i className="fab fa-instagram fa-2x"></i>{" "}
+                  <i className="fab fa-instagram fa-2x"></i>
                 </span>
               </a>
             </div>
