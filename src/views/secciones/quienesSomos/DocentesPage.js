@@ -41,7 +41,8 @@ function DocentesPage() {
     return function cleanup() {
       document.body.classList.remove("landing-page");
     };
-  });
+  }, []);
+
   return (
     <>
       <ExamplesNavbar />
@@ -61,7 +62,7 @@ function DocentesPage() {
         <Container className="mt-5">
           {/* Sección Docentes*/}
           <Row>
-            <Col className="text-center" md="12">
+            <Col className="text-center" xs="12">
               <h2
                 className="mx-auto"
                 style={{
@@ -75,23 +76,20 @@ function DocentesPage() {
             </Col>
           </Row>
           <Row className="justify-content-center">
-            <Col md="12" className="text-center">
-              <Card
-                className="shadow-lg border-0 rounded-4"
-                style={{ width: "70rem" }}
-              >
+            <Col xs="12" sm="10" md="8" lg="7">
+              <Card className="shadow-lg border-0 rounded-4">
                 {/* Imagen en la parte superior */}
                 <CardImg
                   top
                   src={require("assets/img/Alinambi/DocentesAlinambi.jpeg")}
                   alt="imagen de docentes en cabecera"
-                  className="img-fluid"
-                  style={{ height: "500px", objectFit: "cover" }}
+                  className="img-fluid w-100"
+                  style={{ maxHeight: "400px", objectFit: "cover" }}
                 />
-                <CardBody className="p-4">
+                <CardBody className="p-4 text-center">
                   <CardText
                     className="fw-semibold text-muted"
-                    style={{ fontSize: "24px", fontWeight: "bold" }}
+                    style={{ fontSize: "20px", fontWeight: "bold" }}
                   >
                     Este es nuestro personal docente para este periodo académico
                   </CardText>
@@ -100,7 +98,7 @@ function DocentesPage() {
             </Col>
           </Row>
           {/* Sección Ejecutivos*/}
-          <TeamSection />         
+          <TeamSection />
         </Container>
       </div>
       <DemoFooter />

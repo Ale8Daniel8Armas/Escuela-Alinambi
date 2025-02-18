@@ -1,5 +1,4 @@
 import React from "react";
-// reactstrap components
 import {
   Button,
   Label,
@@ -82,19 +81,18 @@ function HistoriaPage() {
               >
                 Somos una institución educativa fiscomisional comprometida con
                 los valores de igualdad, equidad e inclusión social desde
-                nuestra fundación en 2016, bajo la normativa
-                MINEDUC-ME-2016-
-                00124-A, otorgada por el Ministerio de
-                Educación. Impulsado por la fundación Aliñambi hemos implementado diversos proyectos que han
-                fortalecido tanto la calidad humana de nuestra comunidad como el
-                compromiso con la defensa de los derechos humanos y los valores
-                que nos definen y enorgullecen.
+                nuestra fundación en 2016, bajo la normativa MINEDUC-ME-2016-
+                00124-A, otorgada por el Ministerio de Educación. Impulsado por
+                la fundación Aliñambi hemos implementado diversos proyectos que
+                han fortalecido tanto la calidad humana de nuestra comunidad
+                como el compromiso con la defensa de los derechos humanos y los
+                valores que nos definen y enorgullecen.
               </p>
             </Col>
           </Row>
           <div className="container py-5">
             <Row>
-              <Col md="15" className="mx-auto">
+              <Col md="12" className="mx-auto">
                 <Card className="shadow">
                   <CardBody>
                     <h3
@@ -103,15 +101,15 @@ function HistoriaPage() {
                     >
                       Nuestros Orígenes
                     </h3>
-                    <Row style={{ paddingLeft: "50px", paddingRight: "50px" }}>
-                      <Col md="6">
+                    <Row style={{ paddingLeft: "15px", paddingRight: "15px" }}>
+                      <Col md="6" xs="12">
                         <img
                           alt="Fundación"
                           className="img-fluid rounded mb-3"
                           src={require("assets/img/Alinambi/AlinambiInicios.jpg")}
                         />
                       </Col>
-                      <Col md="6">
+                      <Col md="6" xs="12">
                         <p
                           className="lead"
                           style={{
@@ -120,13 +118,13 @@ function HistoriaPage() {
                             fontWeight: "400",
                           }}
                         >
-                          La Unidad Educativa Aliñambi nació por mediados de la década 
-                          de los noventa afianzándose en el nuevo milenio con una
-                          idea revolucionaria: crear un espacio educativo que
-                          combinara la excelencia académica con el desarrollo
-                          integral del ser humano. Iniciamos con tres aulas y
-                          pocos estudiantes, pero con una gran pasión por la
-                          educación.
+                          La Unidad Educativa Aliñambi nació por mediados de la
+                          década de los noventa afianzándose en el nuevo milenio
+                          con una idea revolucionaria: crear un espacio
+                          educativo que combinara la excelencia académica con el
+                          desarrollo integral del ser humano. Iniciamos con tres
+                          aulas y pocos estudiantes, pero con una gran pasión
+                          por la educación.
                         </p>
                       </Col>
                     </Row>
@@ -136,15 +134,15 @@ function HistoriaPage() {
                     >
                       Crecimiento y Logros
                     </h3>
-                    <Row style={{ paddingLeft: "25px", paddingRight: "25px" }}>
-                      <Col md="6" className="order-md-2">
+                    <Row style={{ paddingLeft: "15px", paddingRight: "15px" }}>
+                      <Col md="6" xs="12" className="order-md-2">
                         <img
                           alt="Desarrollo"
                           className="img-fluid rounded mb-3"
                           src={require("assets/img/Alinambi/fotoAlinambiVeintiSeis.jpg")}
                         />
                       </Col>
-                      <Col md="6" className="order-md-1">
+                      <Col md="6" xs="12" className="order-md-1">
                         <p
                           className="lead"
                           style={{
@@ -153,12 +151,13 @@ function HistoriaPage() {
                             fontWeight: "400",
                           }}
                         >
-                          En el transcurso del tiempo, nuestra institución creció
-                          considerablemente, con programas educativos
-                          innovadores y la ampliación del campus. El amor y la responsabilidad
-                          junto con el compromiso que tenemos como sociedad, nos distinguen como
-                          una institución única, capaz de formar personas con calidad humana
-                          y de construir y alimentar sueños.
+                          En el transcurso del tiempo, nuestra institución
+                          creció considerablemente, con programas educativos
+                          innovadores y la ampliación del campus. El amor y la
+                          responsabilidad junto con el compromiso que tenemos
+                          como sociedad, nos distinguen como una institución
+                          única, capaz de formar personas con calidad humana y
+                          de construir y alimentar sueños.
                         </p>
                       </Col>
                     </Row>
@@ -168,11 +167,12 @@ function HistoriaPage() {
                     >
                       Nuevo Milenio y Proyección Futura
                     </h3>
-                    <Row style={{ paddingLeft: "30px", paddingRight: "30px" }}>
+                    <Row style={{ paddingLeft: "15px", paddingRight: "15px" }}>
                       <div
                         className="text-center my-4"
                         style={{
                           display: "flex",
+                          flexWrap: "wrap",
                           justifyContent: "center",
                           gap: "15px",
                         }}
@@ -180,17 +180,17 @@ function HistoriaPage() {
                         <img
                           alt="imagen1"
                           src={require("assets/img/Alinambi/grado-AlinambiTwo.jpg")}
-                          style={{ maxWidth: "320px" }}
+                          style={{ maxWidth: "100%", width: "320px" }}
                         />
                         <img
                           alt="imagen2"
                           src={require("assets/img/Alinambi/fotoAlinambiSeis.jpg")}
-                          style={{ maxWidth: "320px" }}
+                          style={{ maxWidth: "100%", width: "320px" }}
                         />
                         <img
                           alt="imagen3"
                           src={require("assets/img/Alinambi/grado-AlinambiOne.jpg")}
-                          style={{ maxWidth: "320px" }}
+                          style={{ maxWidth: "100%", width: "320px" }}
                         />
                       </div>
                       <p
@@ -203,24 +203,31 @@ function HistoriaPage() {
                       >
                         Hoy, la U.E. Aliñambi es referente en innovación
                         educativa, con más de 500 estudiantes y un equipo
-                        docente altamente preparado y profesional. Nuestros logros incluyen
-                        el apoyo de diversas instituciones reconocidas más el aval 
-                        de calidad primaria dentro de las mejores escuelas de enseñanza
-                        a nivel local.
+                        docente altamente preparado y profesional. Nuestros
+                        logros incluyen el apoyo de diversas instituciones
+                        reconocidas más el aval de calidad primaria dentro de
+                        las mejores escuelas de enseñanza a nivel local.
                       </p>
                     </Row>
                     <div className="text-center mt-4">
-                      <Col style={{ backgroundColor: "#1E90FF" }}>
-                      <h5                   
-                      style={{ color: "#ffffff" }}>
-                        Logros Destacados</h5>
-                      <ul className="list-unstyled" style={{ fontSize: "16px", fontWeight: "bold", lineHeight: "1.9"}} >
-                        <li>
-                          ✓ Acreditación Ministerial de Calidad Educativa
-                        </li>
-                        <li>✓ Reconocimiento por Innovación Pedagógica</li>
-                        <li>✓ Centro integral y de Compromiso Social</li>
-                      </ul>
+                      <Col
+                        style={{ backgroundColor: "#1E90FF", padding: "15px" }}
+                      >
+                        <h5 style={{ color: "#ffffff" }}>Logros Destacados</h5>
+                        <ul
+                          className="list-unstyled"
+                          style={{
+                            fontSize: "16px",
+                            fontWeight: "bold",
+                            lineHeight: "1.9",
+                          }}
+                        >
+                          <li>
+                            ✓ Acreditación Ministerial de Calidad Educativa
+                          </li>
+                          <li>✓ Reconocimiento por Innovación Pedagógica</li>
+                          <li>✓ Centro integral y de Compromiso Social</li>
+                        </ul>
                       </Col>
                     </div>
                   </CardBody>

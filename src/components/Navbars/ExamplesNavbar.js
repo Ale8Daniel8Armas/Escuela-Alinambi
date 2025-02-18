@@ -26,6 +26,9 @@ function ExamplesNavbar() {
   const [isLargeScreen, setIsLargeScreen] = React.useState(
     window.innerWidth < 1165
   );
+  const [isMobileScreen, setIsMobileScreen] = React.useState(
+    window.innerWidth < 767
+  );
 
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
@@ -63,12 +66,18 @@ function ExamplesNavbar() {
       setIsLargeScreen(window.innerWidth < 1165);
     };
 
+    const handleMobileResize = () => {
+      setIsMobileScreen(window.innerWidth < 767);
+    };
+
     window.addEventListener("scroll", updateNavbarColor);
     window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleMobileResize);
 
     return function cleanup() {
       window.removeEventListener("scroll", updateNavbarColor);
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", handleMobileResize);
     };
   }, []);
 
@@ -126,6 +135,10 @@ function ExamplesNavbar() {
                 justifyContent: "space-between",
                 alignItems: "flex-end",
                 flexDirection: isLargeScreen ? "column" : "row",
+                ...(isMobileScreen && {
+                  padding: "0",
+                  backgroundColor: "#9CC066",
+                }),
               }}
               navbar
               isOpen={navbarCollapse}
@@ -133,9 +146,10 @@ function ExamplesNavbar() {
               <Nav
                 navbar
                 style={{
-                  gap: "10px",
                   flexDirection: isLargeScreen ? "column" : "row",
                   marginLeft: "auto",
+                  gap: isMobileScreen ? "0" : "12px",
+                  width: isMobileScreen ? "100%" : "auto",
                 }}
               >
                 <NavItem
@@ -146,8 +160,8 @@ function ExamplesNavbar() {
                     display: "flex",
                     alignItems: "center",
                     gap: "10px",
-                    marginRight: "130px",
-                    marginLeft: "20px",
+                    marginRight: "170px",
+                    marginLeft: "10px",
                   }}
                 >
                   <img
@@ -170,7 +184,7 @@ function ExamplesNavbar() {
                   >
                     <span
                       style={{
-                        fontSize: "20px",
+                        fontSize: "22px",
                         fontWeight: "800",
                         color:
                           navbarColor === "navbar-transparent"
@@ -184,10 +198,10 @@ function ExamplesNavbar() {
                     </span>
                     <span
                       style={{
-                        fontSize: "22px",
-                        fontWeight: "600",
+                        fontSize: "24px",
+                        fontWeight: "900",
                         color: "#1A9BD5",
-                        lineHeight: "1.0",
+                        lineHeight: "1.1",
                         fontFamily: "'Montserrat', sans-serif",
                       }}
                     >
@@ -227,7 +241,10 @@ function ExamplesNavbar() {
                       aria-labelledby="quienesSomosNavbarDropdownMenu"
                       style={{
                         fontFamily: "'Montserrat', sans-serif",
-                        marginBottom: "-230px",
+                        marginBottom: isMobileScreen ? "-440px" : "-230px",
+                        position: isMobileScreen ? "static" : "absolute",
+                        width: isMobileScreen ? "100%" : "auto",
+                        padding: isMobileScreen ? "0" : undefined,
                       }}
                     >
                       <DropdownItem
@@ -236,6 +253,11 @@ function ExamplesNavbar() {
                         style={{
                           fontFamily: "'Montserrat', sans-serif",
                           backgroundColor: "#98FF98",
+                          padding: isMobileScreen ? "8px 12px" : undefined,
+                          margin: isMobileScreen ? "0" : undefined,
+                          borderBottom: isMobileScreen
+                            ? "1px solid rgba(0,0,0,0.1)"
+                            : "none",
                         }}
                       >
                         Mision - Vision
@@ -245,6 +267,11 @@ function ExamplesNavbar() {
                         style={{
                           fontFamily: "'Montserrat', sans-serif",
                           backgroundColor: "#98FF98",
+                          padding: isMobileScreen ? "8px 12px" : undefined,
+                          margin: isMobileScreen ? "0" : undefined,
+                          borderBottom: isMobileScreen
+                            ? "1px solid rgba(0,0,0,0.1)"
+                            : "none",
                         }}
                       >
                         Historia
@@ -254,6 +281,11 @@ function ExamplesNavbar() {
                         style={{
                           fontFamily: "'Montserrat', sans-serif",
                           backgroundColor: "#98FF98",
+                          padding: isMobileScreen ? "8px 12px" : undefined,
+                          margin: isMobileScreen ? "0" : undefined,
+                          borderBottom: isMobileScreen
+                            ? "1px solid rgba(0,0,0,0.1)"
+                            : "none",
                         }}
                       >
                         Valores y Compromiso
@@ -263,6 +295,11 @@ function ExamplesNavbar() {
                         style={{
                           fontFamily: "'Montserrat', sans-serif",
                           backgroundColor: "#98FF98",
+                          padding: isMobileScreen ? "8px 12px" : undefined,
+                          margin: isMobileScreen ? "0" : undefined,
+                          borderBottom: isMobileScreen
+                            ? "1px solid rgba(0,0,0,0.1)"
+                            : "none",
                         }}
                       >
                         Nuestro Equipo
@@ -302,7 +339,10 @@ function ExamplesNavbar() {
                       aria-labelledby="ofertaEducativaNavbarDropdownMenu"
                       style={{
                         fontFamily: "'Montserrat', sans-serif",
-                        marginBottom: "-270px",
+                        marginBottom: isMobileScreen ? "-440px" : "-270px",
+                        position: isMobileScreen ? "static" : "absolute",
+                        width: isMobileScreen ? "100%" : "auto",
+                        padding: isMobileScreen ? "0" : undefined,
                       }}
                     >
                       <DropdownItem
@@ -310,6 +350,11 @@ function ExamplesNavbar() {
                         style={{
                           fontFamily: "'Montserrat', sans-serif",
                           backgroundColor: "#98FF98",
+                          padding: isMobileScreen ? "8px 12px" : undefined,
+                          margin: isMobileScreen ? "0" : undefined,
+                          borderBottom: isMobileScreen
+                            ? "1px solid rgba(0,0,0,0.1)"
+                            : "none",
                         }}
                       >
                         Admisiones
@@ -319,6 +364,11 @@ function ExamplesNavbar() {
                         style={{
                           fontFamily: "'Montserrat', sans-serif",
                           backgroundColor: "#98FF98",
+                          padding: isMobileScreen ? "8px 12px" : undefined,
+                          margin: isMobileScreen ? "0" : undefined,
+                          borderBottom: isMobileScreen
+                            ? "1px solid rgba(0,0,0,0.1)"
+                            : "none",
                         }}
                       >
                         Educación Inicial
@@ -328,6 +378,11 @@ function ExamplesNavbar() {
                         style={{
                           fontFamily: "'Montserrat', sans-serif",
                           backgroundColor: "#98FF98",
+                          padding: isMobileScreen ? "8px 12px" : undefined,
+                          margin: isMobileScreen ? "0" : undefined,
+                          borderBottom: isMobileScreen
+                            ? "1px solid rgba(0,0,0,0.1)"
+                            : "none",
                         }}
                       >
                         Educación Básica
@@ -337,6 +392,11 @@ function ExamplesNavbar() {
                         style={{
                           fontFamily: "'Montserrat', sans-serif",
                           backgroundColor: "#98FF98",
+                          padding: isMobileScreen ? "8px 12px" : undefined,
+                          margin: isMobileScreen ? "0" : undefined,
+                          borderBottom: isMobileScreen
+                            ? "1px solid rgba(0,0,0,0.1)"
+                            : "none",
                         }}
                       >
                         Plan Curricular
@@ -346,6 +406,11 @@ function ExamplesNavbar() {
                         style={{
                           fontFamily: "'Montserrat', sans-serif",
                           backgroundColor: "#98FF98",
+                          padding: isMobileScreen ? "8px 12px" : undefined,
+                          margin: isMobileScreen ? "0" : undefined,
+                          borderBottom: isMobileScreen
+                            ? "1px solid rgba(0,0,0,0.1)"
+                            : "none",
                         }}
                       >
                         Actividades
@@ -385,7 +450,10 @@ function ExamplesNavbar() {
                       aria-labelledby="infoNavbarDropdownMenu"
                       style={{
                         fontFamily: "'Montserrat', sans-serif",
-                        marginBottom: "-40px",
+                        marginBottom: isMobileScreen ? "-440px" : "-250px",
+                        position: isMobileScreen ? "static" : "absolute",
+                        width: isMobileScreen ? "100%" : "auto",
+                        padding: isMobileScreen ? "0" : undefined,
                       }}
                     >
                       <DropdownItem
@@ -393,6 +461,11 @@ function ExamplesNavbar() {
                         style={{
                           fontFamily: "'Montserrat', sans-serif",
                           backgroundColor: "#98FF98",
+                          padding: isMobileScreen ? "8px 12px" : undefined,
+                          margin: isMobileScreen ? "0" : undefined,
+                          borderBottom: isMobileScreen
+                            ? "1px solid rgba(0,0,0,0.1)"
+                            : "none",
                         }}
                       >
                         Convenios
@@ -402,6 +475,11 @@ function ExamplesNavbar() {
                         style={{
                           fontFamily: "'Montserrat', sans-serif",
                           backgroundColor: "#98FF98",
+                          padding: isMobileScreen ? "8px 12px" : undefined,
+                          margin: isMobileScreen ? "0" : undefined,
+                          borderBottom: isMobileScreen
+                            ? "1px solid rgba(0,0,0,0.1)"
+                            : "none",
                         }}
                       >
                         Matricula
@@ -411,6 +489,11 @@ function ExamplesNavbar() {
                         style={{
                           fontFamily: "'Montserrat', sans-serif",
                           backgroundColor: "#98FF98",
+                          padding: isMobileScreen ? "8px 12px" : undefined,
+                          margin: isMobileScreen ? "0" : undefined,
+                          borderBottom: isMobileScreen
+                            ? "1px solid rgba(0,0,0,0.1)"
+                            : "none",
                         }}
                       >
                         Cronogramas
@@ -420,6 +503,11 @@ function ExamplesNavbar() {
                         style={{
                           fontFamily: "'Montserrat', sans-serif",
                           backgroundColor: "#98FF98",
+                          padding: isMobileScreen ? "8px 12px" : undefined,
+                          margin: isMobileScreen ? "0" : undefined,
+                          borderBottom: isMobileScreen
+                            ? "1px solid rgba(0,0,0,0.1)"
+                            : "none",
                         }}
                       >
                         Boletines
@@ -429,6 +517,11 @@ function ExamplesNavbar() {
                         style={{
                           fontFamily: "'Montserrat', sans-serif",
                           backgroundColor: "#98FF98",
+                          padding: isMobileScreen ? "8px 12px" : undefined,
+                          margin: isMobileScreen ? "0" : undefined,
+                          borderBottom: isMobileScreen
+                            ? "1px solid rgba(0,0,0,0.1)"
+                            : "none",
                         }}
                       >
                         Fundación
@@ -440,7 +533,11 @@ function ExamplesNavbar() {
                   <NavLink
                     to="/servicios-page"
                     tag={Link}
-                    style={{ padding: "8px 12px" }}
+                    style={{
+                      padding: "8px 12px",
+                      marginBottom: isMobileScreen ? "-20px" : "-20px",
+                      width: isMobileScreen ? "100%" : "auto",
+                    }}
                   >
                     <h6
                       style={{
@@ -458,7 +555,11 @@ function ExamplesNavbar() {
                   <NavLink
                     to="/contactos-page"
                     tag={Link}
-                    style={{ padding: "8px 12px" }}
+                    style={{
+                      padding: "8px 12px",
+                      marginBottom: isMobileScreen ? "0" : "-20px",
+                      width: isMobileScreen ? "100%" : "auto",
+                    }}
                   >
                     <h6
                       style={{
